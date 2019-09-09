@@ -1,0 +1,138 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	Development	//
+Admin	../services/dbmodels/adminDBModel.py	/^class Admin(gdb.Model):$/;"	kind:class	line:2
+Api	../services/appbase.py	/^from flask_restplus import Api$/;"	kind:namespace	line:3
+CORS	../services/appbase.py	/^from flask_cors import CORS, cross_origin$/;"	kind:namespace	line:4
+Flask	../services/appbase.py	/^from flask import Flask$/;"	kind:namespace	line:1
+Info	../services/tools/info.py	/^class Info:$/;"	kind:class	line:1
+Info	../services/tools/packtools.py	/^from tools.info import Info$/;"	kind:namespace	line:2
+NoteBook	../services/dbmodels/notebookDBModel.py	/^class NoteBook(gdb.Model):$/;"	kind:class	line:2
+Problem	../services/dbmodels/problemDBModel.py	/^class Problem(gdb.Model):$/;"	kind:class	line:2
+ProblemSet	../services/dbmodels/problemsetDBModel.py	/^class ProblemSet(gdb.Model):$/;"	kind:class	line:2
+SQLAlchemy	../services/appbase.py	/^from flask_sqlalchemy import SQLAlchemy$/;"	kind:namespace	line:2
+Score	../services/dbmodels/scoreDBModel.py	/^class Score(gdb.Model):$/;"	kind:class	line:2
+TimedRotatingFileHandler	../services/tools/log.py	/^from logging.handlers import TimedRotatingFileHandler$/;"	kind:namespace	line:2
+User	../services/dbmodels/userDBModel.py	/^class User(gdb.Model):$/;"	kind:class	line:2
+__init__	../services/tools/info.py	/^    def __init__(self, infostatus, infomsg=None, inforesult=None):$/;"	kind:member	line:3
+__tablename__	../services/dbmodels/adminDBModel.py	/^    __tablename__ = 'admin'$/;"	kind:variable	line:3
+__tablename__	../services/dbmodels/notebookDBModel.py	/^    __tablename__ = 'notebook'$/;"	kind:variable	line:3
+__tablename__	../services/dbmodels/problemDBModel.py	/^    __tablename__ = 'problem'$/;"	kind:variable	line:3
+__tablename__	../services/dbmodels/problemsetDBModel.py	/^    __tablename__ = 'problemset'$/;"	kind:variable	line:3
+__tablename__	../services/dbmodels/scoreDBModel.py	/^    __tablename__ = 'score'$/;"	kind:variable	line:3
+__tablename__	../services/dbmodels/userDBModel.py	/^    __tablename__ = 'user'$/;"	kind:variable	line:3
+adminDBModel.py	../services/dbmodels/adminDBModel.py	1;"	kind:file	line:1
+admin_id	../services/dbmodels/adminDBModel.py	/^    admin_id = gdb.Column(gdb.Integer, primary_key=True)$/;"	kind:variable	line:4
+admin_ip	../services/dbmodels/adminDBModel.py	/^    admin_ip = gdb.Column(gdb.String(30))$/;"	kind:variable	line:8
+admin_logintime	../services/dbmodels/adminDBModel.py	/^    admin_logintime = gdb.Column(gdb.String(30))$/;"	kind:variable	line:9
+admin_password	../services/dbmodels/adminDBModel.py	/^    admin_password = gdb.Column(gdb.String(260))$/;"	kind:variable	line:6
+admin_token	../services/dbmodels/adminDBModel.py	/^    admin_token = gdb.Column(gdb.String(260))$/;"	kind:variable	line:7
+admin_username	../services/dbmodels/adminDBModel.py	/^    admin_username = gdb.Column(gdb.String(30))$/;"	kind:variable	line:5
+apis	../services/main.py	/^import apis$/;"	kind:namespace	line:7
+appbase.py	../services/appbase.py	1;"	kind:file	line:1
+baseurl	../services/conf.py	/^baseurl = "http:\/\/" + buildhost + ":" + buildport$/;"	kind:variable	line:7
+baseurl	../services/main.py	/^from conf import baseurl$/;"	kind:namespace	line:5
+builddbmodelfromxls.py	../services/builddbmodelfromxls.py	1;"	kind:file	line:1
+buildhost	../services/conf.py	/^buildhost = "127.0.0.1"$/;"	kind:variable	line:4
+buildhost	../services/main.py	/^from conf import buildhost$/;"	kind:namespace	line:3
+buildport	../services/conf.py	/^buildport = "9100"$/;"	kind:variable	line:5
+buildport	../services/main.py	/^from conf import buildport$/;"	kind:namespace	line:4
+cname	../services/builddbmodelfromxls.py	/^        cname = line[0]$/;"	kind:variable	line:36
+conf.py	../services/conf.py	1;"	kind:file	line:1
+create_db	../services/dbbuilder.py	/^def create_db():$/;"	kind:function	line:5
+cross_origin	../services/appbase.py	/^from flask_cors import CORS, cross_origin$/;"	kind:namespace	line:4
+ctype	../services/builddbmodelfromxls.py	/^        ctype = line[2]$/;"	kind:variable	line:37
+dbbuilder	../services/main.py	/^import dbbuilder$/;"	kind:namespace	line:6
+dbbuilder.py	../services/dbbuilder.py	1;"	kind:file	line:1
+dbconnection	../services/appbase.py	/^from conf import dbconnection$/;"	kind:namespace	line:5
+dbconnection	../services/conf.py	/^dbconnection = 'sqlite:\/\/\/db\/examsystem.db'$/;"	kind:variable	line:2
+filename	../services/tools/log.py	/^    filename = "logs\/"+starttime+".txt"$/;"	kind:variable	line:12
+filestr	../services/builddbmodelfromxls.py	/^        filestr = "from appbase import global_db as gdb\\nclass "$/;"	kind:variable	line:28
+filestr	../services/builddbmodelfromxls.py	/^        filestr = filestr + " " * tablength$/;"	kind:variable	line:30
+filestr	../services/builddbmodelfromxls.py	/^        filestr = filestr + tablename + "(gdb.Model):\\n"$/;"	kind:variable	line:29
+filestr	../services/builddbmodelfromxls.py	/^filestr = ""$/;"	kind:variable	line:9
+flag	../services/builddbmodelfromxls.py	/^        flag = 0$/;"	kind:variable	line:20
+flag	../services/builddbmodelfromxls.py	/^        flag = 1$/;"	kind:variable	line:24
+flag	../services/builddbmodelfromxls.py	/^flag = 0$/;"	kind:variable	line:10
+fmt	../services/tools/log.py	/^    fmt = logging.Formatter(formatstr)$/;"	kind:variable	line:15
+formatstr	../services/tools/log.py	/^    formatstr = '%(asctime)s\\t%(levelname)s\\t%(module)s\\t%(funcName)s\\tLine:%(lineno)d\\t%(message)s'$/;"	kind:variable	line:13
+fp	../services/builddbmodelfromxls.py	/^        fp = open(os.getcwd() + "\/dbmodels\/" +$/;"	kind:variable	line:26
+fp	../services/builddbmodelfromxls.py	/^fp = ""$/;"	kind:variable	line:8
+gdb	../services/builddbmodelfromxls.py	/^        filestr = "from appbase import global_db as gdb\\nclass "$/;"	kind:namespace	line:28
+gdb	../services/dbbuilder.py	/^from appbase import global_db as gdb$/;"	kind:namespace	line:2
+gdb	../services/dbmodels/adminDBModel.py	/^from appbase import global_db as gdb$/;"	kind:namespace	line:1
+gdb	../services/dbmodels/notebookDBModel.py	/^from appbase import global_db as gdb$/;"	kind:namespace	line:1
+gdb	../services/dbmodels/problemDBModel.py	/^from appbase import global_db as gdb$/;"	kind:namespace	line:1
+gdb	../services/dbmodels/problemsetDBModel.py	/^from appbase import global_db as gdb$/;"	kind:namespace	line:1
+gdb	../services/dbmodels/scoreDBModel.py	/^from appbase import global_db as gdb$/;"	kind:namespace	line:1
+gdb	../services/dbmodels/userDBModel.py	/^from appbase import global_db as gdb$/;"	kind:namespace	line:1
+get_data	../services/builddbmodelfromxls.py	/^from pyexcel_xlsx import get_data$/;"	kind:namespace	line:1
+global_api	../services/appbase.py	/^global_api = Api(global_app, version="1.0",$/;"	kind:variable	line:12
+global_app	../services/appbase.py	/^global_app = Flask(__name__)$/;"	kind:variable	line:8
+global_app	../services/main.py	/^from appbase import global_app$/;"	kind:namespace	line:1
+global_db	../services/appbase.py	/^global_db = SQLAlchemy(global_app)$/;"	kind:variable	line:11
+hdlr	../services/tools/log.py	/^    hdlr = TimedRotatingFileHandler(filename, "midnight", 1, 10)$/;"	kind:variable	line:14
+info.py	../services/tools/info.py	1;"	kind:file	line:1
+itemlist	../services/builddbmodelfromxls.py	/^        itemlist = []$/;"	kind:variable	line:21
+itemlist	../services/builddbmodelfromxls.py	/^itemlist = []$/;"	kind:variable	line:11
+jsonify	../services/tools/packtools.py	/^from flask import jsonify$/;"	kind:namespace	line:1
+level	../services/tools/log.py	/^    level = logging.INFO$/;"	kind:variable	line:8
+log.py	../services/tools/log.py	1;"	kind:file	line:1
+logger	../services/main.py	/^from tools.log import logger$/;"	kind:namespace	line:2
+logger	../services/tools/log.py	/^logger = logging.getLogger()$/;"	kind:variable	line:6
+logging	../services/tools/log.py	/^import logging$/;"	kind:namespace	line:1
+main.py	../services/main.py	1;"	kind:file	line:1
+nclass	../services/builddbmodelfromxls.py	/^        filestr = "from appbase import global_db as gdb\\nclass "$/;"	kind:namespace	line:28
+notebookDBModel.py	../services/dbmodels/notebookDBModel.py	1;"	kind:file	line:1
+notebook_id	../services/dbmodels/notebookDBModel.py	/^    notebook_id = gdb.Column(gdb.Integer, primary_key=True)$/;"	kind:variable	line:4
+os	../services/builddbmodelfromxls.py	/^import os$/;"	kind:namespace	line:2
+os	../services/tools/log.py	/^import os$/;"	kind:namespace	line:3
+packinfo	../services/tools/packtools.py	/^def packinfo(infostatus, infomsg=None, inforesult=None):$/;"	kind:function	line:5
+packjoinquery	../services/tools/packtools.py	/^def packjoinquery(resultlist):$/;"	kind:function	line:9
+packtools.py	../services/tools/packtools.py	1;"	kind:file	line:1
+pkey	../services/builddbmodelfromxls.py	/^                pkey = False$/;"	kind:variable	line:43
+pkey	../services/builddbmodelfromxls.py	/^                pkey = True$/;"	kind:variable	line:41
+pkey	../services/builddbmodelfromxls.py	/^        pkey = False$/;"	kind:variable	line:35
+problemDBModel.py	../services/dbmodels/problemDBModel.py	1;"	kind:file	line:1
+problem_answer	../services/dbmodels/problemDBModel.py	/^    problem_answer = gdb.Column(gdb.String(10))$/;"	kind:variable	line:12
+problem_choiceA	../services/dbmodels/problemDBModel.py	/^    problem_choiceA = gdb.Column(gdb.String(200))$/;"	kind:variable	line:8
+problem_choiceB	../services/dbmodels/problemDBModel.py	/^    problem_choiceB = gdb.Column(gdb.String(200))$/;"	kind:variable	line:9
+problem_choiceC	../services/dbmodels/problemDBModel.py	/^    problem_choiceC = gdb.Column(gdb.String(200))$/;"	kind:variable	line:10
+problem_choiceD	../services/dbmodels/problemDBModel.py	/^    problem_choiceD = gdb.Column(gdb.String(200))$/;"	kind:variable	line:11
+problem_desp	../services/dbmodels/problemDBModel.py	/^    problem_desp = gdb.Column(gdb.String(1000))$/;"	kind:variable	line:6
+problem_id	../services/dbmodels/notebookDBModel.py	/^    problem_id = gdb.Column(gdb.Integer)$/;"	kind:variable	line:7
+problem_id	../services/dbmodels/problemDBModel.py	/^    problem_id = gdb.Column(gdb.Integer, primary_key=True)$/;"	kind:variable	line:4
+problem_picpath	../services/dbmodels/problemDBModel.py	/^    problem_picpath = gdb.Column(gdb.String(300))$/;"	kind:variable	line:7
+problemsetDBModel.py	../services/dbmodels/problemsetDBModel.py	1;"	kind:file	line:1
+problemset_count	../services/dbmodels/problemsetDBModel.py	/^    problemset_count = gdb.Column(gdb.Integer)$/;"	kind:variable	line:6
+problemset_desp	../services/dbmodels/problemsetDBModel.py	/^    problemset_desp = gdb.Column(gdb.String(300))$/;"	kind:variable	line:5
+problemset_id	../services/dbmodels/notebookDBModel.py	/^    problemset_id = gdb.Column(gdb.Integer)$/;"	kind:variable	line:6
+problemset_id	../services/dbmodels/problemDBModel.py	/^    problemset_id = gdb.Column(gdb.Integer)$/;"	kind:variable	line:5
+problemset_id	../services/dbmodels/problemsetDBModel.py	/^    problemset_id = gdb.Column(gdb.Integer, primary_key=True)$/;"	kind:variable	line:4
+problemset_id	../services/dbmodels/scoreDBModel.py	/^    problemset_id = gdb.Column(gdb.Integer)$/;"	kind:variable	line:6
+scoreDBModel.py	../services/dbmodels/scoreDBModel.py	1;"	kind:file	line:1
+score_choicelog	../services/dbmodels/scoreDBModel.py	/^    score_choicelog = gdb.Column(gdb.String(1000))$/;"	kind:variable	line:10
+score_id	../services/dbmodels/scoreDBModel.py	/^    score_id = gdb.Column(gdb.Integer, primary_key=True)$/;"	kind:variable	line:4
+score_right	../services/dbmodels/scoreDBModel.py	/^    score_right = gdb.Column(gdb.Integer)$/;"	kind:variable	line:7
+score_timeduring	../services/dbmodels/scoreDBModel.py	/^    score_timeduring = gdb.Column(gdb.Integer)$/;"	kind:variable	line:9
+score_wrong	../services/dbmodels/scoreDBModel.py	/^    score_wrong = gdb.Column(gdb.Integer)$/;"	kind:variable	line:8
+starttime	../services/tools/log.py	/^    starttime = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))$/;"	kind:variable	line:9
+tablename	../services/builddbmodelfromxls.py	/^        tablename = line[1]$/;"	kind:variable	line:25
+tablength	../services/builddbmodelfromxls.py	/^tablength = 4$/;"	kind:variable	line:4
+test.py	../services/test.py	1;"	kind:file	line:1
+time	../services/tools/log.py	/^import time$/;"	kind:namespace	line:4
+tojson	../services/tools/info.py	/^    def tojson(self):$/;"	kind:member	line:8
+userDBModel.py	../services/dbmodels/userDBModel.py	1;"	kind:file	line:1
+user_id	../services/dbmodels/notebookDBModel.py	/^    user_id = gdb.Column(gdb.Integer)$/;"	kind:variable	line:5
+user_id	../services/dbmodels/scoreDBModel.py	/^    user_id = gdb.Column(gdb.Integer)$/;"	kind:variable	line:5
+user_id	../services/dbmodels/userDBModel.py	/^    user_id = gdb.Column(gdb.Integer, primary_key=True)$/;"	kind:variable	line:4
+user_ip	../services/dbmodels/userDBModel.py	/^    user_ip = gdb.Column(gdb.String(30))$/;"	kind:variable	line:8
+user_logintime	../services/dbmodels/userDBModel.py	/^    user_logintime = gdb.Column(gdb.String(30))$/;"	kind:variable	line:9
+user_password	../services/dbmodels/userDBModel.py	/^    user_password = gdb.Column(gdb.String(260))$/;"	kind:variable	line:6
+user_token	../services/dbmodels/userDBModel.py	/^    user_token = gdb.Column(gdb.String(260))$/;"	kind:variable	line:7
+user_username	../services/dbmodels/userDBModel.py	/^    user_username = gdb.Column(gdb.String(30))$/;"	kind:variable	line:5
+wb	../services/builddbmodelfromxls.py	/^wb = get_data(os.getcwd() + "\/数据库设计.xlsx")$/;"	kind:variable	line:6
+ws	../services/builddbmodelfromxls.py	/^ws = wb["数据库设计"]$/;"	kind:variable	line:7
