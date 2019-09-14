@@ -1,0 +1,8 @@
+2019-09-15 04:39:02,780	INFO	main1	<module>	Line:11	app started
+2019-09-15 04:39:02,787	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.110:9100/ (Press CTRL+C to quit)
+2019-09-15 04:39:02,788	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-09-15 04:46:20,825	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-09-15 04:46:22,211	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-09-15 04:46:43,866	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-09-15 04:46:48,262	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-09-15 05:05:23,188	INFO	_internal	_log	Line:122	 * Restarting with stat

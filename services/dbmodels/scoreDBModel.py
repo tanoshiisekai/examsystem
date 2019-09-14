@@ -11,8 +11,7 @@ class Score(gdb.Model):
     score_timeduring = gdb.Column(gdb.Integer)
     score_choicelog = gdb.Column(gdb.String(1000))
 
-    def __init__(self, score_id, user_id, problemset_id, score_right, score_wrong, score_timeduring, score_choicelog):
-        self.score_id = score_id
+    def __init__(self, user_id, problemset_id, score_right, score_wrong, score_timeduring, score_choicelog):
         self.user_id = user_id
         self.problemset_id = problemset_id
         self.score_right = score_right

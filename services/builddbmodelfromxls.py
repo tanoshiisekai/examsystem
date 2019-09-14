@@ -9,15 +9,18 @@ fp = ""
 filestr = ""
 flag = 0
 itemlist = []
+initlist = []
 for line in ws:
     if len(line) == 0 and flag == 0:
         continue
     if len(line) == 0 and flag == 1:
+        print(itemlist)
+        print(initlist)
         filestr = filestr + " " * tablength + "def __init__(self, "
-        for item in itemlist:
+        for item in initlist:
             filestr = filestr + item + ","
         filestr = filestr[:-1] + "):\n"
-        for item in itemlist:
+        for item in initlist:
             filestr = filestr + " " * tablength + " " * \
                 tablength + "self." + item + " = " + item + "\n"
         filestr = filestr + " " * tablength + "def todict(self):\n"
@@ -29,6 +32,7 @@ for line in ws:
         fp.close()
         flag = 0
         itemlist = []
+        initlist = []
         continue
     if line[0] == "英文表名":
         flag = 1
@@ -50,7 +54,9 @@ for line in ws:
             if line[3] == "是":
                 pkey = True
             else:
-                pkey = False
+                initlist.append(cname)
+        else:
+            initlist.append(cname)
         if pkey == True:
             filestr = filestr + " " * tablength + cname + \
                 " = gdb.Column(gdb." + ctype + ", primary_key=True)\n"
@@ -59,10 +65,10 @@ for line in ws:
                 " = gdb.Column(gdb." + ctype + ")\n"
 else:
     filestr = filestr + " " * tablength + "def __init__(self, "
-    for item in itemlist:
+    for item in initlist:
         filestr = filestr + item + ","
     filestr = filestr[:-1] + "):\n"
-    for item in itemlist:
+    for item in initlist:
         filestr = filestr + " " * tablength + " " * \
             tablength + "self." + item + " = " + item + "\n"
     filestr = filestr + " " * tablength + "def todict(self):\n"

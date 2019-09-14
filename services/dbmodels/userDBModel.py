@@ -10,8 +10,7 @@ class User(gdb.Model):
     user_ip = gdb.Column(gdb.String(30))
     user_logintime = gdb.Column(gdb.String(30))
 
-    def __init__(self, user_id, user_username, user_password, user_token, user_ip, user_logintime):
-        self.user_id = user_id
+    def __init__(self, user_username, user_password, user_token, user_ip, user_logintime):
         self.user_username = user_username
         self.user_password = user_password
         self.user_token = user_token

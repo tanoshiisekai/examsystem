@@ -8,8 +8,7 @@ class NoteBook(gdb.Model):
     problemset_id = gdb.Column(gdb.Integer)
     problem_id = gdb.Column(gdb.Integer)
 
-    def __init__(self, notebook_id, user_id, problemset_id, problem_id):
-        self.notebook_id = notebook_id
+    def __init__(self, user_id, problemset_id, problem_id):
         self.user_id = user_id
         self.problemset_id = problemset_id
         self.problem_id = problem_id

@@ -12,7 +12,8 @@
       <md-input v-model="password"></md-input>
     </md-field>
     <md-button class="md-raised md-accent">点击登录</md-button>
-    <md-button class="md-raised" @click="gotoregister()">前往注册</md-button>
+    <md-button class="md-raised md-primary" @click="gotoregister()">前往注册</md-button>
+    <md-button class="md-raised" @click="gotoadminlogin()">管理员登录</md-button>
   </div>
 </template>
 
@@ -28,6 +29,9 @@ export default {
   methods: {
     gotoregister() {
       this.$router.push({ name: "register" });
+    },
+    gotoadminlogin() {
+      this.$router.push({ name: "adminlogin" });
     }
   }
 };

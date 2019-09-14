@@ -1,0 +1,89 @@
+<template>
+  <div class="container">
+    <md-toolbar>
+      <md-menu md-direction="bottom-end" :md-offset-x="0" :md-offset-y="0">
+        <md-button md-menu-trigger>
+          <i class="material-icons">menu</i>
+        </md-button>
+        <md-menu-content class="menulist">
+          <md-menu-item class="menuitem" @click="addproblem">添加题目</md-menu-item>
+          <md-menu-item class="menuitem" @click="manageset">题库管理</md-menu-item>
+          <md-menu-item class="menuitem" @click="score">积分统计</md-menu-item>
+          <md-menu-item class="menuitem" @click="initscore">初始化积分</md-menu-item>
+          <md-menu-item class="menuitem" @click="setting">设置</md-menu-item>
+          <md-menu-item class="menuitem" @click="logout">退出</md-menu-item>
+        </md-menu-content>
+      </md-menu>
+      <span class="md-title">欢迎来到龙龙爱考试</span>
+    </md-toolbar>
+    <md-snackbar :md-duration="3000" :md-active.sync="showSnackbar" md-persistent>
+      <span>{{message}}</span>
+    </md-snackbar>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "adminmenu",
+  data() {
+    return {
+      showSnackbar: false,
+      message: ""
+    };
+  },
+  created: function() {
+    var username = this.$cookie.get("username");
+    var usertoken = this.$cookie.get("usertoken");
+    if (!username || !usertoken) {
+      this.$router.push({ name: "adminlogin" });
+    }
+  },
+  methods: {
+    addproblem() {
+      console.log("addproblem1");
+      this.$router.push({ name: "addproblem1" });
+    },
+    manageset() {
+      console.log("manageset");
+    },
+    score() {
+      console.log("score");
+    },
+    initscore() {
+      console.log("initscore");
+    },
+    setting() {
+      console.log("setting");
+    },
+    logout() {
+      var username = this.$cookie.get("username");
+      var usertoken = this.$cookie.get("usertoken");
+      this.axios
+        .get("/AdminLogin/logout/" + usertoken + "/" + username)
+        .then(response => {
+          var resp = response.data;
+          this.message = resp["infomsg"];
+          this.showSnackbar = true;
+          this.$cookie.set("username", "");
+          this.$cookie.set("usertoken", "");
+          setTimeout(() => {
+            this.$router.push({ name: "adminlogin" });
+          }, 1000);
+        });
+    }
+  }
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.menulist {
+  min-height: 377px;
+}
+.menuitem {
+  height: 60px;
+}
+.menuitem:hover {
+  background-color: #eeeeee;
+}
+</style>

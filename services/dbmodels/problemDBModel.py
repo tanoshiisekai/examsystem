@@ -13,8 +13,7 @@ class Problem(gdb.Model):
     problem_choiceD = gdb.Column(gdb.String(200))
     problem_answer = gdb.Column(gdb.String(10))
 
-    def __init__(self, problem_id, problemset_id, problem_desp, problem_picpath, problem_choiceA, problem_choiceB, problem_choiceC, problem_choiceD, problem_answer):
-        self.problem_id = problem_id
+    def __init__(self, problemset_id, problem_desp, problem_picpath, problem_choiceA, problem_choiceB, problem_choiceC, problem_choiceD, problem_answer):
         self.problemset_id = problemset_id
         self.problem_desp = problem_desp
         self.problem_picpath = problem_picpath

@@ -1,0 +1,9 @@
+2019-09-15 04:03:37,194	INFO	main	<module>	Line:11	app started
+2019-09-15 04:03:37,201	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.110:9100/ (Press CTRL+C to quit)
+2019-09-15 04:03:37,201	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-09-15 04:03:37,479	INFO	main	<module>	Line:11	app started
+2019-09-15 04:03:37,485	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-09-15 04:03:37,485	INFO	_internal	_log	Line:122	 * Debugger PIN: 163-876-169
+2019-09-15 04:03:41,548	INFO	_internal	_log	Line:122	 * Detected change in '/home/long/newdevelopment/examsystem/services/daos/problemsetDAO.py', reloading
+2019-09-15 04:03:41,602	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-09-15 04:16:01,893	INFO	_internal	_log	Line:122	 * Restarting with stat

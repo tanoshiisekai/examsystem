@@ -10,8 +10,7 @@ class Admin(gdb.Model):
     admin_ip = gdb.Column(gdb.String(30))
     admin_logintime = gdb.Column(gdb.String(30))
 
-    def __init__(self, admin_id, admin_username, admin_password, admin_token, admin_ip, admin_logintime):
-        self.admin_id = admin_id
+    def __init__(self, admin_username, admin_password, admin_token, admin_ip, admin_logintime):
         self.admin_username = admin_username
         self.admin_password = admin_password
         self.admin_token = admin_token
