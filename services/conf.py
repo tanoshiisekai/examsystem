@@ -2,7 +2,7 @@
 import os
 dbconnection = 'sqlite:///db/examsystem.db'
 
-buildhost = "192.168.2.110"
+buildhost = "192.168.2.210"
 buildport = "9100"
 
 baseurl = "http://" + buildhost + ":" + buildport
@@ -18,7 +18,7 @@ importpath = "temp"
 dataxlsxname = "problems.xlsx"
 datapicdir = "pics"
 
-fileserverip = "192.168.2.110"
+fileserverip = "192.168.2.210"
 fileserverport = "9101"
 
 filebasedir = "filebasedir"

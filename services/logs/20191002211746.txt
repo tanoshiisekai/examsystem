@@ -1,0 +1,1 @@
+2019-10-02 21:17:46,917	INFO	main1	<module>	Line:11	app started

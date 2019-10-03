@@ -13,7 +13,7 @@
       <md-dialog-title>提示</md-dialog-title>
       <md-card-content>题库已存在，确定继续添加题目吗？</md-card-content>
       <md-dialog-actions>
-        <md-button class="md-primary mybutton" @click="showDialog1 = false">是</md-button>
+        <md-button class="md-primary mybutton" @click="addproblem1()">是</md-button>
         <md-button class="md-primary mybutton" @click="showDialog1 = false">否</md-button>
       </md-dialog-actions>
     </md-dialog>
@@ -48,6 +48,10 @@ export default {
       var fileurl = "http://" + filehost + ":" + fileport + "/gettemplate/";
       console.log(fileurl);
       window.location.href = fileurl;
+    },
+    addproblem1() {
+      this.showDialog1 = false;
+      this.$router.push({ name: "addproblem2_2" });
     },
     addproblem2() {
       this.showDialog2 = false;

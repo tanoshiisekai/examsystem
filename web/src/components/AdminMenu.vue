@@ -45,6 +45,7 @@ export default {
     },
     manageset() {
       console.log("manageset");
+      this.$router.push({ name: "manageset" });
     },
     score() {
       console.log("score");

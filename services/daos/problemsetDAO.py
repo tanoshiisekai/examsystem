@@ -9,9 +9,26 @@ import os
 import zipfile
 from pyexcel_xlsx import get_data as get_data_xlsx
 import shutil
+import os.path
 
 
 class ProblemsetDAO:
+
+    @staticmethod
+    def getproblemsets(token):
+        """
+        返回所有题库
+        """
+        if checktoken(token):
+            try:
+                problemsets = gdb.session.query(ProblemSet).all()
+            except Exception as e:
+                return packinfo(infostatus=0, infomsg="数据库错误！")
+            else:
+                problemlist = [x.todict() for x in problemsets]
+                return packinfo(infostatus=1, inforesult=problemlist)
+        else:
+            return packinfo(infostatus=2, infomsg="没有权限！")
 
     @staticmethod
     def checkexist(token, problemsetname):
@@ -34,28 +51,35 @@ class ProblemsetDAO:
         添加题库
         """
         print(token)
-        serverfilepath = conf.importpath + "/" + token + "/" + conf.tempfilename
+        serverfilepath = os.path.join(os.getcwd(), 
+            conf.importpath, token, conf.tempfilename)
         print(serverfilepath)
         print(protitle)
         print(prodesp)
         file_zip = zipfile.ZipFile(serverfilepath, "r")
-        tempdir = conf.importpath + "/" + token
+        tempdir = os.path.join(os.getcwd(), conf.importpath, token)
         for f in file_zip.namelist():
+            print(tempdir)
+            print(f)
             file_zip.extract(f, tempdir)
         file_zip.close()
-        os.remove(serverfilepath)
-        xlsxfile = get_data_xlsx(
-            tempdir + "/" + conf.tempdirname + "/" + conf.dataxlsxname)["题目"][1:]
+        # os.remove(serverfilepath)
+        xlsxfile = get_data_xlsx(os.path.join(os.getcwd(), 
+            tempdir, conf.tempdirname, conf.dataxlsxname))["题目"][1:]
         print(xlsxfile)
         psetcount = len(xlsxfile)
         protoken = gettoken()
-        prset = ProblemSet(protitle, prodesp, psetcount, protoken)
-        gdb.session.add(prset)
-        gdb.session.commit()
+        if len(prodesp) > 0:
+            prset = ProblemSet(protitle, prodesp, psetcount, protoken)
+            gdb.session.add(prset)
+            gdb.session.commit()
         pro = gdb.session.query(ProblemSet).filter(
-            ProblemSet.problemset_token == protoken).first()
+            ProblemSet.problemset_title == protitle).first()
         proid = pro.problemset_id
-        actualcount = 0
+        if len(prodesp) > 0:
+            actualcount = 0
+        else:
+            actualcount = pro.problemset_count
         for dt in xlsxfile:
             problem_desp = dt[0]
             problem_choiceA = dt[1]
@@ -64,10 +88,11 @@ class ProblemsetDAO:
             problem_choiceD = dt[4]
             problem_answer = dt[5]
             problem_picname = ""
+            print(os.getcwd())
             if len(dt) > 6:
                 newpicname = gettoken() + "." + dt[6].rsplit(".", 1)[-1]
-                shutil.move(os.path.join(tempdir + "/" + conf.tempdirname + "/" + conf.datapicdir, dt[6]),
-                            os.path.join(conf.problempicdir, newpicname))
+                shutil.move(os.path.join(os.getcwd(), tempdir, conf.tempdirname, conf.datapicdir, dt[6]),
+                            os.path.join(os.getcwd(), conf.problempicdir, newpicname))
                 problem_picname = newpicname
 
             """ print(problem_desp)
@@ -104,7 +129,7 @@ class ProblemsetDAO:
             return packinfo(infostatus=0, infomsg="数据库错误！题目添加失败！")
         else:
             pro = gdb.session.query(ProblemSet).filter(
-                ProblemSet.problemset_token == protoken).first()
+                ProblemSet.problemset_title == protitle).first()
             pro.problemset_count = actualcount
             try:
                 gdb.session.commit()
@@ -122,9 +147,9 @@ class ProblemsetDAO:
             if file and allowed_file(file.filename):
                 try:
                     filename = conf.tempfilename
-                    if not os.path.exists(conf.importpath + "/" + token):
-                        os.mkdir(conf.importpath + "/" + token)
-                    fileurl = conf.importpath + "/" + token + "/" + filename
+                    if not os.path.exists(os.path.join(os.getcwd(), conf.importpath, token)):
+                        os.mkdir(os.path.join(os.getcwd(), conf.importpath, token))
+                    fileurl = os.path.join(os.getcwd(), conf.importpath, token, filename)
                     file.save(fileurl)
                 except Exception as e:
                     print(e)

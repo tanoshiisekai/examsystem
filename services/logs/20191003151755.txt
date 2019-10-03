@@ -1,0 +1,8 @@
+2019-10-03 15:17:55,572	INFO	main1	<module>	Line:11	app started
+2019-10-03 15:17:55,583	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-10-03 15:17:55,605	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-10-03 15:17:55,651	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-10-03 15:18:23,588	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Oct/2019 15:18:23] "GET /AdminLogin/admin/longlong HTTP/1.1" 200 -
+2019-10-03 15:18:27,244	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Oct/2019 15:18:27] "GET /ProblemSet/de008f57-8cd7-4c8b-b9ba-3f41a7641760/会计1 HTTP/1.1" 200 -
+2019-10-03 15:18:31,578	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Oct/2019 15:18:31] "POST /ProblemSet/upload/de008f57-8cd7-4c8b-b9ba-3f41a7641760 HTTP/1.1" 200 -
+2019-10-03 15:18:32,404	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Oct/2019 15:18:32] "GET /ProblemSet/upload/de008f57-8cd7-4c8b-b9ba-3f41a7641760/会计1 HTTP/1.1" 500 -

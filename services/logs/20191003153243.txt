@@ -1,0 +1,5 @@
+2019-10-03 15:32:43,431	INFO	main1	<module>	Line:11	app started
+2019-10-03 15:32:43,440	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-10-03 15:32:43,451	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-10-03 15:32:43,462	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-10-03 15:32:45,990	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Oct/2019 15:32:45] "GET /ProblemSet/upload/1d16e7d4-2417-4976-86f0-d285c76da23f/会计1 HTTP/1.1" 500 -

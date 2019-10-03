@@ -37,3 +37,23 @@ class ProblemSetAdd(Resource):
         添加题库
         """
         return ProblemsetDAO.addproblemset(token, problemtitle, problemdesp)
+
+
+@ns_problemset.route("/upload/<string:token>/<string:problemtitle>")
+class ProblemSetAppend(Resource):
+
+    def get(self, token, problemtitle):
+        """
+        追加题库
+        """
+        return ProblemsetDAO.addproblemset(token, problemtitle, "")
+
+
+@ns_problemset.route("/<string:token>")
+class ProblemSets(Resource):
+
+    def get(self, token):
+        """
+        所有题库
+        """
+        return ProblemsetDAO.getproblemsets(token)
