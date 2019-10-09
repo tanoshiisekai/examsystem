@@ -7,6 +7,7 @@ import AddProblem1 from "@/components/AddProblem1";
 import AddProblem2_1 from "@/components/AddProblem2_1";
 import AddProblem2_2 from "@/components/AddProblem2_2";
 import ManageSet from "@/components/ManageSet";
+import AdminSettings from "@/components/AdminSettings";
 
 Vue.use(Router);
 
@@ -46,6 +47,11 @@ export default new Router({
       path: "/manageset",
       name: "manageset",
       component: ManageSet
+    },
+    {
+      path: "/adminsettings",
+      name: "adminsettings",
+      component: AdminSettings
     }
   ]
 });

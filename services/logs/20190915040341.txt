@@ -1,5 +1,0 @@
-2019-09-15 04:03:41,905	INFO	main	<module>	Line:11	app started
-2019-09-15 04:03:41,912	WARNING	_internal	_log	Line:122	 * Debugger is active!
-2019-09-15 04:03:41,912	INFO	_internal	_log	Line:122	 * Debugger PIN: 163-876-169
-2019-09-15 04:09:08,407	INFO	_internal	_log	Line:122	192.168.2.104 - - [15/Sep/2019 04:09:08] "GET /AdminLogin/admin/longlong HTTP/1.1" 200 -
-2019-09-15 04:16:01,847	INFO	_internal	_log	Line:122	 * Detected change in '/home/long/newdevelopment/examsystem/services/apis/problemsetAPI.py', reloading

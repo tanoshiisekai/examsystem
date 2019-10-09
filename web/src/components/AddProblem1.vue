@@ -2,6 +2,9 @@
   <div class="container">
     <AdminMenu></AdminMenu>
     <md-subheader>
+      <span class="md-title">添加题目</span>
+    </md-subheader>
+    <md-subheader>
       <md-button class="md-primary" @click="gettemplate()">下载题库模板</md-button>
     </md-subheader>
     <md-field>

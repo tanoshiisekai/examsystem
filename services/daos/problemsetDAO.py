@@ -15,6 +15,34 @@ import os.path
 class ProblemsetDAO:
 
     @staticmethod
+    def removeproblemsets(token, problemsetname):
+        """
+        移除题库
+        """
+        if checktoken(token):
+            temp = gdb.session.query(ProblemSet).filter(
+                ProblemSet.problemset_title == problemsetname
+            ).first()
+            if temp:
+                pid = temp.problemset_id
+                probs = gdb.session.query(Problem).filter(
+                    Problem.problemset_id == pid
+                ).all()
+                for pb in probs:
+                    gdb.session.delete(pb)
+                gdb.session.delete(temp)
+                try:
+                    gdb.session.commit()
+                except Exception as e:
+                    print(e)
+                    return packinfo(infostatus=0, infomsg="数据库错误！")
+                else:
+                    return packinfo(infostatus=1, infomsg="题库删除成功!")
+        else:
+            return packinfo(infostatus=2, infomsg="没有权限!")
+        
+
+    @staticmethod
     def getproblemsets(token):
         """
         返回所有题库
@@ -51,8 +79,8 @@ class ProblemsetDAO:
         添加题库
         """
         print(token)
-        serverfilepath = os.path.join(os.getcwd(), 
-            conf.importpath, token, conf.tempfilename)
+        serverfilepath = os.path.join(os.getcwd(),
+                                      conf.importpath, token, conf.tempfilename)
         print(serverfilepath)
         print(protitle)
         print(prodesp)
@@ -64,8 +92,8 @@ class ProblemsetDAO:
             file_zip.extract(f, tempdir)
         file_zip.close()
         # os.remove(serverfilepath)
-        xlsxfile = get_data_xlsx(os.path.join(os.getcwd(), 
-            tempdir, conf.tempdirname, conf.dataxlsxname))["题目"][1:]
+        xlsxfile = get_data_xlsx(os.path.join(os.getcwd(),
+                                              tempdir, conf.tempdirname, conf.dataxlsxname))["题目"][1:]
         print(xlsxfile)
         psetcount = len(xlsxfile)
         protoken = gettoken()
@@ -91,7 +119,8 @@ class ProblemsetDAO:
             print(os.getcwd())
             if len(dt) > 6:
                 newpicname = gettoken() + "." + dt[6].rsplit(".", 1)[-1]
-                shutil.move(os.path.join(os.getcwd(), tempdir, conf.tempdirname, conf.datapicdir, dt[6]),
+                shutil.move(os.path.join(os.getcwd(), tempdir, conf.tempdirname,
+                                         conf.datapicdir, dt[6]),
                             os.path.join(os.getcwd(), conf.problempicdir, newpicname))
                 problem_picname = newpicname
 
@@ -148,8 +177,10 @@ class ProblemsetDAO:
                 try:
                     filename = conf.tempfilename
                     if not os.path.exists(os.path.join(os.getcwd(), conf.importpath, token)):
-                        os.mkdir(os.path.join(os.getcwd(), conf.importpath, token))
-                    fileurl = os.path.join(os.getcwd(), conf.importpath, token, filename)
+                        os.mkdir(os.path.join(
+                            os.getcwd(), conf.importpath, token))
+                    fileurl = os.path.join(
+                        os.getcwd(), conf.importpath, token, filename)
                     file.save(fileurl)
                 except Exception as e:
                     print(e)

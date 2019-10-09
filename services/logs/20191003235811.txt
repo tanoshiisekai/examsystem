@@ -1,0 +1,1 @@
+2019-10-04 00:27:00,314	INFO	_internal	_log	Line:122	 * Restarting with stat

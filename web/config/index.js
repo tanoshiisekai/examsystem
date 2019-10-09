@@ -4,6 +4,9 @@
 
 const path = require('path')
 
+process.env.HOST = "192.168.2.210"
+process.env.PORT = 8080
+
 module.exports = {
   dev: {
 

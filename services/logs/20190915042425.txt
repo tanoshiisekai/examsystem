@@ -1,4 +1,0 @@
-2019-09-15 04:24:25,315	INFO	main	<module>	Line:11	app started
-2019-09-15 04:24:25,321	WARNING	_internal	_log	Line:122	 * Debugger is active!
-2019-09-15 04:24:25,322	INFO	_internal	_log	Line:122	 * Debugger PIN: 163-876-169
-2019-09-15 04:24:27,357	INFO	_internal	_log	Line:122	 * Detected change in '/home/long/newdevelopment/examsystem/services/apis/problemsetAPI.py', reloading

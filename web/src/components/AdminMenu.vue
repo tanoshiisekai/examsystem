@@ -10,7 +10,7 @@
           <md-menu-item class="menuitem" @click="manageset">题库管理</md-menu-item>
           <md-menu-item class="menuitem" @click="score">积分统计</md-menu-item>
           <md-menu-item class="menuitem" @click="initscore">初始化积分</md-menu-item>
-          <md-menu-item class="menuitem" @click="setting">设置</md-menu-item>
+          <md-menu-item class="menuitem" @click="adminsettings">修改密码</md-menu-item>
           <md-menu-item class="menuitem" @click="logout">退出</md-menu-item>
         </md-menu-content>
       </md-menu>
@@ -53,8 +53,9 @@ export default {
     initscore() {
       console.log("initscore");
     },
-    setting() {
-      console.log("setting");
+    adminsettings() {
+      console.log("adminsettings");
+      this.$router.push({ name: "adminsettings"});
     },
     logout() {
       var username = this.$cookie.get("username");
@@ -77,7 +78,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 .menulist {
   min-height: 377px;
 }

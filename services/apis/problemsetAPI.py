@@ -57,3 +57,14 @@ class ProblemSets(Resource):
         所有题库
         """
         return ProblemsetDAO.getproblemsets(token)
+
+
+@ns_problemset.route("/remove/<string:token>/<string:problemtitle>")
+class RemoveProblemSet(Resource):
+
+    def get(self, token, problemtitle):
+        """
+        删除题库
+        """
+        return ProblemsetDAO.removeproblemsets(token, problemtitle)
+    
