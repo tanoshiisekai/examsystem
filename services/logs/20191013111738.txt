@@ -1,0 +1,8 @@
+2019-10-13 11:17:38,820	INFO	main1	<module>	Line:11	app started
+2019-10-13 11:17:38,828	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-10-13 11:17:38,852	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-10-13 11:17:38,865	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-10-13 11:17:44,477	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 11:17:44] "GET / HTTP/1.1" 200 -
+2019-10-13 11:17:44,762	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 11:17:44] "GET /swagger.json HTTP/1.1" 200 -
+2019-10-13 11:17:44,781	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 11:17:44] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2019-10-13 11:17:55,123	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\apis\\registerAPI.py', reloading

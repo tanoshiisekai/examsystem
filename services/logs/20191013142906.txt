@@ -1,0 +1,15 @@
+2019-10-13 14:29:07,004	INFO	main1	<module>	Line:11	app started
+2019-10-13 14:29:07,014	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-10-13 14:29:07,041	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-10-13 14:29:07,056	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-10-13 14:29:07,905	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:29:07] "GET / HTTP/1.1" 200 -
+2019-10-13 14:29:07,934	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:29:07] "GET /swaggerui/droid-sans.css HTTP/1.1" 200 -
+2019-10-13 14:29:07,944	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:29:07] "GET /swaggerui/swagger-ui.css HTTP/1.1" 200 -
+2019-10-13 14:29:07,947	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:29:07] "GET /swaggerui/swagger-ui-bundle.js HTTP/1.1" 200 -
+2019-10-13 14:29:07,953	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:29:07] "GET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2019-10-13 14:29:08,212	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:29:08] "GET /swagger.json HTTP/1.1" 200 -
+2019-10-13 14:29:08,222	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:29:08] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2019-10-13 14:30:54,773	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:30:54] "GET /Login/test/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-10-13 14:31:21,702	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:31:21] "GET /Login/test/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-10-13 14:31:44,219	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:31:44] "GET /UserSettings/b1349159-bed4-4e88-a06a-88f11782c171/098f6bcd4621d373cade4e832627b4f6/c20ad4d76fe97759aa27a0c99bff6710 HTTP/1.1" 200 -
+2019-10-13 14:43:43,569	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\tools\\auth.py', reloading

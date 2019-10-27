@@ -9,10 +9,12 @@ import VueMaterial from "vue-material";
 import "vue-material/dist/vue-material.min.css";
 import "vue-material/dist/theme/default.css";
 import "material-design-icons/iconfont/material-icons.css";
+import md5 from "js-md5";
 
 Vue.use(VueMaterial);
 Vue.use(VueAxios, axios);
 Vue.use(VueCookie);
+Vue.prototype.$md5 = md5;
 
 axios.defaults.baseURL = "http://" + backendhost + ":" + backendport;
 /* eslint-disable no-new */

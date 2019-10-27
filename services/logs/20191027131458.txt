@@ -1,0 +1,14 @@
+2019-10-27 13:14:58,201	INFO	main1	<module>	Line:11	app started
+2019-10-27 13:14:58,211	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-10-27 13:14:58,224	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-10-27 13:14:58,238	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-10-27 13:16:20,099	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:16:20] "GET /AdminLogin/admin/0bc651ef7626a7868da4cbfdbe70f96f HTTP/1.1" 200 -
+2019-10-27 13:16:24,306	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:16:24] "GET /AdminLogin/admin/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-10-27 13:16:24,364	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:16:24] "GET /AdminLogin/checktoken/cda7d862-4889-45ff-947d-42ddf5b73e7a HTTP/1.1" 500 -
+2019-10-27 13:16:26,963	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:16:26] "GET /AdminLogin/checktoken/cda7d862-4889-45ff-947d-42ddf5b73e7a HTTP/1.1" 500 -
+2019-10-27 13:16:26,994	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:16:26] "GET /ProblemSet/cda7d862-4889-45ff-947d-42ddf5b73e7a HTTP/1.1" 500 -
+2019-10-27 13:16:27,004	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:16:27] "GET /AdminLogin/checktoken/cda7d862-4889-45ff-947d-42ddf5b73e7a HTTP/1.1" 500 -
+2019-10-27 13:16:31,744	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:16:31] "GET /AdminLogin/checktoken/cda7d862-4889-45ff-947d-42ddf5b73e7a HTTP/1.1" 500 -
+2019-10-27 13:16:31,788	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:16:31] "GET /AdminLogin/checktoken/cda7d862-4889-45ff-947d-42ddf5b73e7a HTTP/1.1" 500 -
+2019-10-27 13:16:38,877	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:16:38] "GET /AdminSettings/cda7d862-4889-45ff-947d-42ddf5b73e7a/202cb962ac59075b964b07152d234b70/0bc651ef7626a7868da4cbfdbe70f96f HTTP/1.1" 500 -
+2019-10-27 13:17:02,258	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\tools\\auth.py', reloading

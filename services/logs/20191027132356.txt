@@ -1,0 +1,20 @@
+2019-10-27 13:23:56,679	INFO	main1	<module>	Line:11	app started
+2019-10-27 13:23:56,690	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-10-27 13:23:56,697	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-10-27 13:23:56,710	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-10-27 13:23:56,911	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:23:56] "GET /ProblemSet/6be580e2-e0ec-4612-be2c-f68bbe5ba374/ww HTTP/1.1" 200 -
+2019-10-27 13:23:58,674	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:23:58] "GET /AdminLogin/checktoken/6be580e2-e0ec-4612-be2c-f68bbe5ba374 HTTP/1.1" 200 -
+2019-10-27 13:24:06,395	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:24:06] "POST /ProblemSet/upload/6be580e2-e0ec-4612-be2c-f68bbe5ba374 HTTP/1.1" 200 -
+2019-10-27 13:24:09,789	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:24:09] "GET /ProblemSet/upload/6be580e2-e0ec-4612-be2c-f68bbe5ba374/ww/www HTTP/1.1" 200 -
+2019-10-27 13:24:11,827	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:24:11] "GET /AdminLogin/checktoken/6be580e2-e0ec-4612-be2c-f68bbe5ba374 HTTP/1.1" 200 -
+2019-10-27 13:24:13,296	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:24:13] "GET /AdminLogin/checktoken/6be580e2-e0ec-4612-be2c-f68bbe5ba374 HTTP/1.1" 200 -
+2019-10-27 13:24:13,316	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:24:13] "GET /ProblemSet/6be580e2-e0ec-4612-be2c-f68bbe5ba374 HTTP/1.1" 200 -
+2019-10-27 13:24:13,318	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:24:13] "GET /AdminLogin/checktoken/6be580e2-e0ec-4612-be2c-f68bbe5ba374 HTTP/1.1" 200 -
+2019-10-27 13:24:23,506	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:24:23] "GET /AdminLogin/checktoken/6be580e2-e0ec-4612-be2c-f68bbe5ba374 HTTP/1.1" 200 -
+2019-10-27 13:24:25,841	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:24:25] "GET /AdminLogin/checktoken/6be580e2-e0ec-4612-be2c-f68bbe5ba374 HTTP/1.1" 200 -
+2019-10-27 13:24:28,259	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:24:28] "GET /AdminLogin/checktoken/6be580e2-e0ec-4612-be2c-f68bbe5ba374 HTTP/1.1" 200 -
+2019-10-27 13:24:28,299	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:24:28] "GET /AdminLogin/checktoken/6be580e2-e0ec-4612-be2c-f68bbe5ba374 HTTP/1.1" 200 -
+2019-10-27 13:24:31,702	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:24:31] "GET /AdminLogin/checktoken/6be580e2-e0ec-4612-be2c-f68bbe5ba374 HTTP/1.1" 200 -
+2019-10-27 13:24:31,732	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:24:31] "GET /ProblemSet/6be580e2-e0ec-4612-be2c-f68bbe5ba374 HTTP/1.1" 200 -
+2019-10-27 13:24:31,741	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 13:24:31] "GET /AdminLogin/checktoken/6be580e2-e0ec-4612-be2c-f68bbe5ba374 HTTP/1.1" 200 -
+2019-10-27 13:27:08,779	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\loginDAO.py', reloading

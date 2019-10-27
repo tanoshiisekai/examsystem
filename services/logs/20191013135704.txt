@@ -1,0 +1,8 @@
+2019-10-13 13:57:05,019	INFO	main1	<module>	Line:11	app started
+2019-10-13 13:57:05,027	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-10-13 13:57:05,054	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-10-13 13:57:05,066	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-10-13 13:57:11,009	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 13:57:11] "GET /Login/test/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-10-13 13:57:17,870	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 13:57:17] "GET /Login/test/c20ad4d76fe97759aa27a0c99bff6710 HTTP/1.1" 200 -
+2019-10-13 13:57:19,661	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 13:57:19] "GET /Login/test/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-10-13 13:57:26,151	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 13:57:26] "GET /Login/test/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -

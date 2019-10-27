@@ -1,5 +1,0 @@
-2019-10-09 21:53:25,643	INFO	main1	<module>	Line:11	app started
-2019-10-09 21:53:25,659	WARNING	_internal	_log	Line:122	 * Debugger is active!
-2019-10-09 21:53:25,678	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
-2019-10-09 21:53:25,695	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
-2019-10-09 21:53:25,782	INFO	_internal	_log	Line:122	192.168.2.210 - - [09/Oct/2019 21:53:25] "GET /ProblemSet/remove/8b8eb63c-c252-4136-a51b-5b0e7f8793ed/1 HTTP/1.1" 200 -

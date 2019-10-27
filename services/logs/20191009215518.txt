@@ -1,9 +1,0 @@
-2019-10-09 21:55:19,040	INFO	main1	<module>	Line:11	app started
-2019-10-09 21:55:19,055	WARNING	_internal	_log	Line:122	 * Debugger is active!
-2019-10-09 21:55:19,072	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
-2019-10-09 21:55:19,102	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
-2019-10-09 21:55:19,347	INFO	_internal	_log	Line:122	192.168.2.210 - - [09/Oct/2019 21:55:19] "GET /ProblemSet/remove/8b8eb63c-c252-4136-a51b-5b0e7f8793ed/1 HTTP/1.1" 200 -
-2019-10-09 21:55:24,567	INFO	_internal	_log	Line:122	192.168.2.210 - - [09/Oct/2019 21:55:24] "GET /ProblemSet/8b8eb63c-c252-4136-a51b-5b0e7f8793ed HTTP/1.1" 200 -
-2019-10-09 21:58:04,990	INFO	_internal	_log	Line:122	192.168.2.210 - - [09/Oct/2019 21:58:04] "GET /ProblemSet/8b8eb63c-c252-4136-a51b-5b0e7f8793ed HTTP/1.1" 200 -
-2019-10-09 21:58:15,107	INFO	_internal	_log	Line:122	192.168.2.210 - - [09/Oct/2019 21:58:15] "GET /ProblemSet/8b8eb63c-c252-4136-a51b-5b0e7f8793ed HTTP/1.1" 200 -
-2019-10-09 22:01:40,040	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading

@@ -1,0 +1,42 @@
+2019-10-13 10:32:56,378	INFO	main1	<module>	Line:11	app started
+2019-10-13 10:32:56,385	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-10-13 10:32:56,408	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-10-13 10:32:56,419	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-10-13 10:33:30,182	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:33:30] "GET /AdminSettings/04d96a57-ba26-4c8d-8b7e-f929c046bddf/d41d8cd98f00b204e9800998ecf8427e/d41d8cd98f00b204e9800998ecf8427e HTTP/1.1" 200 -
+2019-10-13 10:33:35,014	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:33:35] "GET /AdminSettings/04d96a57-ba26-4c8d-8b7e-f929c046bddf/006d2143154327a64d86a264aea225f3/f1290186a5d0b1ceab27f4e77c0c5d68 HTTP/1.1" 200 -
+2019-10-13 10:33:47,440	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:33:47] "GET /AdminSettings/04d96a57-ba26-4c8d-8b7e-f929c046bddf/0bc651ef7626a7868da4cbfdbe70f96f/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-10-13 10:34:43,480	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:34:43] "GET /AdminSettings/04d96a57-ba26-4c8d-8b7e-f929c046bddf/202cb962ac59075b964b07152d234b70/d41d8cd98f00b204e9800998ecf8427e HTTP/1.1" 200 -
+2019-10-13 10:34:45,561	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:34:45] "GET /ProblemSet/04d96a57-ba26-4c8d-8b7e-f929c046bddf HTTP/1.1" 200 -
+2019-10-13 10:34:54,242	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:34:54] "GET /AdminSettings/04d96a57-ba26-4c8d-8b7e-f929c046bddf/d41d8cd98f00b204e9800998ecf8427e/827ccb0eea8a706c4c34a16891f84e7b HTTP/1.1" 200 -
+2019-10-13 10:34:56,288	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:34:56] "GET /ProblemSet/04d96a57-ba26-4c8d-8b7e-f929c046bddf HTTP/1.1" 200 -
+2019-10-13 10:34:57,695	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:34:57] "GET /AdminLogin/logout/04d96a57-ba26-4c8d-8b7e-f929c046bddf/admin HTTP/1.1" 200 -
+2019-10-13 10:35:02,251	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:35:02] "GET /AdminLogin/admin/c4ca4238a0b923820dcc509a6f75849b HTTP/1.1" 200 -
+2019-10-13 10:35:10,084	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:35:10] "GET /AdminLogin/admin/827ccb0eea8a706c4c34a16891f84e7b HTTP/1.1" 200 -
+2019-10-13 10:35:12,833	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:35:12] "GET /ProblemSet/59eeaae8-adb9-4554-b11c-b227b456e711 HTTP/1.1" 200 -
+2019-10-13 10:36:28,646	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:36:28] "GET /AdminSettings/59eeaae8-adb9-4554-b11c-b227b456e711/d41d8cd98f00b204e9800998ecf8427e/d41d8cd98f00b204e9800998ecf8427e HTTP/1.1" 200 -
+2019-10-13 10:36:30,690	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:36:30] "GET /ProblemSet/59eeaae8-adb9-4554-b11c-b227b456e711 HTTP/1.1" 200 -
+2019-10-13 10:36:37,974	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:36:37] "GET /AdminSettings/59eeaae8-adb9-4554-b11c-b227b456e711/d41d8cd98f00b204e9800998ecf8427e/d41d8cd98f00b204e9800998ecf8427e HTTP/1.1" 200 -
+2019-10-13 10:36:40,008	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:36:40] "GET /ProblemSet/59eeaae8-adb9-4554-b11c-b227b456e711 HTTP/1.1" 200 -
+2019-10-13 10:37:53,972	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:37:53] "GET /AdminSettings/59eeaae8-adb9-4554-b11c-b227b456e711/d41d8cd98f00b204e9800998ecf8427e/d41d8cd98f00b204e9800998ecf8427e HTTP/1.1" 200 -
+2019-10-13 10:38:41,494	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:38:41] "GET /AdminSettings/59eeaae8-adb9-4554-b11c-b227b456e711/d41d8cd98f00b204e9800998ecf8427e/d41d8cd98f00b204e9800998ecf8427e HTTP/1.1" 200 -
+2019-10-13 10:38:46,200	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:38:46] "GET /AdminSettings/59eeaae8-adb9-4554-b11c-b227b456e711/d41d8cd98f00b204e9800998ecf8427e/d41d8cd98f00b204e9800998ecf8427e HTTP/1.1" 200 -
+2019-10-13 10:39:31,919	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:39:31] "GET /AdminSettings/59eeaae8-adb9-4554-b11c-b227b456e711/e1671797c52e15f763380b45e841ec32/08a4415e9d594ff960030b921d42b91e HTTP/1.1" 200 -
+2019-10-13 10:39:38,374	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:39:38] "GET /AdminSettings/59eeaae8-adb9-4554-b11c-b227b456e711/827ccb0eea8a706c4c34a16891f84e7b/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-10-13 10:40:25,370	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:40:25] "GET /AdminSettings/59eeaae8-adb9-4554-b11c-b227b456e711/202cb962ac59075b964b07152d234b70/c4ca4238a0b923820dcc509a6f75849b HTTP/1.1" 200 -
+2019-10-13 10:40:44,401	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:40:44] "GET /AdminSettings/59eeaae8-adb9-4554-b11c-b227b456e711/c4ca4238a0b923820dcc509a6f75849b/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-10-13 10:40:49,150	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:40:49] "GET /AdminLogin/logout/59eeaae8-adb9-4554-b11c-b227b456e711/admin HTTP/1.1" 200 -
+2019-10-13 10:40:53,539	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:40:53] "GET /AdminLogin/admin/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-10-13 10:40:56,218	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:40:56] "GET /ProblemSet/373096fa-dc71-47f5-87a2-cfd43be8989a HTTP/1.1" 200 -
+2019-10-13 10:41:01,170	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:41:01] "GET /ProblemSet/373096fa-dc71-47f5-87a2-cfd43be8989a HTTP/1.1" 200 -
+2019-10-13 10:41:15,463	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:41:15] "GET /ProblemSet/373096fa-dc71-47f5-87a2-cfd43be8989a/qq HTTP/1.1" 200 -
+2019-10-13 10:41:20,205	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:41:20] "POST /ProblemSet/upload/373096fa-dc71-47f5-87a2-cfd43be8989a HTTP/1.1" 200 -
+2019-10-13 10:41:21,843	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:41:21] "GET /ProblemSet/upload/373096fa-dc71-47f5-87a2-cfd43be8989a/qq/123 HTTP/1.1" 200 -
+2019-10-13 10:41:26,803	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:41:26] "GET /ProblemSet/373096fa-dc71-47f5-87a2-cfd43be8989a/qq HTTP/1.1" 200 -
+2019-10-13 10:41:31,443	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:41:31] "POST /ProblemSet/upload/373096fa-dc71-47f5-87a2-cfd43be8989a HTTP/1.1" 200 -
+2019-10-13 10:41:32,075	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:41:32] "GET /ProblemSet/upload/373096fa-dc71-47f5-87a2-cfd43be8989a/qq HTTP/1.1" 200 -
+2019-10-13 10:41:36,520	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:41:36] "GET /ProblemSet/373096fa-dc71-47f5-87a2-cfd43be8989a HTTP/1.1" 200 -
+2019-10-13 10:42:04,378	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 10:42:04] "GET /AdminLogin/logout/373096fa-dc71-47f5-87a2-cfd43be8989a/admin HTTP/1.1" 200 -
+2019-10-13 11:17:18,937	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 11:17:18] "GET / HTTP/1.1" 200 -
+2019-10-13 11:17:19,259	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 11:17:19] "GET /swagger.json HTTP/1.1" 200 -
+2019-10-13 11:17:19,274	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 11:17:19] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2019-10-13 11:17:34,288	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\apis\\__init__.py', reloading

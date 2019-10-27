@@ -32,32 +32,45 @@ export default {
     };
   },
   created: function() {
-    var username = this.$cookie.get("username");
-    var usertoken = this.$cookie.get("usertoken");
-    if (!username || !usertoken) {
-      this.$router.push({ name: "adminlogin" });
-    }
+    this.checkcookie();
   },
   methods: {
+    checkcookie() {
+      var username = this.$cookie.get("username");
+      var usertoken = this.$cookie.get("usertoken");
+      this.axios.get("/AdminLogin/checktoken/" + usertoken).then(response => {
+        var resp = response.data;
+        console.log(resp);
+        if (resp["infostatus"] == 0) {
+          this.$router.push({ name: "adminlogin" });
+        }
+      });
+    },
     addproblem() {
       console.log("addproblem1");
+      this.checkcookie();
       this.$router.push({ name: "addproblem1" });
     },
     manageset() {
       console.log("manageset");
+      this.checkcookie();
       this.$router.push({ name: "manageset" });
     },
     score() {
+      this.checkcookie();
       console.log("score");
     },
     initscore() {
+      this.checkcookie();
       console.log("initscore");
     },
     adminsettings() {
+      this.checkcookie();
       console.log("adminsettings");
-      this.$router.push({ name: "adminsettings"});
+      this.$router.push({ name: "adminsettings" });
     },
     logout() {
+      this.checkcookie();
       var username = this.$cookie.get("username");
       var usertoken = this.$cookie.get("usertoken");
       this.axios

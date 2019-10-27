@@ -1,0 +1,17 @@
+2019-10-27 16:11:44,004	INFO	main1	<module>	Line:11	app started
+2019-10-27 16:11:44,010	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-10-27 16:11:44,018	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-10-27 16:11:44,028	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-10-27 16:11:53,236	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:11:53] "GET /AdminLogin/checktoken/440ede63-af1c-4d69-8326-22c431d2192d HTTP/1.1" 200 -
+2019-10-27 16:11:53,239	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:11:53] "GET /AdminLogin/logout/440ede63-af1c-4d69-8326-22c431d2192d/admin HTTP/1.1" 200 -
+2019-10-27 16:12:19,783	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:12:19] "GET /AdminLogin/admin/0bc651ef7626a7868da4cbfdbe70f96f HTTP/1.1" 200 -
+2019-10-27 16:12:19,830	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:12:19] "GET /AdminLogin/checktoken/55fc7bda-2e8d-4f99-a1c6-f7cfcaef8f1f HTTP/1.1" 200 -
+2019-10-27 16:12:22,014	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:12:22] "GET /ProblemSet/55fc7bda-2e8d-4f99-a1c6-f7cfcaef8f1f/ww HTTP/1.1" 200 -
+2019-10-27 16:12:23,102	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:12:23] "GET /AdminLogin/checktoken/55fc7bda-2e8d-4f99-a1c6-f7cfcaef8f1f HTTP/1.1" 200 -
+2019-10-27 16:12:26,269	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:12:26] "POST /ProblemSet/upload/55fc7bda-2e8d-4f99-a1c6-f7cfcaef8f1f HTTP/1.1" 200 -
+2019-10-27 16:12:27,987	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:12:27] "GET /ProblemSet/upload/55fc7bda-2e8d-4f99-a1c6-f7cfcaef8f1f/ww/www HTTP/1.1" 200 -
+2019-10-27 16:12:30,032	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:12:30] "GET /AdminLogin/checktoken/55fc7bda-2e8d-4f99-a1c6-f7cfcaef8f1f HTTP/1.1" 200 -
+2019-10-27 16:12:32,644	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:12:32] "GET /ProblemSet/55fc7bda-2e8d-4f99-a1c6-f7cfcaef8f1f/ww HTTP/1.1" 200 -
+2019-10-27 16:12:33,881	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:12:33] "GET /AdminLogin/checktoken/55fc7bda-2e8d-4f99-a1c6-f7cfcaef8f1f HTTP/1.1" 200 -
+2019-10-27 16:12:37,261	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:12:37] "POST /ProblemSet/upload/55fc7bda-2e8d-4f99-a1c6-f7cfcaef8f1f HTTP/1.1" 200 -
+2019-10-27 16:12:46,043	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:12:46] "GET /ProblemSet/upload/55fc7bda-2e8d-4f99-a1c6-f7cfcaef8f1f/ww HTTP/1.1" 500 -

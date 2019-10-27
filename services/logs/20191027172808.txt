@@ -1,0 +1,24 @@
+2019-10-27 17:28:08,957	INFO	main1	<module>	Line:11	app started
+2019-10-27 17:28:08,964	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-10-27 17:28:08,988	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-10-27 17:28:08,998	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-10-27 17:28:11,861	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 17:28:11] "GET /ProblemSet/init/a9500dc7-2b9d-42f6-900c-275b740b4dc1/ww HTTP/1.1" 200 -
+2019-10-27 17:28:42,044	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 17:28:42] "GET /ProblemSet/init/a9500dc7-2b9d-42f6-900c-275b740b4dc1/ww HTTP/1.1" 200 -
+2019-10-27 17:28:46,684	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 17:28:46] "GET /ProblemSet/init/a9500dc7-2b9d-42f6-900c-275b740b4dc1/ww HTTP/1.1" 200 -
+2019-10-27 17:29:07,264	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 17:29:07] "GET /ProblemSet/init/a9500dc7-2b9d-42f6-900c-275b740b4dc1/ww HTTP/1.1" 200 -
+2019-10-27 17:29:22,371	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 17:29:22] "GET /ProblemSet/init/a9500dc7-2b9d-42f6-900c-275b740b4dc1/ww HTTP/1.1" 200 -
+2019-10-27 17:29:24,337	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 17:29:24] "GET /ProblemSet/init/a9500dc7-2b9d-42f6-900c-275b740b4dc1/ww HTTP/1.1" 200 -
+2019-10-27 17:29:46,227	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 17:29:46] "GET / HTTP/1.1" 200 -
+2019-10-27 17:29:46,250	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 17:29:46] "GET /swaggerui/droid-sans.css HTTP/1.1" 200 -
+2019-10-27 17:29:46,251	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 17:29:46] "GET /swaggerui/swagger-ui.css HTTP/1.1" 200 -
+2019-10-27 17:29:46,541	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 17:29:46] "GET /swagger.json HTTP/1.1" 200 -
+2019-10-27 17:29:46,549	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 17:29:46] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2019-10-27 17:30:19,587	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 17:30:19] "GET /ProblemSet/answer/a9500dc7-2b9d-42f6-900c-275b740b4dc1/0 HTTP/1.1" 200 -
+2019-10-27 17:30:19,593	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 17:30:19] "GET /ProblemSet/init/a9500dc7-2b9d-42f6-900c-275b740b4dc1/ww HTTP/1.1" 200 -
+2019-10-27 17:30:31,041	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 17:30:31] "GET /ProblemSet/answer/a9500dc7-2b9d-42f6-900c-275b740b4dc1/0 HTTP/1.1" 200 -
+2019-10-27 17:30:31,053	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 17:30:31] "GET /ProblemSet/init/a9500dc7-2b9d-42f6-900c-275b740b4dc1/ww HTTP/1.1" 200 -
+2019-10-27 17:30:31,803	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 17:30:31] "GET /ProblemSet/answer/a9500dc7-2b9d-42f6-900c-275b740b4dc1/0 HTTP/1.1" 200 -
+2019-10-27 17:30:31,814	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 17:30:31] "GET /ProblemSet/init/a9500dc7-2b9d-42f6-900c-275b740b4dc1/ww HTTP/1.1" 200 -
+2019-10-27 17:30:36,213	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 17:30:36] "GET /ProblemSet/answer/a9500dc7-2b9d-42f6-900c-275b740b4dc1/0 HTTP/1.1" 200 -
+2019-10-27 17:30:36,227	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 17:30:36] "GET /ProblemSet/init/a9500dc7-2b9d-42f6-900c-275b740b4dc1/ww HTTP/1.1" 200 -
+2019-10-27 17:30:58,898	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading

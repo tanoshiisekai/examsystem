@@ -1,0 +1,12 @@
+2019-10-27 16:09:54,767	INFO	main1	<module>	Line:11	app started
+2019-10-27 16:09:54,775	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-10-27 16:09:54,783	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-10-27 16:09:54,795	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-10-27 16:10:05,954	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:10:05] "GET /AdminLogin/checktoken/76e23817-aebc-41db-a9fa-25bddc935452 HTTP/1.1" 200 -
+2019-10-27 16:10:05,957	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:10:05] "GET /AdminLogin/logout/76e23817-aebc-41db-a9fa-25bddc935452/admin HTTP/1.1" 200 -
+2019-10-27 16:10:12,829	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:10:12] "GET /AdminLogin/admin/0bc651ef7626a7868da4cbfdbe70f96f HTTP/1.1" 200 -
+2019-10-27 16:10:12,864	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:10:12] "GET /AdminLogin/checktoken/440ede63-af1c-4d69-8326-22c431d2192d HTTP/1.1" 200 -
+2019-10-27 16:10:14,808	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:10:14] "GET /ProblemSet/440ede63-af1c-4d69-8326-22c431d2192d/ww HTTP/1.1" 200 -
+2019-10-27 16:10:15,927	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:10:15] "GET /AdminLogin/checktoken/440ede63-af1c-4d69-8326-22c431d2192d HTTP/1.1" 200 -
+2019-10-27 16:10:18,977	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:10:18] "POST /ProblemSet/upload/440ede63-af1c-4d69-8326-22c431d2192d HTTP/1.1" 200 -
+2019-10-27 16:10:20,773	INFO	_internal	_log	Line:122	192.168.2.210 - - [27/Oct/2019 16:10:20] "GET /ProblemSet/upload/440ede63-af1c-4d69-8326-22c431d2192d/ww/www HTTP/1.1" 500 -

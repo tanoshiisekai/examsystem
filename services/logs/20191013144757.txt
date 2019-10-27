@@ -1,0 +1,39 @@
+2019-10-13 14:47:57,274	INFO	main1	<module>	Line:11	app started
+2019-10-13 14:47:57,286	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-10-13 14:47:57,324	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-10-13 14:47:57,340	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-10-13 14:48:29,592	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:48:29] "GET / HTTP/1.1" 200 -
+2019-10-13 14:48:29,899	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:48:29] "GET /swagger.json HTTP/1.1" 200 -
+2019-10-13 14:48:29,910	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:48:29] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2019-10-13 14:50:49,812	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:50:49] "GET /Login/logout/b1349159-bed4-4e88-a06a-88f11782c171/test HTTP/1.1" 200 -
+2019-10-13 14:50:55,605	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:50:55] "GET /AdminLogin/admin/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-10-13 14:50:59,638	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:50:59] "GET /AdminLogin/logout/f83a1f0a-cd4a-443b-93e2-fe0983963873/admin HTTP/1.1" 200 -
+2019-10-13 14:51:07,160	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:51:07] "GET /AdminLogin/admin/81dc9bdb52d04dc20036dbd8313ed055 HTTP/1.1" 200 -
+2019-10-13 14:51:09,801	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:51:09] "GET /AdminLogin/admin/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-10-13 14:53:21,060	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:53:21] "GET /ProblemSet/3c288ba0-c738-4615-86a7-632d600fbb65/ HTTP/1.1" 404 -
+2019-10-13 14:53:29,316	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:53:29] "GET /ProblemSet/3c288ba0-c738-4615-86a7-632d600fbb65/test HTTP/1.1" 200 -
+2019-10-13 14:53:39,522	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:53:39] "GET /AdminSettings/3c288ba0-c738-4615-86a7-632d600fbb65/098f6bcd4621d373cade4e832627b4f6/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-10-13 14:53:45,970	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:53:45] "GET /AdminLogin/logout/3c288ba0-c738-4615-86a7-632d600fbb65/admin HTTP/1.1" 200 -
+2019-10-13 14:55:19,790	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:55:19] "GET /AdminLogin/admin/0bc651ef7626a7868da4cbfdbe70f96f HTTP/1.1" 200 -
+2019-10-13 14:55:22,962	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:55:22] "GET /AdminLogin/admin/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-10-13 14:55:39,105	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:55:39] "GET /ProblemSet/008e5225-947b-4bea-8420-d4a0bb369aaa/ HTTP/1.1" 404 -
+2019-10-13 14:56:28,358	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:56:28] "GET /ProblemSet/008e5225-947b-4bea-8420-d4a0bb369aaa HTTP/1.1" 200 -
+2019-10-13 14:57:02,972	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:57:02] "GET /AdminLogin/checktoken/008e5225-947b-4bea-8420-d4a0bb369aaa HTTP/1.1" 200 -
+2019-10-13 14:57:08,660	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:57:08] "GET /AdminLogin/admin/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-10-13 14:57:08,702	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:57:08] "GET /AdminLogin/checktoken/3d807288-d18b-4e28-8a6b-b22f2bde934b HTTP/1.1" 200 -
+2019-10-13 14:57:11,539	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:57:11] "GET /AdminLogin/checktoken/3d807288-d18b-4e28-8a6b-b22f2bde934b HTTP/1.1" 200 -
+2019-10-13 14:57:11,567	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:57:11] "GET /ProblemSet/3d807288-d18b-4e28-8a6b-b22f2bde934b HTTP/1.1" 200 -
+2019-10-13 14:57:11,569	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:57:11] "GET /AdminLogin/checktoken/3d807288-d18b-4e28-8a6b-b22f2bde934b HTTP/1.1" 200 -
+2019-10-13 14:57:21,252	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:57:21] "GET /AdminLogin/checktoken/3d807288-d18b-4e28-8a6b-b22f2bde934a HTTP/1.1" 200 -
+2019-10-13 14:57:30,985	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:57:30] "GET /AdminLogin/admin/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-10-13 14:57:31,024	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:57:31] "GET /AdminLogin/checktoken/3fe81866-607c-4103-818a-cecae77bdc4c HTTP/1.1" 200 -
+2019-10-13 14:57:33,469	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:57:33] "GET /AdminLogin/checktoken/3fe81866-607c-4103-818a-cecae77bdc4c HTTP/1.1" 200 -
+2019-10-13 14:57:33,487	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:57:33] "GET /AdminLogin/checktoken/3fe81866-607c-4103-818a-cecae77bdc4c HTTP/1.1" 200 -
+2019-10-13 14:57:33,489	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:57:33] "GET /ProblemSet/3fe81866-607c-4103-818a-cecae77bdc4c HTTP/1.1" 200 -
+2019-10-13 14:57:35,229	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:57:35] "GET /AdminLogin/checktoken/3fe81866-607c-4103-818a-cecae77bdc4c HTTP/1.1" 200 -
+2019-10-13 14:57:35,248	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:57:35] "GET /AdminLogin/checktoken/3fe81866-607c-4103-818a-cecae77bdc4c HTTP/1.1" 200 -
+2019-10-13 14:57:36,938	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:57:36] "GET /AdminLogin/logout/3fe81866-607c-4103-818a-cecae77bdc4c/admin HTTP/1.1" 200 -
+2019-10-13 14:57:36,940	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:57:36] "GET /AdminLogin/checktoken/3fe81866-607c-4103-818a-cecae77bdc4c HTTP/1.1" 200 -
+2019-10-13 14:57:43,909	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:57:43] "GET /Login/long/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-10-13 14:57:46,105	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 14:57:46] "GET /Login/test/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-10-13 14:58:43,592	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\loginDAO.py', reloading

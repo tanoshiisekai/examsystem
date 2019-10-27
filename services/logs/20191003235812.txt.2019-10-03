@@ -1,5 +1,0 @@
-2019-10-03 23:58:12,847	INFO	main1	<module>	Line:11	app started
-2019-10-03 23:58:12,852	WARNING	_internal	_log	Line:122	 * Debugger is active!
-2019-10-03 23:58:12,860	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
-2019-10-03 23:58:12,874	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
-2019-10-03 23:58:54,573	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Oct/2019 23:58:54] "GET /AdminLogin/admin/longlong HTTP/1.1" 200 -

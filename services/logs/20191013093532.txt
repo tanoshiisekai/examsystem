@@ -1,0 +1,9 @@
+2019-10-13 09:35:32,393	INFO	main1	<module>	Line:11	app started
+2019-10-13 09:35:32,399	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-10-13 09:35:32,406	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-10-13 09:35:32,415	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-10-13 09:35:33,879	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 09:35:33] "GET / HTTP/1.1" 200 -
+2019-10-13 09:35:34,082	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 09:35:34] "GET /swagger.json HTTP/1.1" 200 -
+2019-10-13 09:35:34,109	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 09:35:34] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2019-10-13 09:38:20,163	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 09:38:20] "GET /AdminSettings/04d96a57-ba26-4c8d-8b7e-f929c046bddf/d41d8cd98f00b204e9800998ecf8427e/d41d8cd98f00b204e9800998ecf8427e HTTP/1.1" 200 -
+2019-10-13 09:38:25,658	INFO	_internal	_log	Line:122	192.168.2.210 - - [13/Oct/2019 09:38:25] "GET /AdminSettings/04d96a57-ba26-4c8d-8b7e-f929c046bddf/c4ca4238a0b923820dcc509a6f75849b/c4ca4238a0b923820dcc509a6f75849b HTTP/1.1" 200 -

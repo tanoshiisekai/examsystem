@@ -2,20 +2,29 @@ from appbase import global_db as gdb
 from dbmodels.adminDBModel import Admin
 from sqlalchemy import and_
 from tools.packtools import packinfo
-from tools.auth import gettoken, getip, gettimestr
+from tools.auth import gettoken, getip, gettimestr, checkadmintoken
 
 
 class AdminloginDAO:
+
+    @staticmethod
+    def checktoken(token, request):
+        """
+        检测admin的token
+        """
+        if checkadmintoken(token, request):
+            return packinfo(infostatus=1, infomsg="合法的token")
+        else:
+            return packinfo(infostatus=0, infomsg="不合法的token")
 
     @staticmethod
     def insert(username, password):
         """
         添加管理员
         """
-        if not gdb.session.query(Admin).filter(and_(
+        if not gdb.session.query(Admin).filter(
             Admin.admin_username == username,
-            Admin.admin_password == password
-        )).first():
+        ).first():
             ad = Admin(username, password, "", "", "")
             gdb.session.add(ad)
             gdb.session.commit()
@@ -25,10 +34,10 @@ class AdminloginDAO:
         """
         管理员退出
         """
-        aim = gdb.session.query(Admin).filter(
+        aim = gdb.session.query(Admin).filter(and_(
             Admin.admin_username == username,
             Admin.admin_token == token,
-            Admin.admin_ip == getip(req)
+            Admin.admin_ip == getip(req))
         ).first()
         if aim:
             # 退出系统
@@ -50,9 +59,9 @@ class AdminloginDAO:
         """
         管理员登录
         """
-        aim = gdb.session.query(Admin).filter(
+        aim = gdb.session.query(Admin).filter(and_(
             Admin.admin_username == username,
-            Admin.admin_password == password
+            Admin.admin_password == password)
         ).first()
         if aim:
             # 登录成功

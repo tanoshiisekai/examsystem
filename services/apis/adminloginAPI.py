@@ -5,6 +5,15 @@ from flask import request
 
 ns_adminlogin = api.namespace("AdminLogin", description="管理员登录")
 
+@ns_adminlogin.route("/checktoken/<string:token>")
+class AdminChecktoken(Resource):
+
+    def get(self, token):
+        """
+        检测token合法性
+        """
+        return AdminloginDAO.checktoken(token, request)
+
 
 @ns_adminlogin.route("/<string:username>/<string:password>")
 class AdminLogin(Resource):
