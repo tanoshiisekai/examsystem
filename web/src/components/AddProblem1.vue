@@ -48,8 +48,7 @@ export default {
   },
   methods: {
     gettemplate() {
-      var fileurl = "http://" + filehost + ":" + fileport + "/gettemplate/";
-      console.log(fileurl);
+      var fileurl = "http://" + filehost + ":" + fileport + "/files/problems.zip";
       window.location.href = fileurl;
     },
     addproblem1() {

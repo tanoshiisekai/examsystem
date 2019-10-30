@@ -1,0 +1,2 @@
+2019-10-30 21:40:20,441	INFO	main1	<module>	Line:11	app started
+2019-10-30 21:40:20,451	WARNING	_internal	_log	Line:122	 * Debugger is active!

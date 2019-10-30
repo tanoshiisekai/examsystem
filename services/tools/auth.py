@@ -56,3 +56,6 @@ def allowed_file(filename):
 def getmd5(aimstr):
     newstr = hashlib.md5(aimstr.encode("utf-8")).hexdigest()
     return newstr
+
+
+

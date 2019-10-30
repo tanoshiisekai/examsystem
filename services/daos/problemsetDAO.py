@@ -12,6 +12,7 @@ from pyexcel_xlsx import get_data as get_data_xlsx
 import shutil
 import os.path
 import random
+from flask import url_for
 
 
 class ProblemsetDAO:
@@ -28,7 +29,12 @@ class ProblemsetDAO:
             ).first()
             if temp:
                 tempdict = temp.todict()
-                tempdict["problem_answer"] = getmd5(tempdict["problem_answer"])
+                answers = list(tempdict["problem_answer"])
+                answers.sort()
+                answers = "".join(answers)
+                print(answers)
+                tempdict["problem_answer"] = getmd5(getmd5(str(answers) + \
+                    str(tempdict["problem_id"]))+str(answers))
                 return packinfo(infostatus=1, inforesult=tempdict)
             else:
                 return packinfo(infostatus=0, infomsg="没有该题目！")

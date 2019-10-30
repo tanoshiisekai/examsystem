@@ -1,3 +1,5 @@
+# 为保证服务器稳定，建议使用Nginx进行文件托管，而不是使用本程序。
+
 from flask import Flask, send_file
 from io import BytesIO
 from urllib.parse import quote
