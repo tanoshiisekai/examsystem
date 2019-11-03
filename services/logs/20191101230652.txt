@@ -1,0 +1,7 @@
+2019-11-01 23:06:52,188	INFO	main1	<module>	Line:11	app started
+2019-11-01 23:06:52,196	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-01 23:06:52,223	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-01 23:06:52,237	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-01 23:07:16,212	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 23:07:16] "GET /ProblemSet/init/12b71b4a-bf45-4651-97dd-d2d010c813e0/ww HTTP/1.1" 500 -
+2019-11-01 23:07:28,519	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 23:07:28] "GET /ProblemSet/init/12b71b4a-bf45-4651-97dd-d2d010c813e0/ww HTTP/1.1" 500 -
+2019-11-01 23:07:32,185	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 23:07:32] "GET /Login/logout/12b71b4a-bf45-4651-97dd-d2d010c813e0/test HTTP/1.1" 200 -

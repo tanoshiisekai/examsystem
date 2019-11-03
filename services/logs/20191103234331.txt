@@ -1,0 +1,8 @@
+2019-11-03 23:43:31,229	INFO	main1	<module>	Line:11	app started
+2019-11-03 23:43:31,235	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-03 23:43:31,259	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-03 23:43:31,269	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-03 23:43:31,391	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:43:31] "GET /ProblemSet/answer/dcd82132-ebc2-43b7-9275-491f7f4707d1/5 HTTP/1.1" 200 -
+2019-11-03 23:44:02,425	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:44:02] "GET /ProblemSet/answer/dcd82132-ebc2-43b7-9275-491f7f4707d1/2 HTTP/1.1" 200 -
+2019-11-03 23:44:33,468	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:44:33] "GET /ProblemSet/answer/dcd82132-ebc2-43b7-9275-491f7f4707d1/6 HTTP/1.1" 200 -
+2019-11-03 23:44:55,178	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\apis\\problemsetAPI.py', reloading

@@ -1,45 +1,49 @@
 <template>
   <div class="container">
-    <UserMenu></UserMenu>
-    <md-subheader>
-      <span class="md-title">答题中</span>
-    </md-subheader>
-    <md-card>
-      <md-card-header>
-        <md-card-header-text style="text-align:left;">
-          <div class="md-title" style="font-size:30px;">{{this.problem.problem_desp}}</div>
-        </md-card-header-text>
-      </md-card-header>
-      <md-card-content style="text-align:left;">
-        <md-card-media style="text-align:left;">
-          <img :src="this.problem.problem_picpath" style="width:300px;" />
-        </md-card-media>
-        <md-checkbox
-          v-model="array"
-          value="A"
-          style="font-size:20px;width:100%;"
-        >A. {{this.problem.problem_choiceA}}</md-checkbox>
-        <md-checkbox
-          v-model="array"
-          value="B"
-          style="font-size:20px;width:100%;"
-        >B. {{this.problem.problem_choiceB}}</md-checkbox>
-        <md-checkbox
-          v-model="array"
-          value="C"
-          style="font-size:20px;width:100%;"
-        >C. {{this.problem.problem_choiceC}}</md-checkbox>
-        <md-checkbox
-          v-model="array"
-          value="D"
-          style="font-size:20px;width:100%;"
-        >D. {{this.problem.problem_choiceD}}</md-checkbox>
-        <md-button class="md-raised md-primary" @click="submitanswer()">提交</md-button>
-      </md-card-content>
-    </md-card>
-    <md-snackbar :md-duration="3000" :md-active.sync="showSnackbar" md-persistent>
-      <span>{{message}}</span>
-    </md-snackbar>
+    <div class="virtualbody">
+      <UserMenu></UserMenu>
+      <md-subheader>
+        <span class="md-title">答题中</span>
+      </md-subheader>
+
+      <md-card>
+        <md-card-header>
+          <md-card-header-text style="text-align:left;">
+            <div class="md-title" style="font-size:30px;">{{this.problem.problem_desp}}</div>
+          </md-card-header-text>
+        </md-card-header>
+        <md-card-content style="text-align:left;">
+          <md-card-media style="text-align:left;">
+            <img :src="this.problem.problem_picpath" style="width:300px;" />
+          </md-card-media>
+          <md-checkbox
+            v-model="array"
+            value="A"
+            style="font-size:20px;width:100%;"
+          >A. {{this.problem.problem_choiceA}}</md-checkbox>
+          <md-checkbox
+            v-model="array"
+            value="B"
+            style="font-size:20px;width:100%;"
+          >B. {{this.problem.problem_choiceB}}</md-checkbox>
+          <md-checkbox
+            v-model="array"
+            value="C"
+            style="font-size:20px;width:100%;"
+          >C. {{this.problem.problem_choiceC}}</md-checkbox>
+          <md-checkbox
+            v-model="array"
+            value="D"
+            style="font-size:20px;width:100%;"
+          >D. {{this.problem.problem_choiceD}}</md-checkbox>
+          <md-button class="md-raised md-primary" @click="doanswer()">提交</md-button>
+        </md-card-content>
+      </md-card>
+      <md-snackbar :md-duration="3000" :md-active.sync="showSnackbar" md-persistent>
+        <span>{{message}}</span>
+      </md-snackbar>
+    </div>
+    <div class="fixedbar">{{this.timecountvalue}}</div>
   </div>
 </template>
 
@@ -63,19 +67,16 @@ export default {
     };
     this.initproblems();
   },
-  mounted() {
-    if (window.performance.navigation.type == 1) {
-      // 截断刷新
-      console.log("刷新");
-    }
-  },
   data() {
     return {
       problemid: 0,
       showSnackbar: false,
       message: "",
       problem: 0,
-      array: []
+      array: [],
+      timecountvalue: 0,
+      timer: null,
+      scoreid: 0
     };
   },
   methods: {
@@ -86,10 +87,50 @@ export default {
       var result = this.$md5(
         this.$md5(answer + this.problem.problem_id) + answer
       );
+      console.log(this.scoreid);
+      var usertoken = this.$cookie.get("usertoken");
       if (result == this.problem.problem_answer) {
-        console.log("right");
+        var answermd5 = this.$md5(this.$md5(usertoken + "10") + this.scoreid);
+        console.log(answermd5);
+        this.axios
+          .get(
+            "/ProblemSet/addscore/" +
+              usertoken +
+              "/" +
+              this.scoreid +
+              "/1/0/" +
+              answermd5
+          )
+          .then(response => {
+            var resp = response.data;
+            console.log(resp);
+          });
       } else {
-        console.log("wrong");
+        var answermd5 = this.$md5(this.$md5(usertoken + "01") + this.scoreid);
+        this.axios
+          .get(
+            "/ProblemSet/addscore/" +
+              usertoken +
+              "/" +
+              this.scoreid +
+              "/0/1/" +
+              answermd5
+          )
+          .then(response => {
+            var resp = response.data;
+            console.log(resp);
+          });
+      }
+    },
+    doanswer() {
+      this.submitanswer();
+      clearInterval(this.timer);
+      this.timer = null;
+      if (this.problem.problem_nextpid != -1) {
+        this.problemid = this.problem.problem_nextpid;
+        this.getfirstproblem();
+      } else {
+        this.$router.push({ name: "finished" });
       }
     },
     initproblems() {
@@ -100,7 +141,9 @@ export default {
         .then(response => {
           var resp = response.data;
           if (resp["infostatus"] == 1) {
-            this.problemid = resp["inforesult"];
+            this.problemid = resp["inforesult"][0];
+            this.scoreid = resp["inforesult"][1];
+            this.$cookie.set("scoreid", this.scoreid);
             this.getfirstproblem();
           } else {
             this.message = resp["infomsg"];
@@ -109,6 +152,8 @@ export default {
         });
     },
     getfirstproblem() {
+      this.array = [];
+      console.log(this.problemid);
       var usertoken = this.$cookie.get("usertoken");
       this.axios
         .get("/ProblemSet/answer/" + usertoken + "/" + this.problemid)
@@ -127,7 +172,31 @@ export default {
             } else {
               this.problem.problem_picpath = "";
             }
+            var timecount = this.problem.problemset_timeperproblem;
             console.log(this.problem);
+            this.timer = setInterval(() => {
+              if (
+                timecount > 0 &&
+                timecount <= this.problem.problemset_timeperproblem
+              ) {
+                timecount = timecount - 1;
+                this.timecountvalue = timecount;
+              } else {
+                console.log("over");
+                console.log("clear timer:", this.timer);
+                clearInterval(this.timer);
+                this.timer = null;
+                this.submitanswer();
+                if (this.problem.problem_nextpid != -1) {
+                  this.problemid = this.problem.problem_nextpid;
+                  this.getfirstproblem();
+                } else {
+                  this.$router.push({ name: "finished" });
+                }
+              }
+            }, 1000);
+            console.log("create timer:", this.timer);
+            this.$cookie.set("timerid", this.timer);
           }
         });
     }
@@ -139,5 +208,27 @@ export default {
 <style scoped>
 .mybutton {
   border: 1px solid #cccccc;
+}
+.fixedbar {
+  position: fixed;
+  top: 0px;
+  left: 300px;
+  z-index: 999;
+  height: 26px;
+  text-align: center;
+  margin-top: 0px;
+  width: 50px;
+  color: #F0F0F0;
+  font-size: 20px;
+  line-height: 26px;
+  background-color: #7878A8;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  filter:alpha(Opacity=60);-moz-opacity:0.6;opacity: 0.6;
+}
+.virtualbody{
+  width: 100%;
+  overflow-y:scroll;
+  overflow-x:auto;
 }
 </style>

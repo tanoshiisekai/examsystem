@@ -1,0 +1,24 @@
+2019-11-01 21:34:26,815	INFO	main1	<module>	Line:11	app started
+2019-11-01 21:34:26,823	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-01 21:34:26,841	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-01 21:34:26,866	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-01 21:35:37,391	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 21:35:37] "GET / HTTP/1.1" 200 -
+2019-11-01 21:35:37,445	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 21:35:37] "GET /swaggerui/swagger-ui.css HTTP/1.1" 304 -
+2019-11-01 21:35:37,449	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 21:35:37] "GET /swaggerui/swagger-ui-bundle.js HTTP/1.1" 304 -
+2019-11-01 21:35:37,451	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 21:35:37] "GET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1" 304 -
+2019-11-01 21:35:37,454	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 21:35:37] "GET /swaggerui/droid-sans.css HTTP/1.1" 304 -
+2019-11-01 21:35:37,691	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 21:35:37] "GET /swagger.json HTTP/1.1" 200 -
+2019-11-01 21:35:59,851	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 21:35:59] "GET /Login/test/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-11-01 21:36:02,226	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 21:36:02] "GET /ProblemSet/9041c406-2419-4f88-b403-ae03d93afb01/ww HTTP/1.1" 200 -
+2019-11-01 21:36:03,309	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 21:36:03] "GET /ProblemSet/init/9041c406-2419-4f88-b403-ae03d93afb01/ww HTTP/1.1" 200 -
+2019-11-01 21:36:03,344	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 21:36:03] "GET /ProblemSet/answer/9041c406-2419-4f88-b403-ae03d93afb01/2 HTTP/1.1" 200 -
+2019-11-01 21:37:14,796	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 21:37:14] "GET /ProblemSet/init/9041c406-2419-4f88-b403-ae03d93afb01/ww HTTP/1.1" 200 -
+2019-11-01 21:37:14,811	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 21:37:14] "GET /ProblemSet/answer/9041c406-2419-4f88-b403-ae03d93afb01/2 HTTP/1.1" 200 -
+2019-11-01 21:38:54,537	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 21:38:54] "GET /Login/logout/9041c406-2419-4f88-b403-ae03d93afb01/test HTTP/1.1" 200 -
+2019-11-01 21:39:02,343	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 21:39:02] "GET /AdminLogin/admin/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-11-01 21:39:07,912	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 21:39:07] "GET /AdminLogin/admin/0bc651ef7626a7868da4cbfdbe70f96f HTTP/1.1" 200 -
+2019-11-01 21:39:07,982	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 21:39:07] "GET /AdminLogin/checktoken/4659ee12-d45a-4b3e-b4f6-9e485b41a4ae HTTP/1.1" 200 -
+2019-11-01 21:39:10,374	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 21:39:10] "GET /AdminLogin/checktoken/4659ee12-d45a-4b3e-b4f6-9e485b41a4ae HTTP/1.1" 200 -
+2019-11-01 21:39:10,394	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 21:39:10] "GET /AdminLogin/checktoken/4659ee12-d45a-4b3e-b4f6-9e485b41a4ae HTTP/1.1" 200 -
+2019-11-01 21:39:10,398	INFO	_internal	_log	Line:122	192.168.2.210 - - [01/Nov/2019 21:39:10] "GET /ProblemSet/4659ee12-d45a-4b3e-b4f6-9e485b41a4ae HTTP/1.1" 200 -
+2019-11-01 21:42:20,218	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\dbmodels\\adminDBModel.py', reloading

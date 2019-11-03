@@ -1,0 +1,27 @@
+2019-11-03 23:38:12,607	INFO	main1	<module>	Line:11	app started
+2019-11-03 23:38:12,614	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-03 23:38:12,637	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-03 23:38:12,649	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-03 23:38:12,668	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:38:12] "GET /Login/logout/5177ec2c-0057-48f2-8e69-48783df2633a/test HTTP/1.1" 200 -
+2019-11-03 23:38:20,458	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:38:20] "GET /Login/test/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-11-03 23:38:22,520	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:38:22] "GET /ProblemSet/6ad76045-daac-40c6-9420-83849b5a53d0/ww HTTP/1.1" 200 -
+2019-11-03 23:38:23,605	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:38:23] "GET /ProblemSet/init/6ad76045-daac-40c6-9420-83849b5a53d0/ww HTTP/1.1" 200 -
+2019-11-03 23:38:23,636	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:38:23] "GET /ProblemSet/answer/6ad76045-daac-40c6-9420-83849b5a53d0/2 HTTP/1.1" 200 -
+2019-11-03 23:38:54,672	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:38:54] "GET /ProblemSet/answer/6ad76045-daac-40c6-9420-83849b5a53d0/4 HTTP/1.1" 200 -
+2019-11-03 23:39:02,805	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:39:02] "GET /ProblemSet/init/6ad76045-daac-40c6-9420-83849b5a53d0/ww HTTP/1.1" 200 -
+2019-11-03 23:39:02,827	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:39:02] "GET /ProblemSet/answer/6ad76045-daac-40c6-9420-83849b5a53d0/2 HTTP/1.1" 200 -
+2019-11-03 23:39:25,125	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:39:25] "GET /ProblemSet/init/6ad76045-daac-40c6-9420-83849b5a53d0/ww HTTP/1.1" 200 -
+2019-11-03 23:39:25,166	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:39:25] "GET /ProblemSet/answer/6ad76045-daac-40c6-9420-83849b5a53d0/3 HTTP/1.1" 200 -
+2019-11-03 23:39:25,704	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:39:25] "GET /ProblemSet/answer/6ad76045-daac-40c6-9420-83849b5a53d0/1 HTTP/1.1" 200 -
+2019-11-03 23:39:33,859	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:39:33] "GET /ProblemSet/answer/6ad76045-daac-40c6-9420-83849b5a53d0/5 HTTP/1.1" 200 -
+2019-11-03 23:39:42,410	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:39:42] "GET /ProblemSet/init/6ad76045-daac-40c6-9420-83849b5a53d0/ww HTTP/1.1" 200 -
+2019-11-03 23:39:42,448	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:39:42] "GET /ProblemSet/answer/6ad76045-daac-40c6-9420-83849b5a53d0/5 HTTP/1.1" 200 -
+2019-11-03 23:39:53,980	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:39:53] "GET /Login/logout/6ad76045-daac-40c6-9420-83849b5a53d0/test HTTP/1.1" 200 -
+2019-11-03 23:39:57,198	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:39:57] "GET /ProblemSet/answer//6 HTTP/1.1" 404 -
+2019-11-03 23:39:57,722	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:39:57] "GET /ProblemSet/answer//5 HTTP/1.1" 404 -
+2019-11-03 23:40:04,995	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:40:04] "GET /Login/test/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-11-03 23:40:06,940	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:40:06] "GET /ProblemSet/5801fc56-6473-48e9-b789-cc05108148ab/ww HTTP/1.1" 200 -
+2019-11-03 23:40:08,016	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:40:08] "GET /ProblemSet/init/5801fc56-6473-48e9-b789-cc05108148ab/ww HTTP/1.1" 200 -
+2019-11-03 23:40:08,048	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:40:08] "GET /ProblemSet/answer/5801fc56-6473-48e9-b789-cc05108148ab/4 HTTP/1.1" 200 -
+2019-11-03 23:40:39,104	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:40:39] "GET /ProblemSet/answer/5801fc56-6473-48e9-b789-cc05108148ab/1 HTTP/1.1" 200 -
+2019-11-03 23:41:03,575	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading

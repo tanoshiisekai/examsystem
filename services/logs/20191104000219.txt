@@ -1,0 +1,46 @@
+2019-11-04 00:02:19,740	INFO	main1	<module>	Line:11	app started
+2019-11-04 00:02:19,750	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-04 00:02:19,777	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-04 00:02:19,791	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-04 00:02:21,623	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:02:21] "GET /Login/logout/58ee6dec-c3b7-41f1-bebd-00a84529a58f/test HTTP/1.1" 200 -
+2019-11-04 00:02:25,427	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:02:25] "GET /Login/test/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-11-04 00:02:28,546	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:02:28] "GET /ProblemSet/e4fdb23d-1c62-4ef8-bdbc-869f3b6e84c8/ww HTTP/1.1" 200 -
+2019-11-04 00:02:29,637	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:02:29] "GET /ProblemSet/init/e4fdb23d-1c62-4ef8-bdbc-869f3b6e84c8/ww HTTP/1.1" 200 -
+2019-11-04 00:02:29,672	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:02:29] "GET /ProblemSet/answer/e4fdb23d-1c62-4ef8-bdbc-869f3b6e84c8/1 HTTP/1.1" 200 -
+2019-11-04 00:02:32,608	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:02:32] "GET /ProblemSet/addscore/e4fdb23d-1c62-4ef8-bdbc-869f3b6e84c8/17/1/0/186931808c1b31ec5fe59c6b40e1e50a HTTP/1.1" 200 -
+2019-11-04 00:03:00,769	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:03:00] "GET /ProblemSet/answer/e4fdb23d-1c62-4ef8-bdbc-869f3b6e84c8/5 HTTP/1.1" 200 -
+2019-11-04 00:03:13,745	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:03:13] "GET /Login/logout/e4fdb23d-1c62-4ef8-bdbc-869f3b6e84c8/test HTTP/1.1" 200 -
+2019-11-04 00:03:18,456	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:03:18] "GET /Login/test/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-11-04 00:03:20,990	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:03:20] "GET /ProblemSet/87549834-bd9d-4845-9dfc-6d7a4b3a8e29/ww HTTP/1.1" 200 -
+2019-11-04 00:03:22,060	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:03:22] "GET /ProblemSet/init/87549834-bd9d-4845-9dfc-6d7a4b3a8e29/ww HTTP/1.1" 200 -
+2019-11-04 00:03:22,087	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:03:22] "GET /ProblemSet/answer/87549834-bd9d-4845-9dfc-6d7a4b3a8e29/1 HTTP/1.1" 200 -
+2019-11-04 00:03:31,811	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:03:31] "GET /ProblemSet/answer/87549834-bd9d-4845-9dfc-6d7a4b3a8e29/2 HTTP/1.1" 200 -
+2019-11-04 00:03:32,010	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:03:32] "GET /ProblemSet/addscore/87549834-bd9d-4845-9dfc-6d7a4b3a8e29/18/1/0/f8a19c6e477b98c5ea33d19deb4968bd HTTP/1.1" 200 -
+2019-11-04 00:03:53,128	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:03:53] "GET /ProblemSet/answer/87549834-bd9d-4845-9dfc-6d7a4b3a8e29/2 HTTP/1.1" 200 -
+2019-11-04 00:03:59,506	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:03:59] "GET /ProblemSet/addscore/87549834-bd9d-4845-9dfc-6d7a4b3a8e29/18/1/0/f8a19c6e477b98c5ea33d19deb4968bd HTTP/1.1" 200 -
+2019-11-04 00:04:02,849	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:04:02] "GET /ProblemSet/answer/87549834-bd9d-4845-9dfc-6d7a4b3a8e29/6 HTTP/1.1" 200 -
+2019-11-04 00:04:24,154	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:04:24] "GET /ProblemSet/answer/87549834-bd9d-4845-9dfc-6d7a4b3a8e29/4 HTTP/1.1" 200 -
+2019-11-04 00:04:29,588	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:04:29] "GET /ProblemSet/addscore/87549834-bd9d-4845-9dfc-6d7a4b3a8e29/18/0/1/aa6c049b0f230fb44e14d230e0934ee1 HTTP/1.1" 200 -
+2019-11-04 00:04:59,130	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:04:59] "GET /Login/logout/87549834-bd9d-4845-9dfc-6d7a4b3a8e29/test HTTP/1.1" 200 -
+2019-11-04 00:06:27,721	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:06:27] "GET /Login/test/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-11-04 00:06:29,264	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:06:29] "GET /ProblemSet/80fd5f9e-e530-48b5-a03e-842da1dfa550/ww HTTP/1.1" 200 -
+2019-11-04 00:06:30,384	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:06:30] "GET /ProblemSet/init/80fd5f9e-e530-48b5-a03e-842da1dfa550/ww HTTP/1.1" 200 -
+2019-11-04 00:06:30,417	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:06:30] "GET /ProblemSet/answer/80fd5f9e-e530-48b5-a03e-842da1dfa550/3 HTTP/1.1" 200 -
+2019-11-04 00:06:42,845	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:06:42] "GET /ProblemSet/addscore/80fd5f9e-e530-48b5-a03e-842da1dfa550/19/0/1/527454a29c06788c2c4c4ef7f5d459fa HTTP/1.1" 200 -
+2019-11-04 00:07:01,456	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:07:01] "GET /ProblemSet/answer/80fd5f9e-e530-48b5-a03e-842da1dfa550/6 HTTP/1.1" 200 -
+2019-11-04 00:07:06,441	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:07:06] "GET /ProblemSet/addscore/80fd5f9e-e530-48b5-a03e-842da1dfa550/19/0/1/527454a29c06788c2c4c4ef7f5d459fa HTTP/1.1" 200 -
+2019-11-04 00:07:30,672	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:07:30] "GET /ProblemSet/init/80fd5f9e-e530-48b5-a03e-842da1dfa550/ww HTTP/1.1" 200 -
+2019-11-04 00:07:30,708	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:07:30] "GET /ProblemSet/answer/80fd5f9e-e530-48b5-a03e-842da1dfa550/2 HTTP/1.1" 200 -
+2019-11-04 00:07:32,489	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:07:32] "GET /ProblemSet/answer/80fd5f9e-e530-48b5-a03e-842da1dfa550/4 HTTP/1.1" 200 -
+2019-11-04 00:07:36,276	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:07:36] "GET /Login/logout/80fd5f9e-e530-48b5-a03e-842da1dfa550/test HTTP/1.1" 200 -
+2019-11-04 00:07:45,664	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:07:45] "GET /Login/test/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-11-04 00:07:52,218	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:07:52] "GET /ProblemSet/dbeae2a8-ffec-4202-a0c9-2f454b1324f4/ww HTTP/1.1" 200 -
+2019-11-04 00:07:53,318	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:07:53] "GET /ProblemSet/init/dbeae2a8-ffec-4202-a0c9-2f454b1324f4/ww HTTP/1.1" 200 -
+2019-11-04 00:07:53,369	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:07:53] "GET /ProblemSet/answer/dbeae2a8-ffec-4202-a0c9-2f454b1324f4/1 HTTP/1.1" 200 -
+2019-11-04 00:08:01,745	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:08:01] "GET /ProblemSet/answer/dbeae2a8-ffec-4202-a0c9-2f454b1324f4/4 HTTP/1.1" 200 -
+2019-11-04 00:08:02,332	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:08:02] "GET /ProblemSet/addscore/dbeae2a8-ffec-4202-a0c9-2f454b1324f4/21/1/0/613882a0c8b5dc721e71bf63a9ee1591 HTTP/1.1" 200 -
+2019-11-04 00:08:03,538	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:08:03] "GET /ProblemSet/answer/dbeae2a8-ffec-4202-a0c9-2f454b1324f4/6 HTTP/1.1" 200 -
+2019-11-04 00:08:24,397	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:08:24] "GET /ProblemSet/answer/dbeae2a8-ffec-4202-a0c9-2f454b1324f4/3 HTTP/1.1" 200 -
+2019-11-04 00:08:32,771	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:08:32] "GET /ProblemSet/answer/dbeae2a8-ffec-4202-a0c9-2f454b1324f4/4 HTTP/1.1" 200 -
+2019-11-04 00:08:34,570	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:08:34] "GET /ProblemSet/answer/dbeae2a8-ffec-4202-a0c9-2f454b1324f4/2 HTTP/1.1" 200 -
+2019-11-04 00:09:23,683	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading

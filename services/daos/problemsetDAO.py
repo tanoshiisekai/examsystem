@@ -1,6 +1,7 @@
 from appbase import global_db as gdb
 from dbmodels.problemsetDBModel import ProblemSet
 from dbmodels.userDBModel import User
+from dbmodels.scoreDBModel import Score
 from dbmodels.problemDBModel import Problem
 from sqlalchemy import and_
 from tools.packtools import packinfo
@@ -18,6 +19,62 @@ from flask import url_for
 class ProblemsetDAO:
 
     @staticmethod
+    def addfinishedtime(token, scoreid, req):
+        """
+        记录结束时间戳
+        """
+        if checkusertoken(token, req):
+            temp = gdb.session.query(Score).filter(
+                Score.score_id == scoreid).first()
+            temp.score_timeend = gettimestr()
+            try:
+                gdb.session.commit()
+            except Exception as e:
+                print(e)
+                return packinfo(infostatus=0, infomsg="数据库错误!")
+            else:
+                return packinfo(infostatus=1, infomsg="时间更新成功!")
+        else:
+            return packinfo(infostatus=2, infomsg="没有权限!")
+
+        
+
+    @staticmethod
+    def addscore(token, scoreid, right, wrong, md5str, req):
+        """
+        记录成绩
+        """
+        if checkusertoken(token, req):
+            mstr = getmd5(getmd5(token + right + wrong) + scoreid)
+            print(mstr)
+            if mstr == md5str:
+                if right == "1" and wrong == "0":
+                    temp = gdb.session.query(Score).filter(
+                        Score.score_id == scoreid).first()
+                    temp.score_right = temp.score_right + 1
+                    try:
+                        gdb.session.commit()
+                    except Exception as e:
+                        print(e)
+                        return packinfo(infostatus=4, infomsg="数据库错误!")
+                elif right == "0" and wrong == "1":
+                    temp = gdb.session.query(Score).filter(
+                        Score.score_id == scoreid).first()
+                    temp.score_wrong = temp.score_wrong + 1
+                    try:
+                        gdb.session.commit()
+                    except Exception as e:
+                        print(e)
+                        return packinfo(infostatus=5, infomsg="数据库错误!")
+                else:
+                    return packinfo(infostatus=3, infomsg="请求异常！请重新登录答题!")
+                return packinfo(infostatus=1, infomsg="成绩已更新！")
+            else:
+                return packinfo(infostatus=0, infomsg="请求异常！请重新登录答题!")
+        else:
+            return packinfo(infostatus=2, infomsg="没有权限！")
+
+    @staticmethod
     def getproblembyid(token, problemid, req):
         """
         获取题目
@@ -27,20 +84,43 @@ class ProblemsetDAO:
             temp = gdb.session.query(Problem).filter(
                 Problem.problem_id == problemid
             ).first()
+            tempset = gdb.session.query(ProblemSet).filter(
+                ProblemSet.problemset_id == temp.problemset_id
+            ).first()
+            tempuser = gdb.session.query(User).filter(
+                User.user_problemsetid == temp.problemset_id
+            ).first()
             if temp:
                 tempdict = temp.todict()
                 answers = list(tempdict["problem_answer"])
                 answers.sort()
                 answers = "".join(answers)
                 print(answers)
-                tempdict["problem_answer"] = getmd5(getmd5(str(answers) + \
-                    str(tempdict["problem_id"]))+str(answers))
+                tempdict["problem_answer"] = getmd5(getmd5(str(answers) +
+                                                           str(tempdict["problem_id"]))+str(answers))
+                tempdict["problemset_timeperproblem"] = tempset.problemset_timeperproblem
+                problemseat = tempuser.user_problemseat
+                problemstream = tempuser.user_problemstream
+                print("pseat:", problemseat)
+                print("pstream:", problemstream)
+                streamlist = problemstream.split("#")
+                if streamlist.index(str(problemseat)) < len(streamlist) - 1:
+                    nextpid = streamlist[streamlist.index(
+                        str(problemseat)) + 1]
+                    tempuser.user_problemseat = nextpid
+                    try:
+                        gdb.session.commit()
+                    except Exception as e:
+                        print(e)
+                        return packinfo(infostatus=3, infomsg="数据库错误！")
+                else:
+                    nextpid = -1
+                tempdict["problem_nextpid"] = nextpid
                 return packinfo(infostatus=1, inforesult=tempdict)
             else:
                 return packinfo(infostatus=0, infomsg="没有该题目！")
         else:
             return packinfo(infostatus=2, infomsg="没有权限！")
-
 
     @staticmethod
     def initproblems(token, problemtitle, req):
@@ -61,8 +141,8 @@ class ProblemsetDAO:
                 aimproblems = [str(x) for x in aimproblems]
                 userproblemstream = "#".join(aimproblems)
                 userproblemsetid = problemsetid
-                userproblemseat = 0
-                firstpid = aimproblems[userproblemseat]
+                userproblemseat = problemids[0]
+                firstpid = userproblemseat
                 user = gdb.session.query(User).filter(
                     User.user_token == token
                 ).first()
@@ -72,11 +152,27 @@ class ProblemsetDAO:
                     user.user_problemseat = userproblemseat
                     try:
                         gdb.session.commit()
+                        timestart = gettimestr()
+                        sco = Score(user.user_id, problemsetid, 0, 0,
+                                    timestart, "", temp[0][0].problemset_answercount)
+                        gdb.session.add(sco)
+                        try:
+                            gdb.session.commit()
+                        except Exception as e:
+                            print(e)
+                            return packinfo(infostatus=0, infomsg="数据库错误!")
+                        else:
+                            scoretemp = gdb.session.query(Score).filter(and_(
+                                Score.user_id == user.user_id,
+                                Score.score_timestart == timestart
+                            )).first()
+                            scoreid = scoretemp.score_id
                     except Exception as e:
                         print(e)
                         return packinfo(infostatus=0, infomsg="数据库错误!")
                     else:
-                        return packinfo(infostatus=1, infomsg="初始化答题成功!", inforesult=firstpid)
+                        return packinfo(infostatus=1, infomsg="初始化答题成功!",
+                                        inforesult=[firstpid, scoreid])
                 else:
                     return packinfo(infostatus=2, infomsg="用户不存在!")
             else:
@@ -107,6 +203,28 @@ class ProblemsetDAO:
         else:
             return packinfo(infostatus=2, infomsg="没有权限!")
 
+    @staticmethod
+    def setanswertime(token, problemtitle, answertime, req):
+        """
+        设置答题时间
+        """
+        if checkadmintoken(token, req):
+            temp = gdb.session.query(ProblemSet).filter(
+                ProblemSet.problemset_title == problemtitle
+            ).first()
+            if temp:
+                temp.problemset_timeperproblem = answertime
+                try:
+                    gdb.session.commit()
+                except Exception as e:
+                    print(e)
+                    return packinfo(infostatus=0, infomsg="数据库错误!")
+                else:
+                    return packinfo(infostatus=1, infomsg="答题时间更新成功!")
+            else:
+                return packinfo(infostatus=3, infomsg="不存在的题库!")
+        else:
+            return packinfo(infostatus=2, infomsg="没有权限!")
 
     @staticmethod
     def removeproblemsets(token, problemsetname, req):
@@ -134,7 +252,7 @@ class ProblemsetDAO:
                     return packinfo(infostatus=1, infomsg="题库删除成功!")
         else:
             return packinfo(infostatus=2, infomsg="没有权限!")
-        
+
     @staticmethod
     def getproblemsets(token, req):
         """
@@ -174,7 +292,7 @@ class ProblemsetDAO:
         print(token)
         if checkadmintoken(token, req):
             serverfilepath = os.path.join(os.getcwd(),
-                                        conf.importpath, token, conf.tempfilename)
+                                          conf.importpath, token, conf.tempfilename)
             print(serverfilepath)
             print(protitle)
             print(prodesp)
@@ -187,13 +305,14 @@ class ProblemsetDAO:
             file_zip.close()
             # os.remove(serverfilepath)
             xlsxfile = get_data_xlsx(os.path.join(os.getcwd(),
-                                                tempdir, conf.tempdirname, 
-                                                conf.dataxlsxname))["题目"][1:]
+                                                  tempdir, conf.tempdirname,
+                                                  conf.dataxlsxname))["题目"][1:]
             print(xlsxfile)
             psetcount = len(xlsxfile)
             protoken = gettoken()
             if len(prodesp) > 0:
-                prset = ProblemSet(protitle, prodesp, psetcount, protoken, 0)
+                prset = ProblemSet(protitle, prodesp,
+                                   psetcount, protoken, 0, 0)
                 gdb.session.add(prset)
                 gdb.session.commit()
             pro = gdb.session.query(ProblemSet).filter(
@@ -215,7 +334,7 @@ class ProblemsetDAO:
                 if len(dt) > 6:
                     newpicname = gettoken() + "." + dt[6].rsplit(".", 1)[-1]
                     shutil.move(os.path.join(os.getcwd(), tempdir, conf.tempdirname,
-                                            conf.datapicdir, dt[6]),
+                                             conf.datapicdir, dt[6]),
                                 os.path.join(os.getcwd(), conf.problempicdir, newpicname))
                     problem_picname = newpicname
 
@@ -242,7 +361,7 @@ class ProblemsetDAO:
                     continue
                 else:
                     pro = Problem(proid, problem_desp, problem_picname, problem_choiceA,
-                                problem_choiceB, problem_choiceC, problem_choiceD, problem_answer)
+                                  problem_choiceB, problem_choiceC, problem_choiceD, problem_answer)
                     gdb.session.add(pro)
                     actualcount = actualcount + 1
             shutil.rmtree(tempdir)
@@ -263,7 +382,6 @@ class ProblemsetDAO:
                     return packinfo(infostatus=1, infomsg="题目添加成功！")
         else:
             return packinfo(infostatus=2, infomsg="没有权限！")
-
 
     @staticmethod
     def uploadfile(token, file, req):

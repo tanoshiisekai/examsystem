@@ -1,0 +1,15 @@
+2019-11-03 23:52:25,778	INFO	main1	<module>	Line:11	app started
+2019-11-03 23:52:25,825	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-03 23:52:25,873	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-03 23:52:25,892	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-03 23:54:44,020	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:54:44] "GET /ProblemSet/init/dcd82132-ebc2-43b7-9275-491f7f4707d1/ww HTTP/1.1" 200 -
+2019-11-03 23:54:44,057	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:54:44] "GET /ProblemSet/answer/dcd82132-ebc2-43b7-9275-491f7f4707d1/2 HTTP/1.1" 200 -
+2019-11-03 23:54:45,875	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:54:45] "GET /Login/logout/dcd82132-ebc2-43b7-9275-491f7f4707d1/test HTTP/1.1" 200 -
+2019-11-03 23:54:50,110	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:54:50] "GET /Login/test/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-11-03 23:54:52,065	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:54:52] "GET /ProblemSet/b46948e6-253b-4cea-96ff-f9af18558bdc/ww HTTP/1.1" 200 -
+2019-11-03 23:54:53,150	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:54:53] "GET /ProblemSet/init/b46948e6-253b-4cea-96ff-f9af18558bdc/ww HTTP/1.1" 200 -
+2019-11-03 23:54:53,182	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:54:53] "GET /ProblemSet/answer/b46948e6-253b-4cea-96ff-f9af18558bdc/2 HTTP/1.1" 200 -
+2019-11-03 23:54:56,599	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:54:56] "GET /ProblemSet/addscore/9/1/0/a9c96382f72ed8da9d1c181f66ccad30 HTTP/1.1" 500 -
+2019-11-03 23:55:15,099	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:55:15] "GET /ProblemSet/answer/b46948e6-253b-4cea-96ff-f9af18558bdc/3 HTTP/1.1" 200 -
+2019-11-03 23:55:24,223	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:55:24] "GET /ProblemSet/answer/b46948e6-253b-4cea-96ff-f9af18558bdc/1 HTTP/1.1" 200 -
+2019-11-03 23:55:38,660	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\apis\\problemsetAPI.py', reloading

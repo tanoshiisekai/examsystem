@@ -1,0 +1,12 @@
+2019-11-03 23:46:42,354	INFO	main1	<module>	Line:11	app started
+2019-11-03 23:46:42,362	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-03 23:46:42,388	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-03 23:46:42,402	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-03 23:46:45,288	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:46:45] "GET / HTTP/1.1" 200 -
+2019-11-03 23:46:45,343	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:46:45] "GET /swaggerui/droid-sans.css HTTP/1.1" 304 -
+2019-11-03 23:46:45,344	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:46:45] "GET /swaggerui/swagger-ui.css HTTP/1.1" 304 -
+2019-11-03 23:46:45,348	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:46:45] "GET /swaggerui/swagger-ui-bundle.js HTTP/1.1" 304 -
+2019-11-03 23:46:45,351	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:46:45] "GET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1" 304 -
+2019-11-03 23:46:45,597	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:46:45] "GET /swagger.json HTTP/1.1" 200 -
+2019-11-03 23:46:45,629	INFO	_internal	_log	Line:122	192.168.2.210 - - [03/Nov/2019 23:46:45] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2019-11-03 23:52:24,052	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading

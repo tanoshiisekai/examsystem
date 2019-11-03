@@ -67,16 +67,26 @@ class RemoveProblemSet(Resource):
         删除题库
         """
         return ProblemsetDAO.removeproblemsets(token, problemtitle, request)
-    
+
 
 @ns_problemset.route("/setting/<string:token>/<string:problemtitle>/<string:answercount>")
 class AnswerCount(Resource):
-    
+
     def get(self, token, problemtitle, answercount):
         """
         设置答题数目
         """
         return ProblemsetDAO.setanswercount(token, problemtitle, answercount, request)
+
+
+@ns_problemset.route("/setting1/<string:token>/<string:problemtitle>/<string:answertime>")
+class AnswerTime(Resource):
+
+    def get(self, token, problemtitle, answertime):
+        """
+        设置答题时间
+        """
+        return ProblemsetDAO.setanswertime(token, problemtitle, answertime, request)
 
 
 @ns_problemset.route("/init/<string:token>/<string:problemtitle>")
@@ -97,3 +107,23 @@ class GetProblem(Resource):
         获取题目
         """
         return ProblemsetDAO.getproblembyid(token, problemid, request)
+
+
+@ns_problemset.route("/addscore/<string:token>/<string:scoreid>/<string:right>/<string:wrong>/<string:md5str>")
+class AddScore(Resource):
+
+    def get(self, token,  scoreid, right, wrong, md5str):
+        """
+        更新积分
+        """
+        return ProblemsetDAO.addscore(token, scoreid, right, wrong, md5str, request)
+
+
+@ns_problemset.route("/finishedtime/<string:token>/<string:scoreid>")
+class FinishedTime(Resource):
+
+    def get(self, token, scoreid):
+        """
+        记录结束时间戳
+        """
+        return ProblemsetDAO.addfinishedtime(token, scoreid, request)

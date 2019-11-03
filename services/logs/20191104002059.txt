@@ -1,0 +1,8 @@
+2019-11-04 00:21:00,043	INFO	main1	<module>	Line:11	app started
+2019-11-04 00:21:00,052	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-04 00:21:00,079	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-04 00:21:00,093	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-04 00:21:00,329	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:21:00] "GET / HTTP/1.1" 200 -
+2019-11-04 00:21:00,594	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:21:00] "GET /swagger.json HTTP/1.1" 200 -
+2019-11-04 00:21:00,618	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:21:00] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2019-11-04 00:21:07,821	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\apis\\problemsetAPI.py', reloading

@@ -1,0 +1,10 @@
+2019-11-04 00:00:44,817	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-11-04 00:01:48,348	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-11-04 00:01:54,064	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-11-04 00:01:59,693	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-11-04 00:02:15,129	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-11-04 00:02:18,706	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-11-04 00:09:23,754	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-11-04 00:09:40,180	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-11-04 00:16:34,644	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-11-04 00:16:53,109	INFO	_internal	_log	Line:122	 * Restarting with stat

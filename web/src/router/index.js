@@ -11,6 +11,7 @@ import AdminSettings from "@/components/AdminSettings";
 import Problems from "@/components/Problems";
 import UserSettings from "@/components/UserSettings";
 import AnswerProblems from "@/components/AnswerProblems";
+import Finished from "@/components/Finished";
 
 
 
@@ -72,6 +73,11 @@ export default new Router({
       path: "/answerproblems",
       name: "answerproblems",
       component: AnswerProblems
+    },
+    {
+      path: "/finished",
+      name: "finished",
+      component: Finished
     }
   ]
 });

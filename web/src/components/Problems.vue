@@ -22,6 +22,10 @@ export default {
   components: {
     UserMenu
   },
+  created() {
+    var timerid = this.$cookie.get("timerid");
+    clearInterval(timerid);
+  },
   data() {
     return {
       problemsettitle: "",
