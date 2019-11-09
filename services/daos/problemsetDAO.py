@@ -3,6 +3,7 @@ from dbmodels.problemsetDBModel import ProblemSet
 from dbmodels.userDBModel import User
 from dbmodels.scoreDBModel import Score
 from dbmodels.problemDBModel import Problem
+from dbmodels.notebookDBModel import NoteBook
 from sqlalchemy import and_
 from tools.packtools import packinfo
 from tools.auth import getmd5, gettoken, getip, gettimestr, checkusertoken, checkalltoken, checkadmintoken, allowed_file
@@ -17,6 +18,60 @@ from flask import url_for
 
 
 class ProblemsetDAO:
+
+    @staticmethod
+    def removewrongproblem(token, notebookid, req):
+        """
+        移除错题
+        """
+        if checkusertoken(token, req):
+            temp = gdb.session.query(NoteBook).filter(
+                NoteBook.notebook_id == notebookid
+            ).first()
+            if temp:
+                gdb.session.delete(temp)
+                try:
+                    gdb.session.commit()
+                except Exception as e:
+                    print(e)
+                    return packinfo(infostatus=0, infomsg="数据库错误!")
+                else:
+                    return packinfo(infostatus=1, infomsg="移除成功!")
+            else:
+                return packinfo(infostatus=2, infomsg="题目不存在!")
+        else:
+            return packinfo(infostatus=3, infomsg="没有权限!")
+
+    @staticmethod
+    def addwrongproblem(token, problemsetid, problemid, req):
+        """
+        添加错题
+        """
+        if checkusertoken(token, req):
+            temp = gdb.session.query(NoteBook).filter(
+                NoteBook.problem_id == problemid
+            ).first()
+            if not temp:
+                us = gdb.session.query(User).filter(
+                    User.user_token == token
+                ).first()
+                if us:
+                    usid = us.user_id
+                    nb = NoteBook(usid, problemsetid, problemid)
+                    gdb.session.add(nb)
+                    try:
+                        gdb.session.commit()
+                    except Exception as e:
+                        print(e)
+                        return packinfo(infostatus=0, infomsg="数据库错误!")
+                    else:
+                        return packinfo(infostatus=1, infomsg="成功添加错题!")
+                else:
+                    return packinfo(infostatus=4, infomsg="用户不存在!")
+            else:
+                return packinfo(infostatus=2, infomsg="已添加的题目!")
+        else:
+            return packinfo(infostatus=3, infomsg="没有权限!")
 
     @staticmethod
     def addfinishedtime(token, scoreid, req):
@@ -36,8 +91,6 @@ class ProblemsetDAO:
                 return packinfo(infostatus=1, infomsg="时间更新成功!")
         else:
             return packinfo(infostatus=2, infomsg="没有权限!")
-
-        
 
     @staticmethod
     def addscore(token, scoreid, right, wrong, md5str, req):
@@ -75,6 +128,62 @@ class ProblemsetDAO:
             return packinfo(infostatus=2, infomsg="没有权限！")
 
     @staticmethod
+    def getwrongproblemidlist(token, req):
+        """
+        获取用户错题列表
+        """
+        if checkusertoken(token, req):
+            us = gdb.session.query(User).filter(
+                User.user_token == token
+            ).first()
+            if us:
+                usid = us.user_id
+                wronglist = gdb.session.query(NoteBook).filter(
+                    NoteBook.user_id == usid
+                ).all()
+                widlist = [{"notebookid": x.notebook_id,
+                            "problemid": x.problem_id} for x in wronglist]
+                # 检查作弊
+                temp = gdb.session.query(Score).filter(
+                    Score.user_id == usid).order_by(Score.score_id.desc()).first()
+                if temp.score_timeend.strip() == "":
+                    return packinfo(infostatus=-1, infomsg="正在答题", inforesult=temp.score_id)
+                return packinfo(infostatus=1, inforesult=widlist, infomsg="查询成功！")
+            else:
+                return packinfo(infostatus=0, infomsg="用户不存在！")
+        else:
+            return packinfo(infostatus=2, infomsg="没有权限！")
+
+    @staticmethod
+    def getproblemwithanswerbyid(token, problemid, req):
+        """
+        获取题目带答案
+        """
+        if checkusertoken(token, req):
+            print(problemid)
+            temp = gdb.session.query(Problem).filter(
+                Problem.problem_id == problemid
+            ).first()
+            us = gdb.session.query(User).filter(
+                User.user_token == token
+            ).first()
+            if temp:
+                tempdict = temp.todict()
+                answers = list(tempdict["problem_answer"])
+                answers.sort()
+                answers = "".join(answers)
+                tempdict["problem_answer"] = answers
+                tempscore = gdb.session.query(Score).filter(
+                    Score.user_id == us.user_id).order_by(Score.score_id.desc()).first()
+                if len(tempscore.score_timeend.strip()) == 0:
+                    return packinfo(infostatus=-1, infomsg="答题中，无法查看错题!")
+                return packinfo(infostatus=1, inforesult=tempdict)
+            else:
+                return packinfo(infostatus=0, infomsg="没有该题目！")
+        else:
+            return packinfo(infostatus=2, infomsg="没有权限！")
+
+    @staticmethod
     def getproblembyid(token, problemid, req):
         """
         获取题目
@@ -90,6 +199,10 @@ class ProblemsetDAO:
             tempuser = gdb.session.query(User).filter(
                 User.user_problemsetid == temp.problemset_id
             ).first()
+            tempscore = gdb.session.query(Score).filter(
+                Score.user_id == tempuser.user_id).order_by(Score.score_id.desc()).first()
+            if len(tempscore.score_timeend.strip()) != 0:
+                return packinfo(infostatus=-1, infomsg="答题被终止!")
             if temp:
                 tempdict = temp.todict()
                 answers = list(tempdict["problem_answer"])

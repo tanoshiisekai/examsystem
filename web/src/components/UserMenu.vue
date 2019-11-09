@@ -54,8 +54,8 @@ export default {
       this.$router.push({ name: "problems" });
     },
     notes() {
-      console.log("notes");
-      this.$router.push({ name: "notes" });
+      console.log("notebook");
+      this.$router.push({ name: "notebook" });
     },
     scores() {
       console.log("scores");

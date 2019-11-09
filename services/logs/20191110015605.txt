@@ -1,0 +1,52 @@
+2019-11-10 01:56:05,431	INFO	main1	<module>	Line:11	app started
+2019-11-10 01:56:05,438	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-10 01:56:05,461	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-10 01:56:05,472	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-10 01:56:07,335	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:56:07] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda HTTP/1.1" 200 -
+2019-11-10 01:56:07,358	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:56:07] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda/5 HTTP/1.1" 200 -
+2019-11-10 01:56:13,597	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:56:13] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda HTTP/1.1" 200 -
+2019-11-10 01:56:13,638	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:56:13] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda/5 HTTP/1.1" 200 -
+2019-11-10 01:56:18,229	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:56:18] "GET /ProblemSet/fa8624a7-de2a-4507-ba23-85a36f820eda/ww HTTP/1.1" 200 -
+2019-11-10 01:56:19,299	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:56:19] "GET /ProblemSet/init/fa8624a7-de2a-4507-ba23-85a36f820eda/ww HTTP/1.1" 200 -
+2019-11-10 01:56:19,329	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:56:19] "GET /ProblemSet/answer/fa8624a7-de2a-4507-ba23-85a36f820eda/6 HTTP/1.1" 200 -
+2019-11-10 01:56:20,540	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:56:20] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda HTTP/1.1" 200 -
+2019-11-10 01:56:26,965	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:56:26] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda HTTP/1.1" 200 -
+2019-11-10 01:56:50,714	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:56:50] "GET /ProblemSet/addscore/fa8624a7-de2a-4507-ba23-85a36f820eda/134/0/1/8a33c10f0a28ea58de155bfa9ffb29bc HTTP/1.1" 200 -
+2019-11-10 01:56:50,738	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:56:50] "GET /ProblemSet/answer/fa8624a7-de2a-4507-ba23-85a36f820eda/3 HTTP/1.1" 200 -
+2019-11-10 01:56:50,762	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:56:50] "GET /ProblemSet/wrongproblem/fa8624a7-de2a-4507-ba23-85a36f820eda/1/6 HTTP/1.1" 200 -
+2019-11-10 01:57:22,723	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:57:22] "GET /ProblemSet/addscore/fa8624a7-de2a-4507-ba23-85a36f820eda/134/0/1/8a33c10f0a28ea58de155bfa9ffb29bc HTTP/1.1" 200 -
+2019-11-10 01:57:22,738	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:57:22] "GET /ProblemSet/answer/fa8624a7-de2a-4507-ba23-85a36f820eda/5 HTTP/1.1" 200 -
+2019-11-10 01:57:22,759	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:57:22] "GET /ProblemSet/wrongproblem/fa8624a7-de2a-4507-ba23-85a36f820eda/1/3 HTTP/1.1" 200 -
+2019-11-10 01:57:44,031	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:57:44] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda HTTP/1.1" 200 -
+2019-11-10 01:58:09,297	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:09] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda HTTP/1.1" 200 -
+2019-11-10 01:58:09,374	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:09] "GET /ProblemSet/init/fa8624a7-de2a-4507-ba23-85a36f820eda/ww HTTP/1.1" 200 -
+2019-11-10 01:58:09,656	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:09] "GET /ProblemSet/answer/fa8624a7-de2a-4507-ba23-85a36f820eda/4 HTTP/1.1" 200 -
+2019-11-10 01:58:10,598	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:10] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda HTTP/1.1" 200 -
+2019-11-10 01:58:39,592	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:39] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda HTTP/1.1" 200 -
+2019-11-10 01:58:41,787	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:41] "GET /ProblemSet/addscore/fa8624a7-de2a-4507-ba23-85a36f820eda/135/0/1/05656eb6db7358c70ef6cfdf5939166e HTTP/1.1" 200 -
+2019-11-10 01:58:41,804	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:41] "GET /ProblemSet/answer/fa8624a7-de2a-4507-ba23-85a36f820eda/3 HTTP/1.1" 200 -
+2019-11-10 01:58:41,822	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:41] "GET /ProblemSet/wrongproblem/fa8624a7-de2a-4507-ba23-85a36f820eda/1/4 HTTP/1.1" 200 -
+2019-11-10 01:58:44,853	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:44] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda HTTP/1.1" 200 -
+2019-11-10 01:58:48,373	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:48] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda HTTP/1.1" 200 -
+2019-11-10 01:58:49,920	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:49] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda HTTP/1.1" 200 -
+2019-11-10 01:58:52,505	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:52] "GET /ProblemSet/addscore/fa8624a7-de2a-4507-ba23-85a36f820eda/135/0/1/05656eb6db7358c70ef6cfdf5939166e HTTP/1.1" 200 -
+2019-11-10 01:58:52,516	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:52] "GET /ProblemSet/answer/fa8624a7-de2a-4507-ba23-85a36f820eda/6 HTTP/1.1" 200 -
+2019-11-10 01:58:52,528	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:52] "GET /ProblemSet/wrongproblem/fa8624a7-de2a-4507-ba23-85a36f820eda/1/3 HTTP/1.1" 200 -
+2019-11-10 01:58:53,381	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:53] "GET /ProblemSet/addscore/fa8624a7-de2a-4507-ba23-85a36f820eda/135/0/1/05656eb6db7358c70ef6cfdf5939166e HTTP/1.1" 200 -
+2019-11-10 01:58:53,383	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:53] "GET /ProblemSet/answer/fa8624a7-de2a-4507-ba23-85a36f820eda/1 HTTP/1.1" 200 -
+2019-11-10 01:58:53,398	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:53] "GET /ProblemSet/wrongproblem/fa8624a7-de2a-4507-ba23-85a36f820eda/1/6 HTTP/1.1" 200 -
+2019-11-10 01:58:54,374	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:54] "GET /ProblemSet/finishedtime/fa8624a7-de2a-4507-ba23-85a36f820eda/135 HTTP/1.1" 200 -
+2019-11-10 01:58:54,386	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:54] "GET /ProblemSet/addscore/fa8624a7-de2a-4507-ba23-85a36f820eda/135/0/1/05656eb6db7358c70ef6cfdf5939166e HTTP/1.1" 200 -
+2019-11-10 01:58:54,401	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:58:54] "GET /ProblemSet/wrongproblem/fa8624a7-de2a-4507-ba23-85a36f820eda/1/1 HTTP/1.1" 200 -
+2019-11-10 01:59:07,335	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:59:07] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda HTTP/1.1" 200 -
+2019-11-10 01:59:07,352	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:59:07] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda/5 HTTP/1.1" 200 -
+2019-11-10 01:59:26,968	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:59:26] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda HTTP/1.1" 200 -
+2019-11-10 01:59:26,985	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:59:26] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda/5 HTTP/1.1" 200 -
+2019-11-10 02:00:43,752	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 02:00:43] "GET /ProblemSet/fa8624a7-de2a-4507-ba23-85a36f820eda/ww HTTP/1.1" 200 -
+2019-11-10 02:00:45,750	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 02:00:45] "GET /ProblemSet/init/fa8624a7-de2a-4507-ba23-85a36f820eda/ww HTTP/1.1" 200 -
+2019-11-10 02:00:45,794	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 02:00:45] "GET /ProblemSet/answer/fa8624a7-de2a-4507-ba23-85a36f820eda/1 HTTP/1.1" 200 -
+2019-11-10 02:00:45,970	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 02:00:45] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda HTTP/1.1" 200 -
+2019-11-10 02:01:17,965	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 02:01:17] "GET /ProblemSet/addscore/fa8624a7-de2a-4507-ba23-85a36f820eda/136/0/1/11fef428997731aef94c657d9356a29e HTTP/1.1" 200 -
+2019-11-10 02:01:18,012	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 02:01:18] "GET /ProblemSet/answer/fa8624a7-de2a-4507-ba23-85a36f820eda/4 HTTP/1.1" 200 -
+2019-11-10 02:01:18,074	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 02:01:18] "GET /ProblemSet/wrongproblem/fa8624a7-de2a-4507-ba23-85a36f820eda/1/1 HTTP/1.1" 200 -
+2019-11-10 02:01:26,666	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading

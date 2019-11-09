@@ -80,6 +80,19 @@ export default {
     };
   },
   methods: {
+    addwrongproblem() {
+      var pid = this.problem.problem_id;
+      var psid = this.problem.problemset_id;
+      console.log("pid", pid);
+      console.log("psid", psid);
+      var usertoken = this.$cookie.get("usertoken");
+      this.axios
+        .get("/ProblemSet/wrongproblem/" + usertoken + "/" + psid + "/" + pid)
+        .then(response => {
+          var resp = response.data;
+          console.log(resp);
+        });
+    },
     submitanswer() {
       var answer = this.array;
       answer.sort();
@@ -119,6 +132,7 @@ export default {
           .then(response => {
             var resp = response.data;
             console.log(resp);
+            this.addwrongproblem();
           });
       }
     },
@@ -159,6 +173,11 @@ export default {
         .get("/ProblemSet/answer/" + usertoken + "/" + this.problemid)
         .then(response => {
           var resp = response.data;
+          if (resp["infostatus"] == -1) {
+            setTimeout(() => {
+              this.$router.push({ name: "terminated" });
+            }, 1000);
+          }
           if (resp["infostatus"] == 1) {
             this.problem = resp["inforesult"];
             if (this.problem.problem_picpath.length > 0) {
@@ -218,17 +237,19 @@ export default {
   text-align: center;
   margin-top: 0px;
   width: 50px;
-  color: #F0F0F0;
+  color: #f0f0f0;
   font-size: 20px;
   line-height: 26px;
-  background-color: #7878A8;
+  background-color: #7878a8;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  filter:alpha(Opacity=60);-moz-opacity:0.6;opacity: 0.6;
+  filter: alpha(Opacity=60);
+  -moz-opacity: 0.6;
+  opacity: 0.6;
 }
-.virtualbody{
+.virtualbody {
   width: 100%;
-  overflow-y:scroll;
-  overflow-x:auto;
+  overflow-y: scroll;
+  overflow-x: auto;
 }
 </style>

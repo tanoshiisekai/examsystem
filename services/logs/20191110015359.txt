@@ -1,0 +1,20 @@
+2019-11-10 01:53:59,729	INFO	main1	<module>	Line:11	app started
+2019-11-10 01:53:59,744	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-10 01:53:59,782	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-10 01:53:59,794	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-10 01:54:01,785	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:54:01] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda HTTP/1.1" 200 -
+2019-11-10 01:54:01,848	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:54:01] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda/5 HTTP/1.1" 200 -
+2019-11-10 01:54:14,924	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:54:14] "GET /ProblemSet/finishedtime/fa8624a7-de2a-4507-ba23-85a36f820eda/132 HTTP/1.1" 200 -
+2019-11-10 01:54:17,175	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:54:17] "GET /ProblemSet/fa8624a7-de2a-4507-ba23-85a36f820eda/w'www HTTP/1.1" 200 -
+2019-11-10 01:54:21,309	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:54:21] "GET /ProblemSet/fa8624a7-de2a-4507-ba23-85a36f820eda/ww HTTP/1.1" 200 -
+2019-11-10 01:54:22,387	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:54:22] "GET /ProblemSet/init/fa8624a7-de2a-4507-ba23-85a36f820eda/ww HTTP/1.1" 200 -
+2019-11-10 01:54:22,422	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:54:22] "GET /ProblemSet/answer/fa8624a7-de2a-4507-ba23-85a36f820eda/3 HTTP/1.1" 200 -
+2019-11-10 01:54:23,682	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:54:23] "GET /ProblemSet/addscore/fa8624a7-de2a-4507-ba23-85a36f820eda/133/0/1/9297c3e4b69cdc459da5262be94ee158 HTTP/1.1" 200 -
+2019-11-10 01:54:23,698	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:54:23] "GET /ProblemSet/answer/fa8624a7-de2a-4507-ba23-85a36f820eda/6 HTTP/1.1" 200 -
+2019-11-10 01:54:23,702	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:54:23] "GET /ProblemSet/wrongproblem/fa8624a7-de2a-4507-ba23-85a36f820eda/1/3 HTTP/1.1" 200 -
+2019-11-10 01:54:26,619	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:54:26] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda HTTP/1.1" 200 -
+2019-11-10 01:54:26,648	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:54:26] "GET /ProblemSet/problemanswer/fa8624a7-de2a-4507-ba23-85a36f820eda/5 HTTP/1.1" 200 -
+2019-11-10 01:54:55,733	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:54:55] "GET /ProblemSet/addscore/fa8624a7-de2a-4507-ba23-85a36f820eda/133/0/1/9297c3e4b69cdc459da5262be94ee158 HTTP/1.1" 200 -
+2019-11-10 01:54:55,753	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:54:55] "GET /ProblemSet/answer/fa8624a7-de2a-4507-ba23-85a36f820eda/1 HTTP/1.1" 200 -
+2019-11-10 01:54:55,770	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 01:54:55] "GET /ProblemSet/wrongproblem/fa8624a7-de2a-4507-ba23-85a36f820eda/1/6 HTTP/1.1" 200 -
+2019-11-10 01:55:08,895	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading

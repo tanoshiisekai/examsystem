@@ -12,8 +12,11 @@ import Problems from "@/components/Problems";
 import UserSettings from "@/components/UserSettings";
 import AnswerProblems from "@/components/AnswerProblems";
 import Finished from "@/components/Finished";
-
-
+import Notebook from "@/components/Notebook";
+import Emptybook from "@/components/Emptybook";
+import Answering from "@/components/Answering";
+import Terminated from "@/components/Terminated";
+import NoteTerminated from "@/components/NoteTerminated";
 
 Vue.use(Router);
 
@@ -78,6 +81,30 @@ export default new Router({
       path: "/finished",
       name: "finished",
       component: Finished
+    },
+    {
+      path: "/notebook",
+      name: "notebook",
+      component: Notebook
+    },
+    {
+      path: "/emptybook",
+      name: "emptybook",
+      component: Emptybook
+    },
+    {
+      path: "/answering",
+      name: "answering",
+      component: Answering
+    },
+    {
+      path: "/terminated",
+      name: "terminated",
+      component: Terminated
+    },{
+      path: "/noteterminated",
+      name: "noteterminated",
+      component: NoteTerminated
     }
   ]
 });

@@ -109,6 +109,26 @@ class GetProblem(Resource):
         return ProblemsetDAO.getproblembyid(token, problemid, request)
 
 
+@ns_problemset.route("/problemanswer/<string:token>/<string:problemid>")
+class ProblemAnswer(Resource):
+
+    def get(self, token, problemid):
+        """
+        获取题目带答案
+        """
+        return ProblemsetDAO.getproblemwithanswerbyid(token, problemid, request)
+
+
+@ns_problemset.route("/problemanswer/<string:token>")
+class WrongProblems(Resource):
+
+    def get(self, token):
+        """
+        获取用户错题列表
+        """
+        return ProblemsetDAO.getwrongproblemidlist(token, request)
+
+
 @ns_problemset.route("/addscore/<string:token>/<string:scoreid>/<string:right>/<string:wrong>/<string:md5str>")
 class AddScore(Resource):
 
@@ -127,3 +147,23 @@ class FinishedTime(Resource):
         记录结束时间戳
         """
         return ProblemsetDAO.addfinishedtime(token, scoreid, request)
+
+
+@ns_problemset.route("/wrongproblem/<string:token>/<string:problemsetid>/<string:problemid>")
+class WrongProblem(Resource):
+
+    def get(self, token, problemsetid, problemid):
+        """
+        添加错题
+        """
+        return ProblemsetDAO.addwrongproblem(token, problemsetid, problemid, request)
+
+
+@ns_problemset.route("/wrongproblem/<string:token>/<string:notebookid>")
+class RemoveWrong(Resource):
+
+    def get(self, token, notebookid):
+        """
+        移除错题
+        """
+        return ProblemsetDAO.removewrongproblem(token, notebookid, request)

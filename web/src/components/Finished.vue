@@ -1,13 +1,10 @@
 <template>
   <div class="container">
     <UserMenu></UserMenu>
-    <md-subheader>
-      <span class="md-title">答题结束</span>
-    </md-subheader>
     <md-card>
       <md-card-header>
         <md-card-header-text style="text-align:left;">
-          <div class="md-title" style="font-size:30px;">答题结束，请从顶部菜单退出本系统。</div>
+          <div class="md-title" style="font-size:30px;">答题结束</div>
         </md-card-header-text>
       </md-card-header>
     </md-card>
