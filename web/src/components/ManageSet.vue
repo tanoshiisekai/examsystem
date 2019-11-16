@@ -4,7 +4,7 @@
     <md-subheader>
       <span class="md-title">题库管理</span>
     </md-subheader>
-    <md-table md-card>
+    <md-table>
       <md-table-row>
         <md-table-head style="text-align:center;">题库名称</md-table-head>
         <md-table-head style="text-align:center;">题库描述</md-table-head>
@@ -24,13 +24,14 @@
           <md-button class="md-raised md-accent" @click="handleDelete(dt.problemset_title)">删除</md-button>
           <md-button class="md-raised md-primary" @click="handleSetting(dt.problemset_title)">设置答题数目</md-button>
           <md-button class="md-raised md-primary" @click="handleTime(dt.problemset_title)">设置答题时间</md-button>
+          <md-button class="md-raised md-primary" @click="handleCopy(dt.problemset_title)">复制题库</md-button>
         </md-table-cell>
       </md-table-row>
     </md-table>
     <md-dialog :md-active.sync="showDialogAnserCount">
       <md-dialog-title>设置</md-dialog-title>
       <md-field>
-        <label>设置答题数目（道）</label>
+        <label>设置答题数目（道）（注意不要少于3道题）</label>
         <md-input v-model="answercount"></md-input>
       </md-field>
       <md-dialog-actions>
@@ -47,6 +48,17 @@
       <md-dialog-actions>
         <md-button class="md-primary mybutton" @click="setanswertime()">是</md-button>
         <md-button class="md-primary mybutton" @click="showDialogAnserTime = false">否</md-button>
+      </md-dialog-actions>
+    </md-dialog>
+    <md-dialog :md-active.sync="showDialogAnserCopy">
+      <md-dialog-title>设置</md-dialog-title>
+      <md-field>
+        <label>设置新题库的名称</label>
+        <md-input v-model="answercopy"></md-input>
+      </md-field>
+      <md-dialog-actions>
+        <md-button class="md-primary mybutton" @click="setanswercopy()">是</md-button>
+        <md-button class="md-primary mybutton" @click="showDialogAnserCopy = false">否</md-button>
       </md-dialog-actions>
     </md-dialog>
     <md-snackbar :md-duration="3000" :md-active.sync="showSnackbar" md-persistent>
@@ -70,8 +82,10 @@ export default {
       datalist: [],
       showDialogAnserCount: false,
       showDialogAnserTime: false,
+      showDialogAnserCopy: false,
       answercount: 0,
       answertime: 0,
+      answercopy: "",
       dialogsettitle: "",
       showSnackbar: false,
       message: ""
@@ -82,11 +96,12 @@ export default {
       var usertoken = this.$cookie.get("usertoken");
       this.axios.get("/ProblemSet/" + usertoken).then(response => {
         var resp = response.data;
-        if (resp["infostatus"]) {
+        if (resp["infostatus"] == 1) {
           this.datalist = resp["inforesult"];
         } else {
           alert(resp["infomsg"]);
         }
+        console.log(this.datalist);
       });
     },
     setanswercount() {
@@ -129,6 +144,24 @@ export default {
           location.reload();
         });
     },
+    setanswercopy() {
+      var usertoken = this.$cookie.get("usertoken");
+      this.axios
+        .get(
+          "/ProblemSet/copyset/" +
+            usertoken +
+            "/" +
+            this.dialogsettitle +
+            "/" +
+            this.answercopy
+        )
+        .then(response => {
+          var resp = response.data;
+          this.showSnackbar = true;
+          this.message = resp["infomsg"];
+          location.reload();
+        });
+    },
     handleDelete(problemsettitle) {
       var usertoken = this.$cookie.get("usertoken");
       this.axios
@@ -147,6 +180,10 @@ export default {
     handleTime(problemsettitle) {
       this.dialogsettitle = problemsettitle;
       this.showDialogAnserTime = true;
+    },
+    handleCopy(problemsettitle) {
+      this.dialogsettitle = problemsettitle;
+      this.showDialogAnserCopy = true;
     }
   }
 };

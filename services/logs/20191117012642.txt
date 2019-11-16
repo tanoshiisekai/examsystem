@@ -1,0 +1,50 @@
+2019-11-17 01:26:42,432	INFO	main1	<module>	Line:11	app started
+2019-11-17 01:26:42,472	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-17 01:26:42,572	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-17 01:26:42,598	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-17 01:26:44,097	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 01:26:44] "GET /ProblemSet/scores/48fe36a7-fabb-4d80-96fb-664c6826f45b HTTP/1.1" 200 -
+2019-11-17 01:27:06,461	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 01:27:06] "GET /ProblemSet/scores/48fe36a7-fabb-4d80-96fb-664c6826f45b HTTP/1.1" 200 -
+2019-11-17 01:27:11,751	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 01:27:11] "GET /ProblemSet/scores/48fe36a7-fabb-4d80-96fb-664c6826f45b HTTP/1.1" 200 -
+2019-11-17 01:27:18,038	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 01:27:18] "GET /ProblemSet/scores/48fe36a7-fabb-4d80-96fb-664c6826f45b HTTP/1.1" 200 -
+2019-11-17 01:28:10,407	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:28:10] "GET /Login/test/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
+2019-11-17 01:28:16,730	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:28:16] "GET /ProblemSet/scores/cd5b8823-986c-4df3-80b6-2107e636d53a HTTP/1.1" 200 -
+2019-11-17 01:28:35,106	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:28:35] "GET /ProblemSet/cd5b8823-986c-4df3-80b6-2107e636d53a/ww HTTP/1.1" 200 -
+2019-11-17 01:28:36,369	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:28:36] "GET /ProblemSet/init/cd5b8823-986c-4df3-80b6-2107e636d53a/ww HTTP/1.1" 200 -
+2019-11-17 01:28:36,440	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:28:36] "GET /ProblemSet/answer/cd5b8823-986c-4df3-80b6-2107e636d53a/5 HTTP/1.1" 200 -
+2019-11-17 01:28:50,395	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:28:50] "GET /ProblemSet/addscore/cd5b8823-986c-4df3-80b6-2107e636d53a/210/1/0/4240a92ad6d722e4fbba3f8024f8cfe6 HTTP/1.1" 200 -
+2019-11-17 01:28:50,414	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:28:50] "GET /ProblemSet/answer/cd5b8823-986c-4df3-80b6-2107e636d53a/4 HTTP/1.1" 200 -
+2019-11-17 01:28:56,031	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:28:56] "GET /ProblemSet/addscore/cd5b8823-986c-4df3-80b6-2107e636d53a/210/1/0/4240a92ad6d722e4fbba3f8024f8cfe6 HTTP/1.1" 200 -
+2019-11-17 01:28:56,043	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:28:56] "GET /ProblemSet/answer/cd5b8823-986c-4df3-80b6-2107e636d53a/6 HTTP/1.1" 200 -
+2019-11-17 01:28:59,931	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:28:59] "GET /ProblemSet/addscore/cd5b8823-986c-4df3-80b6-2107e636d53a/210/1/0/4240a92ad6d722e4fbba3f8024f8cfe6 HTTP/1.1" 200 -
+2019-11-17 01:28:59,936	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:28:59] "GET /ProblemSet/answer/cd5b8823-986c-4df3-80b6-2107e636d53a/2 HTTP/1.1" 200 -
+2019-11-17 01:29:08,020	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:29:08] "GET /ProblemSet/addscore/cd5b8823-986c-4df3-80b6-2107e636d53a/210/1/0/4240a92ad6d722e4fbba3f8024f8cfe6 HTTP/1.1" 200 -
+2019-11-17 01:29:08,028	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:29:08] "GET /ProblemSet/finishedtime/cd5b8823-986c-4df3-80b6-2107e636d53a/210 HTTP/1.1" 200 -
+2019-11-17 01:29:09,759	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:29:09] "GET /ProblemSet/scores/cd5b8823-986c-4df3-80b6-2107e636d53a HTTP/1.1" 200 -
+2019-11-17 01:29:49,805	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:29:49] "GET /ProblemSet/finishedtime/cd5b8823-986c-4df3-80b6-2107e636d53a/210 HTTP/1.1" 200 -
+2019-11-17 01:29:51,837	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:29:51] "GET /ProblemSet/problemanswer/cd5b8823-986c-4df3-80b6-2107e636d53a HTTP/1.1" 200 -
+2019-11-17 01:29:51,877	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:29:51] "GET /ProblemSet/problemanswer/cd5b8823-986c-4df3-80b6-2107e636d53a/4 HTTP/1.1" 200 -
+2019-11-17 01:29:53,952	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:29:53] "GET /ProblemSet/problemanswer/cd5b8823-986c-4df3-80b6-2107e636d53a/1 HTTP/1.1" 200 -
+2019-11-17 01:29:55,047	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:29:55] "GET /ProblemSet/wrongproblem/cd5b8823-986c-4df3-80b6-2107e636d53a/7 HTTP/1.1" 200 -
+2019-11-17 01:29:55,107	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:29:55] "GET /ProblemSet/problemanswer/cd5b8823-986c-4df3-80b6-2107e636d53a/3 HTTP/1.1" 200 -
+2019-11-17 01:29:57,896	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:29:57] "GET /ProblemSet/problemanswer/cd5b8823-986c-4df3-80b6-2107e636d53a/5 HTTP/1.1" 200 -
+2019-11-17 01:29:58,688	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:29:58] "GET /ProblemSet/problemanswer/cd5b8823-986c-4df3-80b6-2107e636d53a/2 HTTP/1.1" 200 -
+2019-11-17 01:30:00,430	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:30:00] "GET /ProblemSet/problemanswer/cd5b8823-986c-4df3-80b6-2107e636d53a/6 HTTP/1.1" 200 -
+2019-11-17 01:30:07,612	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:30:07] "GET /ProblemSet/cd5b8823-986c-4df3-80b6-2107e636d53a/ww HTTP/1.1" 200 -
+2019-11-17 01:30:08,829	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:30:08] "GET /ProblemSet/init/cd5b8823-986c-4df3-80b6-2107e636d53a/ww HTTP/1.1" 200 -
+2019-11-17 01:30:08,877	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:30:08] "GET /ProblemSet/answer/cd5b8823-986c-4df3-80b6-2107e636d53a/2 HTTP/1.1" 200 -
+2019-11-17 01:30:15,781	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:30:15] "GET /ProblemSet/addscore/cd5b8823-986c-4df3-80b6-2107e636d53a/211/0/1/1398157512e0b2d2ced6a41c1a03681c HTTP/1.1" 200 -
+2019-11-17 01:30:15,793	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:30:15] "GET /ProblemSet/answer/cd5b8823-986c-4df3-80b6-2107e636d53a/6 HTTP/1.1" 200 -
+2019-11-17 01:30:15,818	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:30:15] "GET /ProblemSet/wrongproblem/cd5b8823-986c-4df3-80b6-2107e636d53a/1/2 HTTP/1.1" 200 -
+2019-11-17 01:30:17,968	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:30:17] "GET /ProblemSet/addscore/cd5b8823-986c-4df3-80b6-2107e636d53a/211/0/1/1398157512e0b2d2ced6a41c1a03681c HTTP/1.1" 200 -
+2019-11-17 01:30:17,981	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:30:17] "GET /ProblemSet/answer/cd5b8823-986c-4df3-80b6-2107e636d53a/5 HTTP/1.1" 200 -
+2019-11-17 01:30:17,994	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:30:17] "GET /ProblemSet/wrongproblem/cd5b8823-986c-4df3-80b6-2107e636d53a/1/6 HTTP/1.1" 200 -
+2019-11-17 01:30:20,206	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:30:20] "GET /ProblemSet/addscore/cd5b8823-986c-4df3-80b6-2107e636d53a/211/0/1/1398157512e0b2d2ced6a41c1a03681c HTTP/1.1" 200 -
+2019-11-17 01:30:20,211	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:30:20] "GET /ProblemSet/answer/cd5b8823-986c-4df3-80b6-2107e636d53a/1 HTTP/1.1" 200 -
+2019-11-17 01:30:20,243	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:30:20] "GET /ProblemSet/wrongproblem/cd5b8823-986c-4df3-80b6-2107e636d53a/1/5 HTTP/1.1" 200 -
+2019-11-17 01:30:21,035	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:30:21] "GET /ProblemSet/finishedtime/cd5b8823-986c-4df3-80b6-2107e636d53a/211 HTTP/1.1" 200 -
+2019-11-17 01:30:21,043	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:30:21] "GET /ProblemSet/addscore/cd5b8823-986c-4df3-80b6-2107e636d53a/211/0/1/1398157512e0b2d2ced6a41c1a03681c HTTP/1.1" 200 -
+2019-11-17 01:30:21,095	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:30:21] "GET /ProblemSet/wrongproblem/cd5b8823-986c-4df3-80b6-2107e636d53a/1/1 HTTP/1.1" 200 -
+2019-11-17 01:30:23,677	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:30:23] "GET /ProblemSet/scores/cd5b8823-986c-4df3-80b6-2107e636d53a HTTP/1.1" 200 -
+2019-11-17 01:30:27,159	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:30:27] "GET /ProblemSet/finishedtime/cd5b8823-986c-4df3-80b6-2107e636d53a/211 HTTP/1.1" 200 -
+2019-11-17 01:30:28,965	INFO	_internal	_log	Line:122	192.168.2.103 - - [17/Nov/2019 01:30:28] "GET /ProblemSet/scores/cd5b8823-986c-4df3-80b6-2107e636d53a HTTP/1.1" 200 -
+2019-11-17 01:33:16,496	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading

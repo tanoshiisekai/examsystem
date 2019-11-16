@@ -31,6 +31,12 @@ export default {
     };
   },
   created: function() {
+    document.οncοntextmenu = function() {
+      return false;
+    };
+    document.onselectstart = function() {
+      return false;
+    };
     var username = this.$cookie.get("username");
     var usertoken = this.$cookie.get("usertoken");
     if (!username || !usertoken) {
@@ -59,10 +65,11 @@ export default {
     },
     scores() {
       console.log("scores");
+      this.$router.push({ name: "scores" });
     },
     usersettings() {
       console.log("usersettings");
-      this.$router.push({ name: "usersettings"});
+      this.$router.push({ name: "usersettings" });
     },
     userlogout() {
       var username = this.$cookie.get("username");

@@ -6,7 +6,7 @@ from dbmodels.problemDBModel import Problem
 from dbmodels.notebookDBModel import NoteBook
 from sqlalchemy import and_
 from tools.packtools import packinfo
-from tools.auth import getmd5, gettoken, getip, gettimestr, checkusertoken, checkalltoken, checkadmintoken, allowed_file
+from tools.auth import gettimespan, getmd5, gettoken, getip, gettimestr, checkusertoken, checkalltoken, checkadmintoken, allowed_file
 import conf
 import os
 import zipfile
@@ -18,6 +18,166 @@ from flask import url_for
 
 
 class ProblemsetDAO:
+
+    @staticmethod
+    def copyproblemset(token, psettitle, newsettitle, req):
+        """
+        复制题库，可用于组织考试时清空积分
+        """
+        if checkalltoken(token, req):
+            pset = gdb.session.query(ProblemSet).filter(
+                ProblemSet.problemset_title == psettitle
+            ).first()
+            if pset:
+                npset = ProblemSet(newsettitle, pset.problemset_desp, pset.problemset_count, pset.problemset_token,
+                                   pset.problemset_answercount, pset.problemset_timeperproblem)
+                try:
+                    gdb.session.add(npset)
+                    gdb.session.commit()
+                except Exception as e:
+                    return packinfo(infostatus=4, infomsg="数据库错误!")
+                else:
+                    newid = gdb.session.query(ProblemSet).filter(
+                        ProblemSet.problemset_title == newsettitle
+                    ).first().problemset_id
+                    plist = gdb.session.query(Problem).filter(
+                        Problem.problemset_id == pset.problemset_id
+                    ).all()
+                    for p in plist:
+                        np = Problem(newid, p.problem_desp, p.problem_picpath, p.problem_choiceA, p.problem_choiceB,
+                                     p.problem_choiceC, p.problem_choiceD, p.problem_answer)
+                        gdb.session.add(np)
+                    try:
+                        gdb.session.commit()
+                    except Exception as e:
+                        return packinfo(infostatus=5, infomsg="数据库错误!")
+                    else:
+                        return packinfo(infostatus=1, infomsg="复制成功!")
+            else:
+                return packinfo(infostatus=3, infomsg="没有此题库!")
+        else:
+            return packinfo(infostatus=2, infomsg="没有权限!")
+
+    @staticmethod
+    def getscoresbyuseridandpsetid(userid, psetid):
+        """
+        通过用户编号和题库编号查询用户积分
+        """
+        scores = gdb.session.query(Score).filter(and_(
+            Score.user_id == userid,
+            Score.problemset_id == psetid
+        )).all()
+        if len(scores) > 0:
+            scores.sort(key=lambda x: x.score_id, reverse=True)
+            aim = {}
+            for sc in scores:
+                if len(sc.score_timestart) > 0 and len(sc.score_timeend) > 0:
+                    if sc.score_right + sc.score_wrong == sc.score_problemcount:
+                        if gettimespan(sc.score_timeend, sc.score_timestart) / sc.score_problemcount <= sc.problemset_timeperproblem + 3:
+                            aim = sc.todict()
+                            break
+            aim["score_timespan"] = gettimespan(
+                aim["score_timeend"], aim["score_timestart"])
+            aim["problemset_title"] = gdb.session.query(ProblemSet).filter(
+                ProblemSet.problemset_id == aim["problemset_id"]).first().problemset_title
+            aim["user_name"] = gdb.session.query(User).filter(
+                User.user_id == aim["user_id"]).first().user_username
+            return aim
+        return {}
+
+    @staticmethod
+    def getpsetlistbyuserid(userid):
+        """
+        查询用户做过的题库编号列表
+        """
+        psetlist = gdb.session.query(Score.problemset_id).filter(
+            Score.user_id == userid
+        ).distinct().all()
+        return [x[0] for x in psetlist]
+
+    @staticmethod
+    def getuserlistbypsetid(psetid):
+        """
+        查询做某题库的用户编号列表
+        """
+        ulist = gdb.session.query(Score.user_id).filter(
+            Score.problemset_id == psetid
+        ).distinct().all()
+        return [x[0] for x in ulist]
+
+    @staticmethod
+    def getscorelistbypsetid(psetid):
+        """
+        查询做某题库的用户成绩排名
+        """
+        ulist = ProblemsetDAO.getuserlistbypsetid(psetid)
+        scorelist = []
+        for uid in ulist:
+            scorelist.append(
+                ProblemsetDAO.getscoresbyuseridandpsetid(uid, psetid))
+        scorelist.sort(key=lambda x: (x["score_right"]/x["score_problemcount"], 1/(
+            x["score_timespan"]/x["score_problemcount"])), reverse=True)
+        totaluser = len(scorelist)
+        for i in range(0, len(scorelist)):
+            scorelist[i]["score_rank"] = str(i + 1)+"/"+str(totaluser)
+        return scorelist
+
+    @staticmethod
+    def getpsetidbypsetname(token, psetname, req):
+        """
+        根据题库名称，查题库编号
+        """
+        if checkalltoken(token, req):
+            pset = gdb.session.query(ProblemSet).filter(
+                ProblemSet.problemset_title == psetname
+            ).first()
+            if pset:
+                return packinfo(infostatus=1, infomsg="查询成功!", inforesult=pset.problemset_id)
+            else:
+                return packinfo(infostatus=3, infomsg="没有此题库!")
+        else:
+            return packinfo(infostatus=2, infomsg="没有权限!")
+
+    @staticmethod
+    def getranklistbypsetid(token, psetid, req):
+        """
+        根据题库编号，查询排名
+        """
+        if checkalltoken(token, req):
+            scorelist = ProblemsetDAO.getscorelistbypsetid(psetid)
+            return packinfo(infostatus=1, infomsg="查询成功!", inforesult=scorelist)
+        else:
+            return packinfo(infostatus=2, infomsg="没有权限!")
+
+    @staticmethod
+    def getrankbypsetidanduserid(psetid, userid):
+        """
+        根据题库编号和用户编号获取排名
+        """
+        scorelist = ProblemsetDAO.getscorelistbypsetid(psetid)
+        for sc in scorelist:
+            if sc["user_id"] == userid:
+                return sc["score_rank"]
+
+    @staticmethod
+    def getscores(token, req):
+        """
+        获取用户积分榜
+        """
+        if checkusertoken(token, req):
+            us = gdb.session.query(User).filter(
+                User.user_token == token
+            ).first()
+            usid = us.user_id
+            psetlist = ProblemsetDAO.getpsetlistbyuserid(usid)
+            resultlist = []
+            for pid in psetlist:
+                scores = ProblemsetDAO.getscorelistbypsetid(pid)
+                uaim = [x for x in scores if x["user_id"] == usid]
+                resultlist.append(uaim[0])
+            return packinfo(infostatus=1, infomsg="查询成功!", inforesult=resultlist)
+        else:
+            return packinfo(infostatus=2, infomsg="没有权限!")
 
     @staticmethod
     def removewrongproblem(token, notebookid, req):
@@ -48,26 +208,24 @@ class ProblemsetDAO:
         添加错题
         """
         if checkusertoken(token, req):
-            temp = gdb.session.query(NoteBook).filter(
-                NoteBook.problem_id == problemid
+            us = gdb.session.query(User).filter(
+                User.user_token == token
             ).first()
+            temp = gdb.session.query(NoteBook).filter(and_(
+                NoteBook.problem_id == problemid,
+                NoteBook.user_id == us.user_id
+            )).first()
             if not temp:
-                us = gdb.session.query(User).filter(
-                    User.user_token == token
-                ).first()
-                if us:
-                    usid = us.user_id
-                    nb = NoteBook(usid, problemsetid, problemid)
-                    gdb.session.add(nb)
-                    try:
-                        gdb.session.commit()
-                    except Exception as e:
-                        print(e)
-                        return packinfo(infostatus=0, infomsg="数据库错误!")
-                    else:
-                        return packinfo(infostatus=1, infomsg="成功添加错题!")
+                usid = us.user_id
+                nb = NoteBook(usid, problemsetid, problemid)
+                gdb.session.add(nb)
+                try:
+                    gdb.session.commit()
+                except Exception as e:
+                    print(e)
+                    return packinfo(infostatus=0, infomsg="数据库错误!")
                 else:
-                    return packinfo(infostatus=4, infomsg="用户不存在!")
+                    return packinfo(infostatus=1, infomsg="成功添加错题!")
             else:
                 return packinfo(infostatus=2, infomsg="已添加的题目!")
         else:
@@ -197,7 +355,7 @@ class ProblemsetDAO:
                 ProblemSet.problemset_id == temp.problemset_id
             ).first()
             tempuser = gdb.session.query(User).filter(
-                User.user_problemsetid == temp.problemset_id
+                User.user_token == token
             ).first()
             tempscore = gdb.session.query(Score).filter(
                 Score.user_id == tempuser.user_id).order_by(Score.score_id.desc()).first()
@@ -267,7 +425,7 @@ class ProblemsetDAO:
                         gdb.session.commit()
                         timestart = gettimestr()
                         sco = Score(user.user_id, problemsetid, 0, 0,
-                                    timestart, "", temp[0][0].problemset_answercount)
+                                    timestart, "", temp[0][0].problemset_answercount, temp[0][0].problemset_timeperproblem)
                         gdb.session.add(sco)
                         try:
                             gdb.session.commit()

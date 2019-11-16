@@ -17,6 +17,9 @@ import Emptybook from "@/components/Emptybook";
 import Answering from "@/components/Answering";
 import Terminated from "@/components/Terminated";
 import NoteTerminated from "@/components/NoteTerminated";
+import Scores from "@/components/Scores";
+import RankDetails from "@/components/RankDetails";
+import AdminScore from "@/components/AdminScore";
 
 Vue.use(Router);
 
@@ -105,6 +108,18 @@ export default new Router({
       path: "/noteterminated",
       name: "noteterminated",
       component: NoteTerminated
+    },{
+      path: "/scores",
+      name: "scores",
+      component: Scores
+    },{
+      path: "/rankdetails",
+      name: "rankdetails",
+      component: RankDetails
+    },{
+      path: "/adminscore",
+      name: "adminscore",
+      component: AdminScore
     }
   ]
 });

@@ -1,0 +1,11 @@
+2019-11-17 02:35:08,359	INFO	main1	<module>	Line:11	app started
+2019-11-17 02:35:08,367	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-17 02:35:08,390	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-17 02:35:08,400	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-17 02:35:10,414	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 02:35:10] "GET /ProblemSet/scores/a3591e8c-6915-4b4d-9b62-4a9568a8a4df HTTP/1.1" 200 -
+2019-11-17 02:35:11,128	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 02:35:11] "GET /ProblemSet/scoreslist/a3591e8c-6915-4b4d-9b62-4a9568a8a4df/1 HTTP/1.1" 200 -
+2019-11-17 02:35:21,358	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 02:35:21] "GET /ProblemSet/scores/a3591e8c-6915-4b4d-9b62-4a9568a8a4df HTTP/1.1" 200 -
+2019-11-17 02:35:22,366	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 02:35:22] "GET /ProblemSet/scoreslist/a3591e8c-6915-4b4d-9b62-4a9568a8a4df/1 HTTP/1.1" 200 -
+2019-11-17 02:35:25,377	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 02:35:25] "GET /ProblemSet/scores/a3591e8c-6915-4b4d-9b62-4a9568a8a4df HTTP/1.1" 200 -
+2019-11-17 02:35:33,662	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 02:35:33] "GET /ProblemSet/scoreslist/a3591e8c-6915-4b4d-9b62-4a9568a8a4df/1 HTTP/1.1" 200 -
+2019-11-17 02:35:49,412	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading

@@ -167,3 +167,45 @@ class RemoveWrong(Resource):
         移除错题
         """
         return ProblemsetDAO.removewrongproblem(token, notebookid, request)
+
+
+@ns_problemset.route("/scores/<string:token>")
+class Scores(Resource):
+
+    def get(self, token):
+        """
+        用户获取积分榜
+        """
+        return ProblemsetDAO.getscores(token, request)
+
+
+@ns_problemset.route("/scoreslist/<string:token>/<string:psetid>")
+class Scoreslist(Resource):
+
+    def get(self, token, psetid):
+        """
+        获取题库整体排名
+        """
+        return ProblemsetDAO.getranklistbypsetid(token, psetid, request)
+
+
+@ns_problemset.route("/pset/<string:token>/<string:psetname>")
+class Pset(Resource):
+
+    def get(self, token, psetname):
+        """
+        根据题库名称获取编号
+        """
+        return ProblemsetDAO.getpsetidbypsetname(token, psetname, request)
+
+
+@ns_problemset.route("/copyset/<string:token>/<string:psetname>/<string:newname>")
+class CopySet(Resource):
+
+    def get(self, token, psetname, newname):
+        """
+        复制题库
+        """
+        return ProblemsetDAO.copyproblemset(token, psetname, newname, request)
+
+

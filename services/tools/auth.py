@@ -8,6 +8,7 @@ import hashlib
 from sqlalchemy import and_
 
 
+
 def gettoken():
     return str(uuid.uuid4())
 
@@ -18,6 +19,12 @@ def getip(req):
 
 def gettimestr():
     return datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
+
+
+def gettimespan(enddtimestr, starttimestr):
+    dtend = datetime.datetime.strptime(enddtimestr, "%Y-%m-%d-%H-%M-%S")
+    dtstart = datetime.datetime.strptime(starttimestr, "%Y-%m-%d-%H-%M-%S")
+    return (dtend - dtstart).seconds
 
 
 def checkadmintoken(token, req):
