@@ -1,0 +1,14 @@
+2019-11-17 23:38:39,106	INFO	main1	<module>	Line:11	app started
+2019-11-17 23:38:39,119	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-17 23:38:39,154	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-17 23:38:39,178	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-17 23:38:47,092	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:38:47] "GET /AdminLogin/checktoken/61eb1be2-2a17-4179-89aa-5140b37c15e6 HTTP/1.1" 200 -
+2019-11-17 23:38:47,105	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:38:47] "GET /ProblemSet/adminsummary/61eb1be2-2a17-4179-89aa-5140b37c15e6/ww/2 HTTP/1.1" 200 -
+2019-11-17 23:38:47,145	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:38:47] "GET /ProblemSet/problemanswer/61eb1be2-2a17-4179-89aa-5140b37c15e6/5 HTTP/1.1" 200 -
+2019-11-17 23:39:06,662	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:39:06] "GET /AdminLogin/checktoken/61eb1be2-2a17-4179-89aa-5140b37c15e6 HTTP/1.1" 200 -
+2019-11-17 23:39:06,670	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:39:06] "GET /ProblemSet/adminsummary/61eb1be2-2a17-4179-89aa-5140b37c15e6/ww/2 HTTP/1.1" 200 -
+2019-11-17 23:39:06,699	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:39:06] "GET /ProblemSet/problemanswer/61eb1be2-2a17-4179-89aa-5140b37c15e6/5 HTTP/1.1" 200 -
+2019-11-17 23:39:28,152	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:39:28] "GET /AdminLogin/checktoken/61eb1be2-2a17-4179-89aa-5140b37c15e6 HTTP/1.1" 200 -
+2019-11-17 23:39:28,161	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:39:28] "GET /ProblemSet/adminsummary/61eb1be2-2a17-4179-89aa-5140b37c15e6/ww/2 HTTP/1.1" 200 -
+2019-11-17 23:39:28,299	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:39:28] "GET /ProblemSet/problemanswer/61eb1be2-2a17-4179-89aa-5140b37c15e6/5 HTTP/1.1" 200 -
+2019-11-17 23:40:13,300	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading

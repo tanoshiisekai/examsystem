@@ -9,6 +9,7 @@
           <md-menu-item class="menuitem" @click="addproblem">添加题目</md-menu-item>
           <md-menu-item class="menuitem" @click="manageset">题库管理</md-menu-item>
           <md-menu-item class="menuitem" @click="score">积分统计</md-menu-item>
+          <md-menu-item class="menuitem" @click="adminsummary">易错题统计</md-menu-item>
           <md-menu-item class="menuitem" @click="adminsettings">修改密码</md-menu-item>
           <md-menu-item class="menuitem" @click="logout">退出</md-menu-item>
         </md-menu-content>
@@ -44,6 +45,11 @@ export default {
           this.$router.push({ name: "adminlogin" });
         }
       });
+    },
+    adminsummary(){
+      console.log("adminsummary");
+      this.checkcookie();
+      this.$router.push({name: "adminsummary"});
     },
     addproblem() {
       console.log("addproblem1");
@@ -89,7 +95,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 .menulist {
-  min-height: 316px;
+  min-height: 376px;
 }
 .menuitem {
   height: 60px;

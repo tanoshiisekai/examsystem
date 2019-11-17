@@ -1,8 +1,10 @@
 <template>
   <div class="container">
-    <UserMenu></UserMenu>
+    <AdminMenu></AdminMenu>
     <md-subheader>
-      <span class="md-title">错题本（ 共 {{this.wrongcount}} 题，第 {{this.wrongposi}} 题 ）</span>
+      <span
+        class="md-title"
+      >易错题整理（共 {{this.wrongcount}} 题，第 {{this.wrongposi}} 题，错误人数 {{this.problem.problem_summarycount}}人）</span>
     </md-subheader>
 
     <md-card>
@@ -35,7 +37,6 @@
           disabled
           style="font-size:20px;width:100%;"
         >D. {{this.problem.problem_choiceD}}</md-checkbox>
-        <md-button class="md-raised md-accent" @click="doremove()">移除该题</md-button>
         <md-button class="md-raised md-primary" @click="donext()">下一题</md-button>
       </md-card-content>
     </md-card>
@@ -43,12 +44,12 @@
 </template>
 
 <script>
-import UserMenu from "@/components/UserMenu";
+import AdminMenu from "@/components/AdminMenu";
 import { filehost, fileport } from "@/conf";
 export default {
-  name: "notebook",
+  name: "summarydetails",
   components: {
-    UserMenu
+    AdminMenu
   },
   created() {
     this.getwrongidlist();
@@ -67,28 +68,6 @@ export default {
     };
   },
   methods: {
-    doremove() {
-      console.log(this.posi);
-      this.posi = this.posi - 1;
-      var nbid = this.wronglist[this.posi].notebookid;
-      console.log(nbid);
-      var usertoken = this.$cookie.get("usertoken");
-      console.log(this.wronglist);
-      this.axios
-        .get("/ProblemSet/wrongproblem/" + usertoken + "/" + nbid)
-        .then(response => {
-          var resp = response.data;
-          if (resp["infostatus"] == 1) {
-            this.wronglist.splice(this.posi, 1);
-            console.log(this.wronglist);
-            this.wrongcount = this.wronglist.length;
-
-            console.log(this.posi);
-            console.log(this.wrongposi);
-            this.donext();
-          }
-        });
-    },
     donext() {
       this.disable_A = false;
       this.disable_B = false;
@@ -99,14 +78,19 @@ export default {
     getwrongidlist() {
       this.wrongidlist = [];
       var usertoken = this.$cookie.get("usertoken");
+      var summary_psetname = this.$cookie.get("summary_psetname");
+      var summary_pwrongpercent = this.$cookie.get("summary_pwrongpercent");
       this.axios
-        .get("/ProblemSet/problemanswer/" + usertoken)
+        .get(
+          "/ProblemSet/adminsummary/" +
+            usertoken +
+            "/" +
+            summary_psetname +
+            "/" +
+            summary_pwrongpercent
+        )
         .then(response => {
           var resp = response.data;
-          if (resp["infostatus"] == -1) {
-            this.$cookie.set("answeringid", resp["inforesult"]);
-            this.$router.push({ name: "answering" });
-          }
           this.wronglist = resp["inforesult"];
           this.wrongcount = this.wronglist.length;
           console.log(this.wronglist);
@@ -114,6 +98,7 @@ export default {
         });
     },
     getnextproblem() {
+      console.log("posi", this.posi);
       if (this.posi >= this.wronglist.length) {
         this.posi = 0;
       }
@@ -121,18 +106,17 @@ export default {
       if (this.wronglist.length == 0) {
         this.$router.push({ name: "emptybook" });
       }
-      var pid = this.wronglist[this.posi].problemid;
+      var pid = this.wronglist[this.posi].problem_id;
       this.axios
-        .get("/ProblemSet/problemanswer/" + usertoken + "/" + pid)
+        .get("/ProblemSet/problemsummary/" + usertoken + "/" + pid)
         .then(response => {
           var resp = response.data;
-          console.log(resp["infomsg"]);
-          if (resp["infostatus"] == -1) {
-            setTimeout(() => {
-              this.$router.push({ name: "noteterminated" });
-            }, 1000);
-          }
           this.problem = resp["inforesult"];
+          console.log(this.problem);
+          console.log(this.posi);
+          this.problem["problem_summarycount"] = this.wronglist[
+            this.posi
+          ].problem_count;
           if (this.problem.problem_picpath.length > 0) {
             this.problem.problem_picpath =
               "http://" +

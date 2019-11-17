@@ -1,0 +1,20 @@
+2019-11-17 23:34:55,175	INFO	main1	<module>	Line:11	app started
+2019-11-17 23:34:55,196	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-17 23:34:55,228	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-17 23:34:55,240	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-17 23:35:03,541	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:35:03] "GET /AdminLogin/checktoken/d4c0d741-dd19-472c-9344-7dcfb5249556 HTTP/1.1" 200 -
+2019-11-17 23:35:03,552	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:35:03] "GET /ProblemSet/adminsummary/d4c0d741-dd19-472c-9344-7dcfb5249556/ww/2 HTTP/1.1" 200 -
+2019-11-17 23:35:03,700	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:35:03] "GET /ProblemSet/problemanswer/d4c0d741-dd19-472c-9344-7dcfb5249556/undefined HTTP/1.1" 200 -
+2019-11-17 23:35:12,531	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:35:12] "GET /AdminLogin/checktoken/d4c0d741-dd19-472c-9344-7dcfb5249556 HTTP/1.1" 200 -
+2019-11-17 23:35:12,536	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:35:12] "GET /ProblemSet/adminsummary/d4c0d741-dd19-472c-9344-7dcfb5249556/ww/2 HTTP/1.1" 200 -
+2019-11-17 23:35:12,751	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:35:12] "GET /ProblemSet/problemanswer/d4c0d741-dd19-472c-9344-7dcfb5249556/undefined HTTP/1.1" 200 -
+2019-11-17 23:35:16,722	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:35:16] "GET /AdminLogin/checktoken/d4c0d741-dd19-472c-9344-7dcfb5249556 HTTP/1.1" 200 -
+2019-11-17 23:35:16,728	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:35:16] "GET /AdminLogin/logout/d4c0d741-dd19-472c-9344-7dcfb5249556/admin HTTP/1.1" 200 -
+2019-11-17 23:35:23,295	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:35:23] "GET /AdminLogin/admin/0bc651ef7626a7868da4cbfdbe70f96f HTTP/1.1" 200 -
+2019-11-17 23:35:23,367	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:35:23] "GET /AdminLogin/checktoken/61eb1be2-2a17-4179-89aa-5140b37c15e6 HTTP/1.1" 200 -
+2019-11-17 23:35:25,140	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:35:25] "GET /AdminLogin/checktoken/61eb1be2-2a17-4179-89aa-5140b37c15e6 HTTP/1.1" 200 -
+2019-11-17 23:35:25,165	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:35:25] "GET /AdminLogin/checktoken/61eb1be2-2a17-4179-89aa-5140b37c15e6 HTTP/1.1" 200 -
+2019-11-17 23:35:27,126	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:35:27] "GET /AdminLogin/checktoken/61eb1be2-2a17-4179-89aa-5140b37c15e6 HTTP/1.1" 200 -
+2019-11-17 23:35:27,133	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:35:27] "GET /ProblemSet/adminsummary/61eb1be2-2a17-4179-89aa-5140b37c15e6/ww/2 HTTP/1.1" 200 -
+2019-11-17 23:35:27,160	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:35:27] "GET /ProblemSet/problemanswer/61eb1be2-2a17-4179-89aa-5140b37c15e6/undefined HTTP/1.1" 200 -
+2019-11-17 23:38:21,541	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading

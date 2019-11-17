@@ -15,6 +15,7 @@ import shutil
 import os.path
 import random
 from flask import url_for
+from sqlalchemy import func
 
 
 class ProblemsetDAO:
@@ -286,6 +287,27 @@ class ProblemsetDAO:
             return packinfo(infostatus=2, infomsg="没有权限！")
 
     @staticmethod
+    def getsummarylist(token, summary_psetname, summary_pwrongpercent, req):
+        """
+        获取易错题列表
+        """
+        if checkadmintoken(token, req):
+            print(token)
+            print(summary_psetname)
+            print(summary_pwrongpercent)
+            # 查询的同时返回计数
+            summarylist = gdb.session.query(NoteBook.problem_id, func.count(NoteBook.problem_id)).filter(
+                NoteBook.problemset_id == gdb.session.query(ProblemSet).filter(
+                    ProblemSet.problemset_title == summary_psetname).first().problemset_id
+            ).group_by(NoteBook.problem_id).all()
+            summarylist = [x for x in summarylist if x[1] >= int(summary_pwrongpercent)]
+            summarylist.sort(key=lambda x:x[1], reverse=True)
+            summarylist = [{"problem_id": x[0], "problem_count": x[1]} for x in summarylist]
+            return packinfo(infostatus=1, inforesult=summarylist, infomsg="查询成功！")
+        else:
+            return packinfo(infostatus=2, infomsg="没有权限！")
+
+    @staticmethod
     def getwrongproblemidlist(token, req):
         """
         获取用户错题列表
@@ -313,11 +335,33 @@ class ProblemsetDAO:
             return packinfo(infostatus=2, infomsg="没有权限！")
 
     @staticmethod
+    def getsummarywithanswerbyid(token, problemid, req):
+        """
+        获取易错题带答案
+        """
+        if checkalltoken(token, req):
+            print(problemid)
+            temp = gdb.session.query(Problem).filter(
+                Problem.problem_id == problemid
+            ).first()
+            if temp:
+                tempdict = temp.todict()
+                answers = list(tempdict["problem_answer"])
+                answers.sort()
+                answers = "".join(answers)
+                tempdict["problem_answer"] = answers
+                return packinfo(infostatus=1, inforesult=tempdict)
+            else:
+                return packinfo(infostatus=0, infomsg="没有该题目！")
+        else:
+            return packinfo(infostatus=2, infomsg="没有权限！")
+
+    @staticmethod
     def getproblemwithanswerbyid(token, problemid, req):
         """
         获取题目带答案
         """
-        if checkusertoken(token, req):
+        if checkalltoken(token, req):
             print(problemid)
             temp = gdb.session.query(Problem).filter(
                 Problem.problem_id == problemid

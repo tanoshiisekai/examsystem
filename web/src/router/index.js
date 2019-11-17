@@ -20,6 +20,8 @@ import NoteTerminated from "@/components/NoteTerminated";
 import Scores from "@/components/Scores";
 import RankDetails from "@/components/RankDetails";
 import AdminScore from "@/components/AdminScore";
+import AdminSummary from "@/components/AdminSummary";
+import SummaryDetails from "@/components/SummaryDetails";
 
 Vue.use(Router);
 
@@ -120,6 +122,14 @@ export default new Router({
       path: "/adminscore",
       name: "adminscore",
       component: AdminScore
+    },{
+      path: "/adminsummary",
+      name: "adminsummary",
+      component: AdminSummary
+    },{
+      path: "/summarydetails",
+      name: "summarydetails",
+      component: SummaryDetails
     }
   ]
 });

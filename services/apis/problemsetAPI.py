@@ -119,6 +119,16 @@ class ProblemAnswer(Resource):
         return ProblemsetDAO.getproblemwithanswerbyid(token, problemid, request)
 
 
+@ns_problemset.route("/problemsummary/<string:token>/<string:problemid>")
+class ProblemAnswer(Resource):
+
+    def get(self, token, problemid):
+        """
+        获取易错题带答案
+        """
+        return ProblemsetDAO.getsummarywithanswerbyid(token, problemid, request)
+
+
 @ns_problemset.route("/problemanswer/<string:token>")
 class WrongProblems(Resource):
 
@@ -209,3 +219,11 @@ class CopySet(Resource):
         return ProblemsetDAO.copyproblemset(token, psetname, newname, request)
 
 
+@ns_problemset.route("/adminsummary/<string:token>/<string:summary_psetname>/<string:summary_pwrongpercent>")
+class AdminSummary(Resource):
+
+    def get(self, token, summary_psetname, summary_pwrongpercent):
+        """
+        获取易错题列表        
+        """
+        return ProblemsetDAO.getsummarylist(token, summary_psetname, summary_pwrongpercent, request)
