@@ -77,6 +77,8 @@ class ProblemsetDAO:
                         if gettimespan(sc.score_timeend, sc.score_timestart) / sc.score_problemcount <= sc.problemset_timeperproblem + 3:
                             aim = sc.todict()
                             break
+            if "score_timeend" not in aim.keys():
+                return {}
             aim["score_timespan"] = gettimespan(
                 aim["score_timeend"], aim["score_timestart"])
             aim["problemset_title"] = gdb.session.query(ProblemSet).filter(
@@ -116,6 +118,7 @@ class ProblemsetDAO:
         for uid in ulist:
             scorelist.append(
                 ProblemsetDAO.getscoresbyuseridandpsetid(uid, psetid))
+        scorelist = [x for x in scorelist if "score_right" in x.keys()]
         scorelist.sort(key=lambda x: (x["score_right"]/x["score_problemcount"], 1/(
             x["score_timespan"]/x["score_problemcount"])), reverse=True)
         totaluser = len(scorelist)
