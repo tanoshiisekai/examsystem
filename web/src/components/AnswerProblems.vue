@@ -36,7 +36,7 @@
             value="D"
             style="font-size:20px;width:100%;"
           >D. {{this.problem.problem_choiceD}}</md-checkbox>
-          <md-button class="md-raised md-primary" @click="doanswer()">提交</md-button>
+          <md-button class="md-raised md-primary" @click="doanswer()" :disabled="isunable">提交</md-button>
         </md-card-content>
       </md-card>
       <md-snackbar :md-duration="3000" :md-active.sync="showSnackbar" md-persistent>
@@ -76,7 +76,8 @@ export default {
       array: [],
       timecountvalue: 0,
       timer: null,
-      scoreid: 0
+      scoreid: 0,
+      isunable: false
     };
   },
   methods: {
@@ -94,6 +95,7 @@ export default {
         });
     },
     submitanswer() {
+      this.isunable = true;
       var answer = this.array;
       answer.sort();
       answer = answer.join("");
@@ -142,7 +144,9 @@ export default {
       this.timer = null;
       if (this.problem.problem_nextpid != -1) {
         this.problemid = this.problem.problem_nextpid;
-        this.getfirstproblem();
+        setTimeout(() => {
+          this.getfirstproblem();
+        }, 1000);
       } else {
         this.$router.push({ name: "finished" });
       }
@@ -166,6 +170,7 @@ export default {
         });
     },
     getfirstproblem() {
+      this.isunable = false;
       this.array = [];
       console.log(this.problemid);
       var usertoken = this.$cookie.get("usertoken");
