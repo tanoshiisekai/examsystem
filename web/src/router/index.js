@@ -22,6 +22,7 @@ import RankDetails from "@/components/RankDetails";
 import AdminScore from "@/components/AdminScore";
 import AdminSummary from "@/components/AdminSummary";
 import SummaryDetails from "@/components/SummaryDetails";
+import AdminEmptyBook from "@/components/AdminEmptyBook";
 
 Vue.use(Router);
 
@@ -130,6 +131,10 @@ export default new Router({
       path: "/summarydetails",
       name: "summarydetails",
       component: SummaryDetails
+    },{
+      path: "/adminemptybook",
+      name: "adminemptybook",
+      component: AdminEmptyBook
     }
   ]
 });

@@ -68,6 +68,7 @@ class ProblemsetDAO:
             Score.user_id == userid,
             Score.problemset_id == psetid
         )).all()
+        print(scores)
         if len(scores) > 0:
             scores.sort(key=lambda x: x.score_id, reverse=True)
             aim = {}
@@ -77,6 +78,7 @@ class ProblemsetDAO:
                         if gettimespan(sc.score_timeend, sc.score_timestart) / sc.score_problemcount <= sc.problemset_timeperproblem + 3:
                             aim = sc.todict()
                             break
+            print(aim)
             if "score_timeend" not in aim.keys():
                 return {}
             aim["score_timespan"] = gettimespan(
@@ -452,12 +454,17 @@ class ProblemsetDAO:
             )).all()
             if temp:
                 problemids = [x[1].problem_id for x in temp]
+                print(problemids)
                 problemanswercount = temp[0][0].problemset_answercount
+                print(problemanswercount)
                 problemsetid = temp[0][0].problemset_id
+                print(problemsetid)
                 random.shuffle(problemids)
                 aimproblems = problemids[:problemanswercount]
+                print(aimproblems)
                 aimproblems = [str(x) for x in aimproblems]
                 userproblemstream = "#".join(aimproblems)
+                print(userproblemstream)
                 userproblemsetid = problemsetid
                 userproblemseat = problemids[0]
                 firstpid = userproblemseat
@@ -560,6 +567,16 @@ class ProblemsetDAO:
                 ).all()
                 for pb in probs:
                     gdb.session.delete(pb)
+                scores = gdb.session.query(Score).filter(
+                    Score.problemset_id == pid
+                ).all()
+                for sc in scores:
+                    gdb.session.delete(sc)
+                notebooks = gdb.session.query(NoteBook).filter(
+                    NoteBook.problemset_id == pid
+                ).all()
+                for nb in notebooks:
+                    gdb.session.delete(nb)
                 gdb.session.delete(temp)
                 try:
                     gdb.session.commit()

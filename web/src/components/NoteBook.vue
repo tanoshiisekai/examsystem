@@ -18,22 +18,22 @@
         <md-checkbox
           v-model="disable_A"
           disabled
-          style="font-size:20px;width:100%;"
+          style="font-size:20px;width:100%;height:50px;"
         >A. {{this.problem.problem_choiceA}}</md-checkbox>
         <md-checkbox
           v-model="disable_B"
           disabled
-          style="font-size:20px;width:100%;"
+          style="font-size:20px;width:100%;height:50px;"
         >B. {{this.problem.problem_choiceB}}</md-checkbox>
         <md-checkbox
           v-model="disable_C"
           disabled
-          style="font-size:20px;width:100%;"
+          style="font-size:20px;width:100%;height:50px;"
         >C. {{this.problem.problem_choiceC}}</md-checkbox>
         <md-checkbox
           v-model="disable_D"
           disabled
-          style="font-size:20px;width:100%;"
+          style="font-size:20px;width:100%;height:50px;"
         >D. {{this.problem.problem_choiceD}}</md-checkbox>
         <md-button class="md-raised md-accent" @click="doremove()">移除该题</md-button>
         <md-button class="md-raised md-primary" @click="donext()">下一题</md-button>

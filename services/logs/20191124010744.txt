@@ -1,0 +1,13 @@
+2019-11-24 01:07:44,387	INFO	main1	<module>	Line:11	app started
+2019-11-24 01:07:44,399	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-24 01:07:44,431	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-24 01:07:44,447	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-24 01:08:48,200	INFO	_internal	_log	Line:122	192.168.2.210 - - [24/Nov/2019 01:08:48] "GET /AdminLogin/admin/7a76d3a93b326741b0435c28ff63ae4a HTTP/1.1" 200 -
+2019-11-24 01:08:52,326	INFO	_internal	_log	Line:122	192.168.2.210 - - [24/Nov/2019 01:08:52] "GET /AdminLogin/admin/66d4aaa5ea177ac32c69946de3731ec0 HTTP/1.1" 200 -
+2019-11-24 01:08:52,373	INFO	_internal	_log	Line:122	192.168.2.210 - - [24/Nov/2019 01:08:52] "GET /AdminLogin/checktoken/6d058eb9-ab24-4bf4-ba6c-80644e87b3dd HTTP/1.1" 200 -
+2019-11-24 01:08:58,611	INFO	_internal	_log	Line:122	192.168.2.210 - - [24/Nov/2019 01:08:58] "GET /ProblemSet/6d058eb9-ab24-4bf4-ba6c-80644e87b3dd/Python11 HTTP/1.1" 200 -
+2019-11-24 01:08:59,990	INFO	_internal	_log	Line:122	192.168.2.210 - - [24/Nov/2019 01:08:59] "GET /AdminLogin/checktoken/6d058eb9-ab24-4bf4-ba6c-80644e87b3dd HTTP/1.1" 200 -
+2019-11-24 01:09:03,398	INFO	_internal	_log	Line:122	192.168.2.210 - - [24/Nov/2019 01:09:03] "POST /ProblemSet/upload/6d058eb9-ab24-4bf4-ba6c-80644e87b3dd HTTP/1.1" 200 -
+2019-11-24 01:09:10,093	INFO	_internal	_log	Line:122	192.168.2.210 - - [24/Nov/2019 01:09:10] "GET /ProblemSet/upload/6d058eb9-ab24-4bf4-ba6c-80644e87b3dd/Python11/Python第一学期期中考试 HTTP/1.1" 200 -
+2019-11-24 01:09:12,153	INFO	_internal	_log	Line:122	192.168.2.210 - - [24/Nov/2019 01:09:12] "GET /AdminLogin/checktoken/6d058eb9-ab24-4bf4-ba6c-80644e87b3dd HTTP/1.1" 200 -
+2019-11-24 01:09:34,870	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading

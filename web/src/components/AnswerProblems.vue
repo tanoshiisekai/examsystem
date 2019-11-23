@@ -5,6 +5,9 @@
       <md-subheader>
         <span class="md-title">答题中</span>
       </md-subheader>
+      <md-subheader>
+        <span>注意至少有一个正确答案，选择不全不得分</span>
+      </md-subheader>
 
       <md-card>
         <md-card-header>
@@ -19,22 +22,22 @@
           <md-checkbox
             v-model="array"
             value="A"
-            style="font-size:20px;width:100%;"
+            style="font-size:20px;width:100%;height:50px;"
           >A. {{this.problem.problem_choiceA}}</md-checkbox>
           <md-checkbox
             v-model="array"
             value="B"
-            style="font-size:20px;width:100%;"
+            style="font-size:20px;width:100%;height:50px;"
           >B. {{this.problem.problem_choiceB}}</md-checkbox>
           <md-checkbox
             v-model="array"
             value="C"
-            style="font-size:20px;width:100%;"
+            style="font-size:20px;width:100%;height:50px;"
           >C. {{this.problem.problem_choiceC}}</md-checkbox>
           <md-checkbox
             v-model="array"
             value="D"
-            style="font-size:20px;width:100%;"
+            style="font-size:20px;width:100%;height:50px;"
           >D. {{this.problem.problem_choiceD}}</md-checkbox>
           <md-button class="md-raised md-primary" @click="doanswer()" :disabled="isunable">提交</md-button>
         </md-card-content>

@@ -104,7 +104,7 @@ export default {
       }
       var usertoken = this.$cookie.get("usertoken");
       if (this.wronglist.length == 0) {
-        this.$router.push({ name: "emptybook" });
+        this.$router.push({ name: "adminemptybook" });
       }
       var pid = this.wronglist[this.posi].problem_id;
       this.axios

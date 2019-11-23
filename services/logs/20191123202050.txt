@@ -1,0 +1,57 @@
+2019-11-23 20:20:50,966	INFO	main1	<module>	Line:11	app started
+2019-11-23 20:20:50,980	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-23 20:20:51,066	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-23 20:20:51,088	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-23 20:20:57,566	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:20:57] "GET /ProblemSet/04846239-cab4-4334-912f-aeb3d906cc88/Python11 HTTP/1.1" 200 -
+2019-11-23 20:20:58,741	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:20:58] "GET /ProblemSet/init/04846239-cab4-4334-912f-aeb3d906cc88/Python11 HTTP/1.1" 200 -
+2019-11-23 20:20:58,822	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:20:58] "GET /ProblemSet/answer/04846239-cab4-4334-912f-aeb3d906cc88/44 HTTP/1.1" 500 -
+2019-11-23 20:21:09,105	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:09] "GET /Login/logout/04846239-cab4-4334-912f-aeb3d906cc88/test1 HTTP/1.1" 200 -
+2019-11-23 20:21:17,932	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:17] "GET /AdminLogin/admin/0bc651ef7626a7868da4cbfdbe70f96f HTTP/1.1" 200 -
+2019-11-23 20:21:17,997	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:17] "GET /AdminLogin/checktoken/8f6cc7cd-6718-4ec5-ac95-d82331c1d98b HTTP/1.1" 200 -
+2019-11-23 20:21:19,800	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:19] "GET /AdminLogin/checktoken/8f6cc7cd-6718-4ec5-ac95-d82331c1d98b HTTP/1.1" 200 -
+2019-11-23 20:21:19,821	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:19] "GET /ProblemSet/8f6cc7cd-6718-4ec5-ac95-d82331c1d98b HTTP/1.1" 200 -
+2019-11-23 20:21:19,821	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:19] "GET /AdminLogin/checktoken/8f6cc7cd-6718-4ec5-ac95-d82331c1d98b HTTP/1.1" 200 -
+2019-11-23 20:21:26,180	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:26] "GET /ProblemSet/setting/8f6cc7cd-6718-4ec5-ac95-d82331c1d98b/Python11/30 HTTP/1.1" 200 -
+2019-11-23 20:21:28,601	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:28] "GET /ProblemSet/8f6cc7cd-6718-4ec5-ac95-d82331c1d98b HTTP/1.1" 200 -
+2019-11-23 20:21:28,603	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:28] "GET /AdminLogin/checktoken/8f6cc7cd-6718-4ec5-ac95-d82331c1d98b HTTP/1.1" 200 -
+2019-11-23 20:21:37,043	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:37] "GET /ProblemSet/setting1/8f6cc7cd-6718-4ec5-ac95-d82331c1d98b/Python11/30 HTTP/1.1" 200 -
+2019-11-23 20:21:37,709	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:37] "GET /ProblemSet/8f6cc7cd-6718-4ec5-ac95-d82331c1d98b HTTP/1.1" 200 -
+2019-11-23 20:21:37,712	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:37] "GET /AdminLogin/checktoken/8f6cc7cd-6718-4ec5-ac95-d82331c1d98b HTTP/1.1" 200 -
+2019-11-23 20:21:40,104	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:40] "GET /AdminLogin/checktoken/8f6cc7cd-6718-4ec5-ac95-d82331c1d98b HTTP/1.1" 200 -
+2019-11-23 20:21:40,118	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:40] "GET /AdminLogin/logout/8f6cc7cd-6718-4ec5-ac95-d82331c1d98b/admin HTTP/1.1" 200 -
+2019-11-23 20:21:46,656	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:46] "GET /Login/test1/098f6bcd4621d373cade4e832627b4f6 HTTP/1.1" 200 -
+2019-11-23 20:21:50,726	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:50] "GET /ProblemSet/88a69f29-591a-4bd2-a5b1-fdd659562aff/Python11 HTTP/1.1" 200 -
+2019-11-23 20:21:51,816	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:51] "GET /ProblemSet/init/88a69f29-591a-4bd2-a5b1-fdd659562aff/Python11 HTTP/1.1" 200 -
+2019-11-23 20:21:51,860	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:51] "GET /ProblemSet/answer/88a69f29-591a-4bd2-a5b1-fdd659562aff/39 HTTP/1.1" 200 -
+2019-11-23 20:21:55,729	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:55] "GET /ProblemSet/addscore/88a69f29-591a-4bd2-a5b1-fdd659562aff/56/1/0/645aa37021e6ee65f795ef8ca1ae3570 HTTP/1.1" 200 -
+2019-11-23 20:21:56,723	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:21:56] "GET /ProblemSet/answer/88a69f29-591a-4bd2-a5b1-fdd659562aff/40 HTTP/1.1" 200 -
+2019-11-23 20:22:01,615	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:01] "GET /ProblemSet/addscore/88a69f29-591a-4bd2-a5b1-fdd659562aff/56/1/0/645aa37021e6ee65f795ef8ca1ae3570 HTTP/1.1" 200 -
+2019-11-23 20:22:02,610	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:02] "GET /ProblemSet/answer/88a69f29-591a-4bd2-a5b1-fdd659562aff/47 HTTP/1.1" 200 -
+2019-11-23 20:22:04,972	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:04] "GET /ProblemSet/addscore/88a69f29-591a-4bd2-a5b1-fdd659562aff/56/1/0/645aa37021e6ee65f795ef8ca1ae3570 HTTP/1.1" 200 -
+2019-11-23 20:22:05,961	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:05] "GET /ProblemSet/answer/88a69f29-591a-4bd2-a5b1-fdd659562aff/38 HTTP/1.1" 200 -
+2019-11-23 20:22:10,194	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:10] "GET /ProblemSet/addscore/88a69f29-591a-4bd2-a5b1-fdd659562aff/56/1/0/645aa37021e6ee65f795ef8ca1ae3570 HTTP/1.1" 200 -
+2019-11-23 20:22:11,188	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:11] "GET /ProblemSet/answer/88a69f29-591a-4bd2-a5b1-fdd659562aff/43 HTTP/1.1" 200 -
+2019-11-23 20:22:13,850	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:13] "GET /ProblemSet/addscore/88a69f29-591a-4bd2-a5b1-fdd659562aff/56/1/0/645aa37021e6ee65f795ef8ca1ae3570 HTTP/1.1" 200 -
+2019-11-23 20:22:14,851	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:14] "GET /ProblemSet/answer/88a69f29-591a-4bd2-a5b1-fdd659562aff/44 HTTP/1.1" 200 -
+2019-11-23 20:22:17,201	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:17] "GET /ProblemSet/addscore/88a69f29-591a-4bd2-a5b1-fdd659562aff/56/1/0/645aa37021e6ee65f795ef8ca1ae3570 HTTP/1.1" 200 -
+2019-11-23 20:22:18,220	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:18] "GET /ProblemSet/answer/88a69f29-591a-4bd2-a5b1-fdd659562aff/46 HTTP/1.1" 200 -
+2019-11-23 20:22:22,163	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:22] "GET /ProblemSet/addscore/88a69f29-591a-4bd2-a5b1-fdd659562aff/56/1/0/645aa37021e6ee65f795ef8ca1ae3570 HTTP/1.1" 200 -
+2019-11-23 20:22:23,163	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:23] "GET /ProblemSet/answer/88a69f29-591a-4bd2-a5b1-fdd659562aff/45 HTTP/1.1" 200 -
+2019-11-23 20:22:25,563	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:25] "GET /ProblemSet/addscore/88a69f29-591a-4bd2-a5b1-fdd659562aff/56/1/0/645aa37021e6ee65f795ef8ca1ae3570 HTTP/1.1" 200 -
+2019-11-23 20:22:26,548	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:26] "GET /ProblemSet/answer/88a69f29-591a-4bd2-a5b1-fdd659562aff/42 HTTP/1.1" 200 -
+2019-11-23 20:22:28,438	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:28] "GET /ProblemSet/addscore/88a69f29-591a-4bd2-a5b1-fdd659562aff/56/1/0/645aa37021e6ee65f795ef8ca1ae3570 HTTP/1.1" 200 -
+2019-11-23 20:22:29,431	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:29] "GET /ProblemSet/answer/88a69f29-591a-4bd2-a5b1-fdd659562aff/41 HTTP/1.1" 200 -
+2019-11-23 20:22:32,809	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:32] "GET /ProblemSet/addscore/88a69f29-591a-4bd2-a5b1-fdd659562aff/56/1/0/645aa37021e6ee65f795ef8ca1ae3570 HTTP/1.1" 200 -
+2019-11-23 20:22:32,819	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:32] "GET /ProblemSet/finishedtime/88a69f29-591a-4bd2-a5b1-fdd659562aff/56 HTTP/1.1" 200 -
+2019-11-23 20:22:34,944	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:34] "GET /ProblemSet/problemanswer/88a69f29-591a-4bd2-a5b1-fdd659562aff HTTP/1.1" 200 -
+2019-11-23 20:22:34,981	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:34] "GET /ProblemSet/problemanswer/88a69f29-591a-4bd2-a5b1-fdd659562aff/6 HTTP/1.1" 200 -
+2019-11-23 20:22:37,353	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:37] "GET /ProblemSet/problemanswer/88a69f29-591a-4bd2-a5b1-fdd659562aff/6 HTTP/1.1" 200 -
+2019-11-23 20:22:39,529	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:39] "GET /ProblemSet/problemanswer/88a69f29-591a-4bd2-a5b1-fdd659562aff/6 HTTP/1.1" 200 -
+2019-11-23 20:22:40,388	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:40] "GET /ProblemSet/problemanswer/88a69f29-591a-4bd2-a5b1-fdd659562aff/6 HTTP/1.1" 200 -
+2019-11-23 20:22:41,325	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:41] "GET /ProblemSet/problemanswer/88a69f29-591a-4bd2-a5b1-fdd659562aff/6 HTTP/1.1" 200 -
+2019-11-23 20:22:41,780	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:41] "GET /ProblemSet/problemanswer/88a69f29-591a-4bd2-a5b1-fdd659562aff/6 HTTP/1.1" 200 -
+2019-11-23 20:22:42,295	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:42] "GET /ProblemSet/problemanswer/88a69f29-591a-4bd2-a5b1-fdd659562aff/6 HTTP/1.1" 200 -
+2019-11-23 20:22:43,292	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:43] "GET /ProblemSet/problemanswer/88a69f29-591a-4bd2-a5b1-fdd659562aff/6 HTTP/1.1" 200 -
+2019-11-23 20:22:48,975	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:48] "GET /ProblemSet/scores/88a69f29-591a-4bd2-a5b1-fdd659562aff HTTP/1.1" 500 -
+2019-11-23 20:22:55,381	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:22:55] "GET /Login/logout/88a69f29-591a-4bd2-a5b1-fdd659562aff/test1 HTTP/1.1" 200 -
+2019-11-23 20:23:06,784	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading

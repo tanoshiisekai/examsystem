@@ -1,0 +1,7 @@
+2019-11-23 20:01:35,529	INFO	main1	<module>	Line:11	app started
+2019-11-23 20:01:35,536	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-23 20:01:35,545	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-23 20:01:35,563	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-23 20:01:40,026	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:01:40] "GET /ProblemSet/7b7c0f0e-b309-4609-9cb5-968cb5da98cb/Python第一学期期中考试 HTTP/1.1" 200 -
+2019-11-23 20:01:41,112	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:01:41] "GET /ProblemSet/init/7b7c0f0e-b309-4609-9cb5-968cb5da98cb/Python第一学期期中考试 HTTP/1.1" 200 -
+2019-11-23 20:01:41,164	INFO	_internal	_log	Line:122	192.168.2.210 - - [23/Nov/2019 20:01:41] "GET /ProblemSet/answer/7b7c0f0e-b309-4609-9cb5-968cb5da98cb/35 HTTP/1.1" 500 -
