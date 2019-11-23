@@ -1,2 +1,0 @@
-2019-11-10 00:00:14,935	INFO	_internal	_log	Line:122	192.168.2.210 - - [10/Nov/2019 00:00:14] "GET /Login/test/202cb962ac59075b964b07152d234b70 HTTP/1.1" 200 -
-2019-11-10 00:10:10,653	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading

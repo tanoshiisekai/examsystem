@@ -1,5 +1,0 @@
-2019-10-13 14:43:44,697	INFO	main1	<module>	Line:11	app started
-2019-10-13 14:43:44,707	WARNING	_internal	_log	Line:122	 * Debugger is active!
-2019-10-13 14:43:44,741	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
-2019-10-13 14:43:44,753	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
-2019-10-13 14:44:19,131	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\tools\\auth.py', reloading

@@ -1,3 +1,0 @@
-2019-11-04 00:00:14,975	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:00:14] "GET /ProblemSet/answer/dab1ff7a-16f5-4764-abcf-72de3749e985/6 HTTP/1.1" 200 -
-2019-11-04 00:00:30,698	INFO	_internal	_log	Line:122	192.168.2.210 - - [04/Nov/2019 00:00:30] "GET /ProblemSet/answer/dab1ff7a-16f5-4764-abcf-72de3749e985/2 HTTP/1.1" 200 -
-2019-11-04 00:00:44,749	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading

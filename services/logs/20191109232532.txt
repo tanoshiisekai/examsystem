@@ -1,1 +1,0 @@
-2019-11-10 00:10:10,727	INFO	_internal	_log	Line:122	 * Restarting with stat

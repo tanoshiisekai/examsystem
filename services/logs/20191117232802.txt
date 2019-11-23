@@ -1,7 +1,0 @@
-2019-11-17 23:28:03,314	INFO	main1	<module>	Line:11	app started
-2019-11-17 23:28:03,326	WARNING	_internal	_log	Line:122	 * Debugger is active!
-2019-11-17 23:28:03,362	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
-2019-11-17 23:28:03,382	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
-2019-11-17 23:28:05,557	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:28:05] "GET /AdminLogin/checktoken/74fe4b01-bffc-4118-8381-958a8d57a778 HTTP/1.1" 200 -
-2019-11-17 23:28:05,569	INFO	_internal	_log	Line:122	192.168.2.210 - - [17/Nov/2019 23:28:05] "GET /ProblemSet/adminsummary/74fe4b01-bffc-4118-8381-958a8d57a778/ww/2 HTTP/1.1" 200 -
-2019-11-17 23:29:37,707	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading
