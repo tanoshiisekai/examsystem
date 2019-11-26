@@ -1,0 +1,10 @@
+2019-11-26 21:12:37,978	INFO	main1	<module>	Line:11	app started
+2019-11-26 21:12:37,985	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-26 21:12:38,007	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-26 21:12:38,019	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-26 21:13:22,370	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 21:13:22] "GET /AdminLogin/checktoken/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 21:13:25,880	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 21:13:25] "GET /AdminLogin/checktoken/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 21:13:32,876	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 21:13:32] "GET /ProblemSet/togglenotebookopen/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 21:13:37,222	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 21:13:37] "GET /ProblemSet/togglenotebookclose/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 21:13:42,297	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 21:13:42] "GET /ProblemSet/togglenotebookopen/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 21:13:48,213	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\apis\\problemsetAPI.py', reloading

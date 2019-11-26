@@ -126,6 +126,10 @@ export default {
         .get("/ProblemSet/problemanswer/" + usertoken + "/" + pid)
         .then(response => {
           var resp = response.data;
+          if (resp["infostatus"] == 3){
+            alert(resp["infomsg"]);
+            this.$router.push({name:"emptybook"});
+          }
           console.log(resp["infomsg"]);
           if (resp["infostatus"] == -1) {
             setTimeout(() => {

@@ -1,0 +1,39 @@
+2019-11-26 22:09:34,610	INFO	main1	<module>	Line:11	app started
+2019-11-26 22:09:34,618	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-26 22:09:34,642	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-26 22:09:34,651	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-26 22:09:53,303	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:09:53] "GET /ProblemSet/getnotebooktoggle/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 22:09:53,483	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:09:53] "GET /AdminLogin/checktoken/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 22:10:20,083	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:10:20] "GET /AdminLogin/checktoken/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 22:10:20,086	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:10:20] "GET /ProblemSet/getnotebooktoggle/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 22:10:31,952	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:10:31] "GET /AdminLogin/checktoken/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 22:10:32,094	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:10:32] "GET /ProblemSet/getnotebooktoggle/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 22:10:39,707	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:10:39] "GET /ProblemSet/togglenotebookopen/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 22:10:46,931	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:10:46] "GET /AdminLogin/checktoken/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 22:10:46,947	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:10:46] "GET /ProblemSet/getnotebooktoggle/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 22:10:51,403	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:10:51] "GET /ProblemSet/togglenotebookclose/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 22:10:54,400	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:10:54] "GET /AdminLogin/checktoken/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 22:10:54,416	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:10:54] "GET /AdminLogin/logout/377e9018-972d-4f6b-b171-aa377fae65ff/long HTTP/1.1" 200 -
+2019-11-26 22:11:02,411	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:02] "GET /AdminLogin/long/e1ba0451725ff9250856e28feefcdb4c HTTP/1.1" 200 -
+2019-11-26 22:11:24,563	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:24] "GET /AdminLogin/long/74205c0cecd1c24479b3fdd15c437698 HTTP/1.1" 200 -
+2019-11-26 22:11:24,636	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:24] "GET /AdminLogin/checktoken/61182459-91bd-49f2-a646-f7d3af2e57dd HTTP/1.1" 200 -
+2019-11-26 22:11:29,358	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:29] "GET /AdminLogin/checktoken/61182459-91bd-49f2-a646-f7d3af2e57dd HTTP/1.1" 200 -
+2019-11-26 22:11:29,391	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:29] "GET /ProblemSet/getnotebooktoggle/61182459-91bd-49f2-a646-f7d3af2e57dd HTTP/1.1" 200 -
+2019-11-26 22:11:29,395	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:29] "GET /AdminLogin/checktoken/61182459-91bd-49f2-a646-f7d3af2e57dd HTTP/1.1" 200 -
+2019-11-26 22:11:32,246	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:32] "GET /ProblemSet/togglenotebookopen/61182459-91bd-49f2-a646-f7d3af2e57dd HTTP/1.1" 200 -
+2019-11-26 22:11:35,476	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:35] "GET /AdminLogin/checktoken/61182459-91bd-49f2-a646-f7d3af2e57dd HTTP/1.1" 200 -
+2019-11-26 22:11:35,484	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:35] "GET /AdminLogin/logout/61182459-91bd-49f2-a646-f7d3af2e57dd/long HTTP/1.1" 200 -
+2019-11-26 22:11:41,468	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:41] "GET /AdminLogin/long/74205c0cecd1c24479b3fdd15c437698 HTTP/1.1" 200 -
+2019-11-26 22:11:41,523	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:41] "GET /AdminLogin/checktoken/b0f80150-72cc-42ef-a7db-b79bb690f963 HTTP/1.1" 200 -
+2019-11-26 22:11:44,032	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:44] "GET /AdminLogin/checktoken/b0f80150-72cc-42ef-a7db-b79bb690f963 HTTP/1.1" 200 -
+2019-11-26 22:11:44,058	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:44] "GET /ProblemSet/getnotebooktoggle/b0f80150-72cc-42ef-a7db-b79bb690f963 HTTP/1.1" 200 -
+2019-11-26 22:11:44,061	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:44] "GET /AdminLogin/checktoken/b0f80150-72cc-42ef-a7db-b79bb690f963 HTTP/1.1" 200 -
+2019-11-26 22:11:45,498	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:45] "GET /ProblemSet/togglenotebookclose/b0f80150-72cc-42ef-a7db-b79bb690f963 HTTP/1.1" 200 -
+2019-11-26 22:11:47,493	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:47] "GET /AdminLogin/checktoken/b0f80150-72cc-42ef-a7db-b79bb690f963 HTTP/1.1" 200 -
+2019-11-26 22:11:47,511	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:47] "GET /AdminLogin/logout/b0f80150-72cc-42ef-a7db-b79bb690f963/long HTTP/1.1" 200 -
+2019-11-26 22:11:54,448	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:54] "GET /AdminLogin/long/74205c0cecd1c24479b3fdd15c437698 HTTP/1.1" 200 -
+2019-11-26 22:11:54,502	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:54] "GET /AdminLogin/checktoken/e88bfb9a-35f4-4401-9318-2b5d8e6523be HTTP/1.1" 200 -
+2019-11-26 22:11:56,666	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:56] "GET /AdminLogin/checktoken/e88bfb9a-35f4-4401-9318-2b5d8e6523be HTTP/1.1" 200 -
+2019-11-26 22:11:56,691	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:56] "GET /AdminLogin/checktoken/e88bfb9a-35f4-4401-9318-2b5d8e6523be HTTP/1.1" 200 -
+2019-11-26 22:11:56,696	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:11:56] "GET /ProblemSet/getnotebooktoggle/e88bfb9a-35f4-4401-9318-2b5d8e6523be HTTP/1.1" 200 -
+2019-11-26 22:13:20,705	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading

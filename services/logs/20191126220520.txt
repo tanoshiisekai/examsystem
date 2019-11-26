@@ -1,0 +1,12 @@
+2019-11-26 22:05:20,503	INFO	main1	<module>	Line:11	app started
+2019-11-26 22:05:20,519	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-26 22:05:20,548	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-26 22:05:20,565	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-26 22:06:36,655	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:06:36] "GET /AdminLogin/checktoken/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 22:06:36,686	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:06:36] "GET /ProblemSet/getnotebooktoggle/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 500 -
+2019-11-26 22:07:44,315	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:07:44] "GET /AdminLogin/checktoken/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 22:07:44,329	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:07:44] "GET /ProblemSet/getnotebooktoggle/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 500 -
+2019-11-26 22:07:55,468	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:07:55] "GET /AdminLogin/checktoken/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 22:07:55,490	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:07:55] "GET /ProblemSet/getnotebooktoggle/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 500 -
+2019-11-26 22:08:03,188	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:08:03] "GET /AdminLogin/checktoken/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 22:08:03,270	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 22:08:03] "GET /ProblemSet/getnotebooktoggle/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 500 -

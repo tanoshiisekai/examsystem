@@ -1,0 +1,4 @@
+2019-11-26 20:56:21,589	INFO	main1	<module>	Line:11	app started
+2019-11-26 20:56:21,596	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-26 20:56:21,624	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-26 20:56:21,634	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)

@@ -18,18 +18,6 @@ class AdminloginDAO:
             return packinfo(infostatus=0, infomsg="不合法的token")
 
     @staticmethod
-    def insert(username, password):
-        """
-        添加管理员
-        """
-        if not gdb.session.query(Admin).filter(
-            Admin.admin_username == username,
-        ).first():
-            ad = Admin(username, password, "", "", "")
-            gdb.session.add(ad)
-            gdb.session.commit()
-
-    @staticmethod
     def logout(token, username, req):
         """
         管理员退出

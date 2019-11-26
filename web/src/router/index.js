@@ -23,6 +23,7 @@ import AdminScore from "@/components/AdminScore";
 import AdminSummary from "@/components/AdminSummary";
 import SummaryDetails from "@/components/SummaryDetails";
 import AdminEmptyBook from "@/components/AdminEmptyBook";
+import ControlPanel from "@/components/ControlPanel";
 
 Vue.use(Router);
 
@@ -107,34 +108,38 @@ export default new Router({
       path: "/terminated",
       name: "terminated",
       component: Terminated
-    },{
+    }, {
       path: "/noteterminated",
       name: "noteterminated",
       component: NoteTerminated
-    },{
+    }, {
       path: "/scores",
       name: "scores",
       component: Scores
-    },{
+    }, {
       path: "/rankdetails",
       name: "rankdetails",
       component: RankDetails
-    },{
+    }, {
       path: "/adminscore",
       name: "adminscore",
       component: AdminScore
-    },{
+    }, {
       path: "/adminsummary",
       name: "adminsummary",
       component: AdminSummary
-    },{
+    }, {
       path: "/summarydetails",
       name: "summarydetails",
       component: SummaryDetails
-    },{
+    }, {
       path: "/adminemptybook",
       name: "adminemptybook",
       component: AdminEmptyBook
+    }, {
+      path: "/controlpanel",
+      name: "controlpanel",
+      component: ControlPanel
     }
   ]
 });

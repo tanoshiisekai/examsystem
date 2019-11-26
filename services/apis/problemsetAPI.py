@@ -7,6 +7,46 @@ from flask import request
 ns_problemset = api.namespace("ProblemSet", description="题库管理")
 
 
+@ns_problemset.route("/getnotebooktoggle/<string:token>")
+class GetNotebookToggle(Resource):
+
+    def get(self, token):
+        """
+        获取用户错题本开闭状态
+        """
+        return ProblemsetDAO.getnotebooktoggle(token, request)
+
+
+@ns_problemset.route("/togglenotebookopen/<string:token>")
+class ToggleNotebookOpen(Resource):
+
+    def get(self, token):
+        """
+        打开错题本
+        """
+        return ProblemsetDAO.togglenotebookopen(token, request)
+
+
+@ns_problemset.route("/togglenotebookopen/<string:token>")
+class ToggleNotebookOpen(Resource):
+
+    def get(self, token):
+        """
+        打开错题本
+        """
+        return ProblemsetDAO.togglenotebookopen(token, request)
+
+
+@ns_problemset.route("/togglenotebookclose/<string:token>")
+class ToggleNotebookClose(Resource):
+
+    def get(self, token):
+        """
+        关闭错题本
+        """
+        return ProblemsetDAO.togglenotebookclose(token, request)
+
+
 @ns_problemset.route("/<string:token>/<string:problemsetname>")
 class CheckProblemSet(Resource):
 

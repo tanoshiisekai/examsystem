@@ -11,6 +11,7 @@
           <md-menu-item class="menuitem" @click="score">积分统计</md-menu-item>
           <md-menu-item class="menuitem" @click="adminsummary">易错题统计</md-menu-item>
           <md-menu-item class="menuitem" @click="adminsettings">修改密码</md-menu-item>
+          <md-menu-item class="menuitem" @click="controlpanel">控制面板</md-menu-item>
           <md-menu-item class="menuitem" @click="logout">退出</md-menu-item>
         </md-menu-content>
       </md-menu>
@@ -35,6 +36,11 @@ export default {
     this.checkcookie();
   },
   methods: {
+    controlpanel() {
+      console.log("controlpanel");
+      this.checkcookie();
+      this.$router.push({name: "controlpanel"});
+    },
     checkcookie() {
       var username = this.$cookie.get("username");
       var usertoken = this.$cookie.get("usertoken");
@@ -95,7 +101,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 .menulist {
-  min-height: 376px;
+  min-height: 436px;
 }
 .menuitem {
   height: 60px;

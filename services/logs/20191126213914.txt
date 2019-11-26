@@ -1,0 +1,7 @@
+2019-11-26 21:39:14,487	INFO	main1	<module>	Line:11	app started
+2019-11-26 21:39:14,509	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-11-26 21:39:14,571	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-11-26 21:39:14,588	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
+2019-11-26 21:54:15,985	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 21:54:15] "GET /ProblemSet/togglenotebookopen/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 21:54:19,635	INFO	_internal	_log	Line:122	192.168.2.210 - - [26/Nov/2019 21:54:19] "GET /ProblemSet/togglenotebookclose/377e9018-972d-4f6b-b171-aa377fae65ff HTTP/1.1" 200 -
+2019-11-26 22:05:19,427	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading

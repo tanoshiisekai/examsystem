@@ -1,6 +1,7 @@
-from daos.adminloginDAO import AdminloginDAO
+from daos.initDAO import InitDAO
 from tools.auth import getmd5
 
 
-AdminloginDAO.insert("admin", getmd5("admintest"))
+InitDAO.insertadmin("long", getmd5("testlong"))
+InitDAO.insertsettings("togglenotebook", "1")   # 默认打开错题本
 

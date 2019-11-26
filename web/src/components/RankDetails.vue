@@ -43,7 +43,7 @@ export default {
   data() {
     return {
       datalist: [],
-      laststep: this.$cookie.get("laststep"),
+      laststep: "",
       psettitle: ""
     };
   },
@@ -63,6 +63,7 @@ export default {
         });
     },
     handleBack() {
+      this.laststep = this.$cookie.get("laststep");
       this.$router.push({ name:this.laststep });
     }
   }

@@ -4,6 +4,7 @@ from dbmodels.userDBModel import User
 from dbmodels.scoreDBModel import Score
 from dbmodels.problemDBModel import Problem
 from dbmodels.notebookDBModel import NoteBook
+from dbmodels.settingsDBModel import Settings
 from sqlalchemy import and_
 from tools.packtools import packinfo
 from tools.auth import gettimespan, getmd5, gettoken, getip, gettimestr, checkusertoken, checkalltoken, checkadmintoken, allowed_file
@@ -19,6 +20,61 @@ from sqlalchemy import func
 
 
 class ProblemsetDAO:
+
+    @staticmethod
+    def getnotebooktoggle(token, req):
+        """
+        获取用户错题本开闭状态
+        """
+        if checkadmintoken(token, req):
+            setting = gdb.session.query(Settings).filter(
+                Settings.settings_key == "togglenotebook"
+            ).first()
+            return packinfo(infostatus=1, infomsg="查询成功!", inforesult=setting.settings_value)
+        else:
+            return packinfo(infostatus=2, infomsg="没有权限!")
+
+    @staticmethod
+    def togglenotebookclose(token, req):
+        """
+        关闭用户错题本
+        """
+        if checkadmintoken(token, req):
+            setting = gdb.session.query(Settings).filter(
+                Settings.settings_key == "togglenotebook"
+            ).first()
+            if setting.settings_value == "1":
+                setting.settings_value = "0"
+            try:
+                gdb.session.commit()
+            except Exception as e:
+                print(e)
+                return packinfo(infostatus=4, infomsg="数据库错误!")
+            else:
+                return packinfo(infostatus=1, infomsg="切换成功!")
+        else:
+            return packinfo(infostatus=2, infomsg="没有权限!")
+
+    @staticmethod
+    def togglenotebookopen(token, req):
+        """
+        打开用户错题本
+        """
+        if checkadmintoken(token, req):
+            setting = gdb.session.query(Settings).filter(
+                Settings.settings_key == "togglenotebook"
+            ).first()
+            if setting.settings_value == "0":
+                setting.settings_value = "1"
+            try:
+                gdb.session.commit()
+            except Exception as e:
+                print(e)
+                return packinfo(infostatus=4, infomsg="数据库错误!")
+            else:
+                return packinfo(infostatus=1, infomsg="切换成功!")
+        else:
+            return packinfo(infostatus=2, infomsg="没有权限!")
 
     @staticmethod
     def copyproblemset(token, psettitle, newsettitle, req):
@@ -305,9 +361,11 @@ class ProblemsetDAO:
                 NoteBook.problemset_id == gdb.session.query(ProblemSet).filter(
                     ProblemSet.problemset_title == summary_psetname).first().problemset_id
             ).group_by(NoteBook.problem_id).all()
-            summarylist = [x for x in summarylist if x[1] >= int(summary_pwrongpercent)]
-            summarylist.sort(key=lambda x:x[1], reverse=True)
-            summarylist = [{"problem_id": x[0], "problem_count": x[1]} for x in summarylist]
+            summarylist = [x for x in summarylist if x[1]
+                           >= int(summary_pwrongpercent)]
+            summarylist.sort(key=lambda x: x[1], reverse=True)
+            summarylist = [{"problem_id": x[0], "problem_count": x[1]}
+                           for x in summarylist]
             return packinfo(infostatus=1, inforesult=summarylist, infomsg="查询成功！")
         else:
             return packinfo(infostatus=2, infomsg="没有权限！")
@@ -368,6 +426,11 @@ class ProblemsetDAO:
         """
         if checkalltoken(token, req):
             print(problemid)
+            tnb = gdb.session.query(Settings).filter(
+                Settings.settings_key == "togglenotebook"
+            ).first()
+            if tnb.settings_value == "0":
+                return packinfo(infostatus=3, infomsg="管理员已关闭错题本功能！")
             temp = gdb.session.query(Problem).filter(
                 Problem.problem_id == problemid
             ).first()
