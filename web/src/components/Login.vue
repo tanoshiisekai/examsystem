@@ -21,6 +21,7 @@
 </template>
 
 <script>
+  import { filehost, fileport, apiversion } from "@/conf";
 export default {
   name: "login",
   data() {
@@ -39,21 +40,21 @@ export default {
       this.$router.push({ name: "adminlogin" });
     },
     login() {
-      if(this.username.length == 0 || this.password.length == 0){
+      if (this.username.length == 0 || this.password.length == 0) {
         this.showSnackbar = true;
-        this.message = "用户名和密码不能为空!"
+        this.message = "用户名和密码不能为空!";
       }
       var username = this.username;
       var password = this.$md5(this.password);
-      this.axios.get("/Login/" + username + "/" + password).then(response => {
+      this.axios.get("/Login"+apiversion+"/" + username + "/" + password).then(response => {
         var resp = response.data;
         this.showSnackbar = true;
         this.message = resp["infomsg"];
         console.log(resp);
-        if(resp["infostatus"] == 1){
+        if (resp["infostatus"] == 1) {
           this.$cookie.set("username", this.username);
           this.$cookie.set("usertoken", resp["inforesult"]["usertoken"]);
-          this.$router.push({name: "problems"});
+          this.$router.push({ name: "problems" });
         }
       });
     }

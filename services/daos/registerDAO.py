@@ -15,7 +15,7 @@ class RegisterDAO:
         if not gdb.session.query(User).filter(
             User.user_username == username
             ).first():
-            ad = User(username, password, "", "", "", 0, "", 0)
+            ad = User(username, password, "", "", "", 0, "", 0, "")
             try:
                 gdb.session.add(ad)
                 gdb.session.commit()

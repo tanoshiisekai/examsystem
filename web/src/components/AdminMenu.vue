@@ -24,6 +24,7 @@
 </template>
 
 <script>
+  import { filehost, fileport, apiversion } from "@/conf";
 export default {
   name: "adminmenu",
   data() {
@@ -44,7 +45,7 @@ export default {
     checkcookie() {
       var username = this.$cookie.get("username");
       var usertoken = this.$cookie.get("usertoken");
-      this.axios.get("/AdminLogin/checktoken/" + usertoken).then(response => {
+      this.axios.get("/AdminLogin"+apiversion+"/checktoken/" + usertoken).then(response => {
         var resp = response.data;
         console.log(resp);
         if (resp["infostatus"] == 0) {
@@ -82,7 +83,7 @@ export default {
       var username = this.$cookie.get("username");
       var usertoken = this.$cookie.get("usertoken");
       this.axios
-        .get("/AdminLogin/logout/" + usertoken + "/" + username)
+        .get("/AdminLogin"+apiversion+"/logout/" + usertoken + "/" + username)
         .then(response => {
           var resp = response.data;
           this.message = resp["infomsg"];

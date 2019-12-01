@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import { filehost, fileport, apiversion } from "@/conf";
 export default {
   name: "adminlogin",
   data() {
@@ -27,7 +28,7 @@ export default {
       username: "",
       password: "",
       showSnackbar: false,
-      message: "",
+      message: ""
     };
   },
   methods: {
@@ -44,7 +45,9 @@ export default {
       }
       this.password = this.$md5(this.password);
       this.axios
-        .get("/AdminLogin/" + this.username + "/" + this.password)
+        .get(
+          "/AdminLogin" + apiversion + "/" + this.username + "/" + this.password
+        )
         .then(response => {
           var resp = response.data;
           if (resp["infostatus"] == 1) {

@@ -14,6 +14,7 @@
 
 <script>
 import AdminMenu from "@/components/AdminMenu";
+import { filehost, fileport, apiversion } from "@/conf";
 export default {
   name: "addproblem2_2",
   components: {
@@ -36,7 +37,7 @@ export default {
       this.problemsettitle = this.$cookie.get("problemsettitle");
       this.axios
         .get(
-          "/ProblemSet/upload/" +
+          "/ProblemSet"+apiversion+"/upload/" +
             token +
             "/" +
             this.problemsettitle
@@ -61,7 +62,7 @@ export default {
         }
       };
       this.axios
-        .post("/ProblemSet/upload/" + token, formData, config)
+        .post("/ProblemSet"+apiversion+"/upload/" + token, formData, config)
         .then(response => {
           var resp = response.data;
           console.log(resp);

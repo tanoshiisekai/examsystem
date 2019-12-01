@@ -22,21 +22,28 @@
 </template>
 
 <script>
+  import { filehost, fileport, apiversion } from "@/conf";
 export default {
   name: "usermenu",
   data() {
     return {
       showSnackbar: false,
-      message: ""
+      message: "",
     };
   },
   created: function() {
-    document.οncοntextmenu = function() {
-      return false;
-    };
-    document.onselectstart = function() {
-      return false;
-    };
+    var ua = window.navigator.userAgent.toLowerCase();
+    this.axios
+      .post("/Login"+apiversion+"/checkagent/", {
+        useragent: ua
+      })
+      .then(response => {
+        var resp = response.data;
+        if (resp["infostatus"] != 1) {
+          alert(resp["infomsg"]);
+          this.$router.push({ name: "login" });
+        }
+      });
     var username = this.$cookie.get("username");
     var usertoken = this.$cookie.get("usertoken");
     if (!username || !usertoken) {
@@ -47,7 +54,7 @@ export default {
     checkcookie() {
       var username = this.$cookie.get("username");
       var usertoken = this.$cookie.get("usertoken");
-      this.axios.get("/AdminLogin/checktoken/" + usertoken).then(response => {
+      this.axios.get("/AdminLogin"+apiversion+"/checktoken/" + usertoken).then(response => {
         var resp = response.data;
         console.log(resp);
         if (resp["infostatus"] == 0) {
@@ -75,7 +82,7 @@ export default {
       var username = this.$cookie.get("username");
       var usertoken = this.$cookie.get("usertoken");
       this.axios
-        .get("/Login/logout/" + usertoken + "/" + username)
+        .get("/Login"+apiversion+"/logout/" + usertoken + "/" + username)
         .then(response => {
           var resp = response.data;
           this.message = resp["infomsg"];

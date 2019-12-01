@@ -44,7 +44,7 @@
 
 <script>
 import UserMenu from "@/components/UserMenu";
-import { filehost, fileport } from "@/conf";
+  import { filehost, fileport, apiversion } from "@/conf";
 export default {
   name: "notebook",
   components: {
@@ -75,7 +75,7 @@ export default {
       var usertoken = this.$cookie.get("usertoken");
       console.log(this.wronglist);
       this.axios
-        .get("/ProblemSet/wrongproblem/" + usertoken + "/" + nbid)
+        .get("/ProblemSet"+apiversion+"/wrongproblem/" + usertoken + "/" + nbid)
         .then(response => {
           var resp = response.data;
           if (resp["infostatus"] == 1) {
@@ -100,7 +100,7 @@ export default {
       this.wrongidlist = [];
       var usertoken = this.$cookie.get("usertoken");
       this.axios
-        .get("/ProblemSet/problemanswer/" + usertoken)
+        .get("/ProblemSet"+apiversion+"/problemanswer/" + usertoken)
         .then(response => {
           var resp = response.data;
           if (resp["infostatus"] == -1) {
@@ -123,7 +123,7 @@ export default {
       }
       var pid = this.wronglist[this.posi].problemid;
       this.axios
-        .get("/ProblemSet/problemanswer/" + usertoken + "/" + pid)
+        .get("/ProblemSet"+apiversion+"/problemanswer/" + usertoken + "/" + pid)
         .then(response => {
           var resp = response.data;
           if (resp["infostatus"] == 3){

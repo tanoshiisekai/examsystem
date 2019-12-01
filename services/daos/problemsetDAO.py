@@ -17,6 +17,7 @@ import os.path
 import random
 from flask import url_for
 from sqlalchemy import func
+from tools.imagetools import drawwaterprint
 
 
 class ProblemsetDAO:
@@ -313,11 +314,27 @@ class ProblemsetDAO:
             return packinfo(infostatus=2, infomsg="没有权限!")
 
     @staticmethod
-    def addscore(token, scoreid, right, wrong, md5str, req):
+    def addscore(token, scoreid, right, wrong, md5str, timestamp, req):
         """
         记录成绩
         """
         if checkusertoken(token, req):
+            print(timestamp)
+            us = gdb.session.query(User).filter(
+                User.user_token == token
+            ).first()
+            if us.user_dotimestamp:
+                oldtime = int(us.user_dotimestamp)
+                newtime = int(timestamp)
+                if abs(newtime - oldtime) < 2000:
+                    print("频繁请求")
+                    return packinfo(infostatus=-1, infomsg="请不要频繁操作!")
+            us.user_dotimestamp = timestamp
+            try:
+                gdb.session.commit()
+            except Exception as e:
+                print(e)
+                return packinfo(infostatus=6, infomsg="数据库错误!")
             mstr = getmd5(getmd5(token + right + wrong) + scoreid)
             print(mstr)
             if mstr == md5str:
@@ -478,7 +495,37 @@ class ProblemsetDAO:
                 answers = list(tempdict["problem_answer"])
                 answers.sort()
                 answers = "".join(answers)
-                print(answers)
+
+                choicelist = [["A", tempdict["problem_choiceA"]],
+                              ["B", tempdict["problem_choiceB"]],
+                              ["C", tempdict["problem_choiceC"]],
+                              ["D", tempdict["problem_choiceD"]]]
+                answerlist = list(answers)
+                print(choicelist)
+                print(answerlist)
+                for cho in choicelist:
+                    for ans in answerlist:
+                        if ans == cho[0]:
+                            cho.append("$")
+                            break
+                    else:
+                        cho.append("#")
+                random.shuffle(choicelist)
+                choicelist[0][0] = "A"
+                choicelist[1][0] = "B"
+                choicelist[2][0] = "C"
+                choicelist[3][0] = "D"
+                tempdict["problem_choiceA"] = choicelist[0][1]
+                tempdict["problem_choiceB"] = choicelist[1][1]
+                tempdict["problem_choiceC"] = choicelist[2][1]
+                tempdict["problem_choiceD"] = choicelist[3][1]
+                newanswer = ""
+                for ch in choicelist:
+                    if ch[-1] == "$":
+                        newanswer = newanswer + ch[0]
+                print(choicelist)
+                print(newanswer)
+                answers = newanswer
                 tempdict["problem_answer"] = getmd5(getmd5(str(answers) +
                                                            str(tempdict["problem_id"]))+str(answers))
                 tempdict["problemset_timeperproblem"] = tempset.problemset_timeperproblem
@@ -735,6 +782,7 @@ class ProblemsetDAO:
                                              conf.datapicdir, dt[6]),
                                 os.path.join(os.getcwd(), conf.problempicdir, newpicname))
                     problem_picname = newpicname
+                    drawwaterprint(os.path.join(os.getcwd(), conf.problempicdir, newpicname))
 
                 """ print(problem_desp)
                 print(problem_choiceA)

@@ -2,8 +2,9 @@ from appbase import global_api as api
 from daos.adminloginDAO import AdminloginDAO
 from flask_restplus import Resource
 from flask import request
+from conf import apiversion
 
-ns_adminlogin = api.namespace("AdminLogin", description="管理员登录")
+ns_adminlogin = api.namespace("AdminLogin" + str(apiversion), description="管理员登录")
 
 @ns_adminlogin.route("/checktoken/<string:token>")
 class AdminChecktoken(Resource):

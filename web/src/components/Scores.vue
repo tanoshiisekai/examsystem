@@ -32,6 +32,7 @@
 </template>
 
 <script>
+  import { filehost, fileport, apiversion } from "@/conf";
 import UserMenu from "@/components/UserMenu";
 export default {
   name: "scores",
@@ -49,7 +50,7 @@ export default {
   methods: {
     getdata() {
       var usertoken = this.$cookie.get("usertoken");
-      this.axios.get("/ProblemSet/scores/" + usertoken).then(response => {
+      this.axios.get("/ProblemSet"+apiversion+"/scores/" + usertoken).then(response => {
         var resp = response.data;
         if (resp["infostatus"] == 1) {
           this.datalist = resp["inforesult"];

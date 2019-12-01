@@ -24,6 +24,7 @@
 </template>
 
 <script>
+  import { filehost, fileport, apiversion } from "@/conf";
 export default {
   name: "register",
   data() {
@@ -57,7 +58,7 @@ export default {
       var username = this.username;
       var password = this.$md5(this.password);
       this.axios
-        .get("/Register/" + username + "/" + password)
+        .get("/Register"+apiversion+"/" + username + "/" + password)
         .then(response => {
           this.showSnackbar = true;
           this.message = response.data["infomsg"];

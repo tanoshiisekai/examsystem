@@ -10,6 +10,7 @@
 
 <script>
 import UserMenu from "@/components/UserMenu";
+  import { filehost, fileport, apiversion } from "@/conf";
 export default {
   name: "answering",
   components: {
@@ -24,7 +25,7 @@ export default {
       var scoreid = this.$cookie.get("answeringid");
       var usertoken = this.$cookie.get("usertoken");
       this.axios
-        .get("/ProblemSet/finishedtime/" + usertoken + "/" + scoreid)
+        .get("/ProblemSet"+apiversion+"/finishedtime/" + usertoken + "/" + scoreid)
         .then(response => {
             var resp = response.data;
             if(resp["infostatus"] == 1){

@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <div class="virtualbody">
-      <UserMenu></UserMenu>
       <md-subheader>
         <span class="md-title">答题中</span>
       </md-subheader>
@@ -39,7 +38,12 @@
             value="D"
             style="font-size:20px;width:100%;height:50px;"
           >D. {{this.problem.problem_choiceD}}</md-checkbox>
-          <md-button class="md-raised md-primary" @click="doanswer()" :disabled="isunable">提交</md-button>
+          <md-button
+            class="md-raised md-primary"
+            @click="doanswer()"
+            :disabled="isunable"
+            :class="[styles]"
+          >提交</md-button>
         </md-card-content>
       </md-card>
       <md-snackbar :md-duration="3000" :md-active.sync="showSnackbar" md-persistent>
@@ -52,13 +56,28 @@
 
 <script>
 import UserMenu from "@/components/UserMenu";
-import { filehost, fileport } from "@/conf";
+import {
+  filehost,
+  fileport,
+  apiversion,
+  unmovetime,
+  cheattime,
+  unmovecount
+} from "@/conf";
 export default {
   name: "answerproblems",
   components: {
     UserMenu
   },
   created() {
+    document.οncοntextmenu = function() {
+      return false;
+    };
+    document.onselectstart = function() {
+      return false;
+    };
+    document.onmousemove = this.mouseMove;
+    document.onblur = this.mouseMove;
     window.onbeforeunload = function(e) {
       e = e || window.event;
       // 兼容IE8和Firefox 4之前的版本
@@ -79,11 +98,61 @@ export default {
       array: [],
       timecountvalue: 0,
       timer: null,
+      timer1: null,
       scoreid: 0,
-      isunable: false
+      isunable: false,
+      lasttimestap: 0,
+      warningcount: 0,
+      span: 0,
+      mousePos: 0,
     };
   },
   methods: {
+    mouseMove(ev) {
+      ev = ev || window.event;
+      this.mousePos = this.mousePosition(ev);
+      if (this.mousePos.x < 10) {
+        alert("注意：鼠标请不要离开答题区域！");
+      }
+      if (this.mousePos.x > document.body.clientWidth - 10) {
+        alert("注意：鼠标请不要离开答题区域！");
+      }
+      if (this.mousePos.y < 10) {
+        alert("注意：鼠标请不要离开答题区域！");
+      }
+      if (this.mousePos.y > document.body.clientHeight - 10) {
+        alert("注意：鼠标请不要离开答题区域！");
+      }
+      var mousetimestamp = new Date().getTime();
+      console.log(mousetimestamp);
+      if (this.lasttimestap == 0) {
+        this.lasttimestap = mousetimestamp;
+      } else {
+        this.span = mousetimestamp - this.lasttimestap;
+        console.log("timespan:", this.span);
+        if (this.span > unmovetime) {
+          alert("注意：你已经长时间没有移动鼠标！");
+          this.warningcount = this.warningcount + 1;
+          if (this.warningcount > unmovecount && this.span > cheattime) {
+            alert("系统检测到你有作弊嫌疑，请重新答题！");
+            this.$router.push({ name: "finished" });
+          } else {
+            this.lasttimestap = mousetimestamp;
+          }
+        } else {
+          this.lasttimestap = mousetimestamp;
+        }
+      }
+    },
+    mousePosition(ev) {
+      if (ev.pageX || ev.pageY) {
+        return { x: ev.pageX, y: ev.pageY };
+      }
+      return {
+        x: ev.clientX + document.body.scrollLeft - document.body.clientLeft,
+        y: ev.clientY + document.body.scrollTop - document.body.clientTop
+      };
+    },
     addwrongproblem() {
       var pid = this.problem.problem_id;
       var psid = this.problem.problemset_id;
@@ -91,17 +160,30 @@ export default {
       console.log("psid", psid);
       var usertoken = this.$cookie.get("usertoken");
       this.axios
-        .get("/ProblemSet/wrongproblem/" + usertoken + "/" + psid + "/" + pid)
+        .get(
+          "/ProblemSet" +
+            apiversion +
+            "/wrongproblem/" +
+            usertoken +
+            "/" +
+            psid +
+            "/" +
+            pid
+        )
         .then(response => {
           var resp = response.data;
           console.log(resp);
         });
     },
     submitanswer() {
+      var dotimestamp = new Date().getTime();
+      console.log(dotimestamp);
       this.isunable = true;
+      this.styles = "changeposition";
       var answer = this.array;
       answer.sort();
       answer = answer.join("");
+      console.log(this.answer);
       var result = this.$md5(
         this.$md5(answer + this.problem.problem_id) + answer
       );
@@ -112,53 +194,90 @@ export default {
         console.log(answermd5);
         this.axios
           .get(
-            "/ProblemSet/addscore/" +
+            "/ProblemSet" +
+              apiversion +
+              "/addscore/" +
               usertoken +
               "/" +
               this.scoreid +
               "/1/0/" +
-              answermd5
+              answermd5 +
+              "/" +
+              dotimestamp
           )
           .then(response => {
             var resp = response.data;
             console.log(resp);
+            if (resp["infostatus"] == -1) {
+              alert("请不要频繁点击按钮！");
+              this.isunable = false;
+              this.styles = "recoverposition";
+            } else {
+              clearInterval(this.timer);
+              this.timer = null;
+              if (this.problem.problem_nextpid != -1) {
+                this.problemid = this.problem.problem_nextpid;
+                setTimeout(() => {
+                  this.getfirstproblem();
+                }, 1000);
+              } else {
+                this.$router.push({ name: "finished" });
+              }
+            }
           });
       } else {
         var answermd5 = this.$md5(this.$md5(usertoken + "01") + this.scoreid);
         this.axios
           .get(
-            "/ProblemSet/addscore/" +
+            "/ProblemSet" +
+              apiversion +
+              "/addscore/" +
               usertoken +
               "/" +
               this.scoreid +
               "/0/1/" +
-              answermd5
+              answermd5 +
+              "/" +
+              dotimestamp
           )
           .then(response => {
             var resp = response.data;
             console.log(resp);
-            this.addwrongproblem();
+            if (resp["infostatus"] == -1) {
+              alert("请不要频繁点击按钮！");
+              this.isunable = false;
+              this.styles = "recoverposition";
+            } else {
+              this.addwrongproblem();
+              clearInterval(this.timer);
+              this.timer = null;
+              if (this.problem.problem_nextpid != -1) {
+                this.problemid = this.problem.problem_nextpid;
+                setTimeout(() => {
+                  this.getfirstproblem();
+                }, 1000);
+              } else {
+                this.$router.push({ name: "finished" });
+              }
+            }
           });
       }
     },
     doanswer() {
       this.submitanswer();
-      clearInterval(this.timer);
-      this.timer = null;
-      if (this.problem.problem_nextpid != -1) {
-        this.problemid = this.problem.problem_nextpid;
-        setTimeout(() => {
-          this.getfirstproblem();
-        }, 1000);
-      } else {
-        this.$router.push({ name: "finished" });
-      }
     },
     initproblems() {
       var problemsettitle = this.$cookie.get("problemsettitle");
       var usertoken = this.$cookie.get("usertoken");
       this.axios
-        .get("/ProblemSet/init/" + usertoken + "/" + problemsettitle)
+        .get(
+          "/ProblemSet" +
+            apiversion +
+            "/init/" +
+            usertoken +
+            "/" +
+            problemsettitle
+        )
         .then(response => {
           var resp = response.data;
           if (resp["infostatus"] == 1) {
@@ -174,11 +293,19 @@ export default {
     },
     getfirstproblem() {
       this.isunable = false;
+      this.styles = "recoverposition";
       this.array = [];
       console.log(this.problemid);
       var usertoken = this.$cookie.get("usertoken");
       this.axios
-        .get("/ProblemSet/answer/" + usertoken + "/" + this.problemid)
+        .get(
+          "/ProblemSet" +
+            apiversion +
+            "/answer/" +
+            usertoken +
+            "/" +
+            this.problemid
+        )
         .then(response => {
           var resp = response.data;
           if (resp["infostatus"] == -1) {
@@ -214,12 +341,6 @@ export default {
                 clearInterval(this.timer);
                 this.timer = null;
                 this.submitanswer();
-                if (this.problem.problem_nextpid != -1) {
-                  this.problemid = this.problem.problem_nextpid;
-                  this.getfirstproblem();
-                } else {
-                  this.$router.push({ name: "finished" });
-                }
               }
             }, 1000);
             console.log("create timer:", this.timer);
@@ -259,5 +380,11 @@ export default {
   width: 100%;
   overflow-y: scroll;
   overflow-x: auto;
+}
+.changeposition {
+  margin-left: 100px;
+}
+.recoverposition {
+  margin-left: 0px;
 }
 </style>

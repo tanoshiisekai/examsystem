@@ -25,6 +25,7 @@
 
 <script>
 import AdminMenu from "@/components/AdminMenu";
+  import { filehost, fileport, apiversion } from "@/conf";
 export default {
   name: "adminsettings",
   components: {
@@ -60,7 +61,7 @@ export default {
       var newpassword = this.$md5(this.password);
       var token = this.$cookie.get("usertoken");
       this.axios
-        .get("/AdminSettings/" + token + "/" + oldpassword + "/" + newpassword)
+        .get("/AdminSettings"+apiversion+"/" + token + "/" + oldpassword + "/" + newpassword)
         .then(response => {
           this.showSnackbar = true;
           this.message = response.data["infomsg"];

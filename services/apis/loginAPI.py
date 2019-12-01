@@ -2,8 +2,21 @@ from appbase import global_api as api
 from daos.loginDAO import LoginDAO
 from flask_restplus import Resource
 from flask import request
+from apimodels.useragentModel import useragentmodel
+from conf import apiversion
 
-ns_login = api.namespace("Login", description="用户登录")
+ns_login = api.namespace("Login"+str(apiversion), description="用户登录")
+
+
+@ns_login.route("/checkagent/")
+class UserAgent(Resource):
+
+    @ns_login.expect(useragentmodel)
+    def post(self):
+        """
+        检测浏览器
+        """
+        return LoginDAO.checkuseragent(api.payload)
 
 
 @ns_login.route("/checktoken/<string:username>/<string:token>")

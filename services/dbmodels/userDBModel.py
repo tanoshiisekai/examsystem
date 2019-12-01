@@ -12,8 +12,9 @@ class User(gdb.Model):
     user_problemsetid = gdb.Column(gdb.Integer)
     user_problemstream = gdb.Column(gdb.String(500))
     user_problemseat = gdb.Column(gdb.Integer)
+    user_dotimestamp = gdb.Column(gdb.String(100))
 
-    def __init__(self, user_username, user_password, user_token, user_ip, user_logintime, user_problemsetid, user_problemstream, user_problemseat):
+    def __init__(self, user_username, user_password, user_token, user_ip, user_logintime, user_problemsetid, user_problemstream, user_problemseat, user_dotimestamp):
         self.user_username = user_username
         self.user_password = user_password
         self.user_token = user_token
@@ -22,6 +23,7 @@ class User(gdb.Model):
         self.user_problemsetid = user_problemsetid
         self.user_problemstream = user_problemstream
         self.user_problemseat = user_problemseat
+        self.user_dotimestamp = user_dotimestamp
 
     def todict(self):
         return {"user_id": self.user_id,
@@ -32,4 +34,5 @@ class User(gdb.Model):
                 "user_logintime": self.user_logintime,
                 "user_problemsetid": self.user_problemsetid,
                 "user_problemstream": self.user_problemstream,
-                "user_problemseat": self.user_problemseat}
+                "user_problemseat": self.user_problemseat,
+                "user_dotimestamp": self.user_dotimestamp}

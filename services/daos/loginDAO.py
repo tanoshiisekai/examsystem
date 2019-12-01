@@ -8,6 +8,29 @@ from tools.auth import gettoken, getip, gettimestr, checkusertoken
 class LoginDAO:
 
     @staticmethod
+    def checkuseragent(data):
+        """
+        检测浏览器
+        """
+        if data:
+            useragent = data["useragent"]
+            print(useragent)
+            if "mobile" in useragent:
+                return packinfo(infostatus=2, infomsg="此系统不支持移动端浏览器！请切换至计算机上使用。")
+            elif "firefox" in useragent:
+                return packinfo(infostatus=1, infomsg="支持的浏览器")
+            elif "edge" in useragent:
+                return packinfo(infostatus=1, infomsg="支持的浏览器")
+            elif "chrome" in useragent:
+                return packinfo(infostatus=1, infomsg="支持的浏览器")
+            else:
+                return packinfo(infostatus=3, infomsg="此系统不支持您的浏览器！请使用Edge、Firefox或Chrome浏览器。")
+        else:
+            return packinfo(infostatus=-1, infomsg="系统异常！请重新打开！")
+
+
+
+    @staticmethod
     def checktoken(username, token):
         """
         检测admin的token

@@ -16,6 +16,7 @@
 </template>
 
 <script>
+  import { filehost, fileport, apiversion } from "@/conf";
 import AdminMenu from "@/components/AdminMenu";
 export default {
   name: "adminscore",
@@ -34,7 +35,7 @@ export default {
     handleSearch() {
       var usertoken = this.$cookie.get("usertoken");
       this.axios
-        .get("/ProblemSet/pset/" + usertoken + "/" + this.psetname)
+        .get("/ProblemSet"+apiversion+"/pset/" + usertoken + "/" + this.psetname)
         .then(response => {
           var resp = response.data;
           if (resp["infostatus"] == 1) {

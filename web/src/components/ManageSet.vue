@@ -68,6 +68,7 @@
 </template>
 
 <script>
+  import { filehost, fileport, apiversion } from "@/conf";
 import AdminMenu from "@/components/AdminMenu";
 export default {
   name: "manageset",
@@ -94,7 +95,7 @@ export default {
   methods: {
     getdatas() {
       var usertoken = this.$cookie.get("usertoken");
-      this.axios.get("/ProblemSet/" + usertoken).then(response => {
+      this.axios.get("/ProblemSet"+apiversion+"/" + usertoken).then(response => {
         var resp = response.data;
         if (resp["infostatus"] == 1) {
           this.datalist = resp["inforesult"];
@@ -108,7 +109,7 @@ export default {
       var usertoken = this.$cookie.get("usertoken");
       this.axios
         .get(
-          "/ProblemSet/setting/" +
+          "/ProblemSet"+apiversion+"/setting/" +
             usertoken +
             "/" +
             this.dialogsettitle +
@@ -128,7 +129,7 @@ export default {
       var usertoken = this.$cookie.get("usertoken");
       this.axios
         .get(
-          "/ProblemSet/setting1/" +
+          "/ProblemSet"+apiversion+"/setting1/" +
             usertoken +
             "/" +
             this.dialogsettitle +
@@ -148,7 +149,7 @@ export default {
       var usertoken = this.$cookie.get("usertoken");
       this.axios
         .get(
-          "/ProblemSet/copyset/" +
+          "/ProblemSet"+apiversion+"/copyset/" +
             usertoken +
             "/" +
             this.dialogsettitle +
@@ -165,7 +166,7 @@ export default {
     handleDelete(problemsettitle) {
       var usertoken = this.$cookie.get("usertoken");
       this.axios
-        .get("/ProblemSet/remove/" + usertoken + "/" + problemsettitle)
+        .get("/ProblemSet"+apiversion+"/remove/" + usertoken + "/" + problemsettitle)
         .then(response => {
           var resp = response.data;
           if (resp["infostatus"] == 1) {

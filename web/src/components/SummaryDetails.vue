@@ -45,7 +45,7 @@
 
 <script>
 import AdminMenu from "@/components/AdminMenu";
-import { filehost, fileport } from "@/conf";
+  import { filehost, fileport, apiversion } from "@/conf";
 export default {
   name: "summarydetails",
   components: {
@@ -82,7 +82,7 @@ export default {
       var summary_pwrongpercent = this.$cookie.get("summary_pwrongpercent");
       this.axios
         .get(
-          "/ProblemSet/adminsummary/" +
+          "/ProblemSet"+apiversion+"/adminsummary/" +
             usertoken +
             "/" +
             summary_psetname +
@@ -108,7 +108,7 @@ export default {
       }
       var pid = this.wronglist[this.posi].problem_id;
       this.axios
-        .get("/ProblemSet/problemsummary/" + usertoken + "/" + pid)
+        .get("/ProblemSet"+apiversion+"/problemsummary/" + usertoken + "/" + pid)
         .then(response => {
           var resp = response.data;
           this.problem = resp["inforesult"];

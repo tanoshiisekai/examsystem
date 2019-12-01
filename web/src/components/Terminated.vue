@@ -8,6 +8,7 @@
 </template>
 
 <script>
+  import { filehost, fileport, apiversion } from "@/conf";
 import UserMenu from "@/components/UserMenu";
 export default {
   name: "terminated",

@@ -3,8 +3,9 @@ from appbase import upload_parser
 from daos.problemsetDAO import ProblemsetDAO
 from flask_restplus import Resource
 from flask import request
+from conf import apiversion
 
-ns_problemset = api.namespace("ProblemSet", description="题库管理")
+ns_problemset = api.namespace("ProblemSet"+str(apiversion), description="题库管理")
 
 
 @ns_problemset.route("/getnotebooktoggle/<string:token>")
@@ -179,14 +180,14 @@ class WrongProblems(Resource):
         return ProblemsetDAO.getwrongproblemidlist(token, request)
 
 
-@ns_problemset.route("/addscore/<string:token>/<string:scoreid>/<string:right>/<string:wrong>/<string:md5str>")
+@ns_problemset.route("/addscore/<string:token>/<string:scoreid>/<string:right>/<string:wrong>/<string:md5str>/<string:timestamp>")
 class AddScore(Resource):
 
-    def get(self, token,  scoreid, right, wrong, md5str):
+    def get(self, token,  scoreid, right, wrong, md5str, timestamp):
         """
         更新积分
         """
-        return ProblemsetDAO.addscore(token, scoreid, right, wrong, md5str, request)
+        return ProblemsetDAO.addscore(token, scoreid, right, wrong, md5str, timestamp, request)
 
 
 @ns_problemset.route("/finishedtime/<string:token>/<string:scoreid>")

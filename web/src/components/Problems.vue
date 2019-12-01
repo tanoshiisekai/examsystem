@@ -17,6 +17,7 @@
 
 <script>
 import UserMenu from "@/components/UserMenu";
+  import { filehost, fileport, apiversion } from "@/conf";
 export default {
   name: "problems",
   components: {
@@ -41,7 +42,7 @@ export default {
         var usertoken = this.$cookie.get("usertoken");
         this.$cookie.set("problemsettitle", this.problemsettitle);
         this.axios
-          .get("/ProblemSet/" + usertoken + "/" + this.problemsettitle)
+          .get("/ProblemSet"+apiversion+"/" + usertoken + "/" + this.problemsettitle)
           .then(response => {
             var resp = response.data;
             console.log(resp);

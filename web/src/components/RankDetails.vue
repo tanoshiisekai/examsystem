@@ -32,6 +32,7 @@
 
 <script>
 import UserMenu from "@/components/UserMenu";
+  import { filehost, fileport, apiversion } from "@/conf";
 export default {
   name: "rankdetails",
   components: {
@@ -52,7 +53,7 @@ export default {
       var usertoken = this.$cookie.get("usertoken");
       var psetid = this.$cookie.get("rank_problemsetid");
       this.axios
-        .get("/ProblemSet/scoreslist/" + usertoken + "/" + psetid)
+        .get("/ProblemSet"+apiversion+"/scoreslist/" + usertoken + "/" + psetid)
         .then(response => {
             var resp = response.data;
             console.log(resp);

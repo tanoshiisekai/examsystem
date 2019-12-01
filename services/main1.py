@@ -11,3 +11,10 @@ dbbuilder.create_db()
 logger.info("app started")
 print("app started at " + baseurl)
 global_app.run(host=buildhost, port=buildport, debug=True)
+
+
+# 启动前应修改的配置文件
+# nginx.conf
+# conf.py
+# index.js
+# conf.js

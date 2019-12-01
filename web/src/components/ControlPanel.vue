@@ -15,6 +15,7 @@
 
 <script>
 import AdminMenu from "@/components/AdminMenu";
+  import { filehost, fileport, apiversion } from "@/conf";
 export default {
   name: "controlpanel",
   components: {
@@ -23,7 +24,7 @@ export default {
   created() {
     var admintoken = this.$cookie.get("usertoken");
     this.axios
-      .get("/ProblemSet/getnotebooktoggle/" + admintoken)
+      .get("/ProblemSet"+apiversion+"/getnotebooktoggle/" + admintoken)
       .then(response => {
         var resp = response.data;
         console.log(resp);
@@ -48,7 +49,7 @@ export default {
       if (this.switchnotebook == true) {
         var admintoken = this.$cookie.get("usertoken");
         this.axios
-          .get("/ProblemSet/togglenotebookopen/" + admintoken)
+          .get("/ProblemSet"+apiversion+"/togglenotebookopen/" + admintoken)
           .then(response => {
             var resp = response.data;
             console.log(resp);
@@ -56,7 +57,7 @@ export default {
       } else {
         var admintoken = this.$cookie.get("usertoken");
         this.axios
-          .get("/ProblemSet/togglenotebookclose/" + admintoken)
+          .get("/ProblemSet"+apiversion+"/togglenotebookclose/" + admintoken)
           .then(response => {
             var resp = response.data;
             console.log(resp);

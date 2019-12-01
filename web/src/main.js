@@ -11,6 +11,7 @@ import "vue-material/dist/theme/default.css";
 import "material-design-icons/iconfont/material-icons.css";
 import md5 from "js-md5";
 
+
 Vue.use(VueMaterial);
 Vue.use(VueAxios, axios);
 Vue.use(VueCookie);

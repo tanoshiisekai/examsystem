@@ -24,6 +24,7 @@
 </template>
 
 <script>
+  import { filehost, fileport, apiversion } from "@/conf";
 import UserMenu from "@/components/UserMenu";
 export default {
   name: "usersettings",
@@ -60,7 +61,7 @@ export default {
       var newpassword = this.$md5(this.password);
       var token = this.$cookie.get("usertoken");
       this.axios
-        .get("/UserSettings/" + token + "/" + oldpassword + "/" + newpassword)
+        .get("/UserSettings"+apiversion+"/" + token + "/" + oldpassword + "/" + newpassword)
         .then(response => {
           this.showSnackbar = true;
           this.message = response.data["infomsg"];

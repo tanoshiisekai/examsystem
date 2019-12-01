@@ -1,5 +1,0 @@
-2019-11-26 20:55:06,768	INFO	main1	<module>	Line:11	app started
-2019-11-26 20:55:06,778	WARNING	_internal	_log	Line:122	 * Debugger is active!
-2019-11-26 20:55:06,805	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
-2019-11-26 20:55:06,821	INFO	_internal	_log	Line:122	 * Running on http://192.168.2.210:9100/ (Press CTRL+C to quit)
-2019-11-26 20:56:18,199	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\dbmodels\\__init__.py', reloading

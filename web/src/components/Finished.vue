@@ -13,13 +13,14 @@
 
 <script>
 import UserMenu from "@/components/UserMenu";
-import { filehost, fileport } from "@/conf";
+ import { filehost, fileport, apiversion } from "@/conf";
 export default {
   name: "answerproblems",
   components: {
     UserMenu
   },
   created() {
+    document.onmousemove = null;
     this.settimestr();
   },
   data() {
@@ -30,7 +31,7 @@ export default {
       var usertoken = this.$cookie.get("usertoken");
       var scoreid = this.$cookie.get("scoreid");
       this.axios
-        .get("/ProblemSet/finishedtime/" + usertoken + "/" + scoreid)
+        .get("/ProblemSet"+apiversion+"/finishedtime/" + usertoken + "/" + scoreid)
         .then(response =>{
           var resp = response.data;
           console.log(resp);

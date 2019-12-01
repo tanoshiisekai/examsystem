@@ -9,6 +9,7 @@
 
 <script>
 import UserMenu from "@/components/UserMenu";
+  import { filehost, fileport, apiversion } from "@/conf";
 export default {
   name: "emptybook",
   components: {

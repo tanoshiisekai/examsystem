@@ -9,6 +9,7 @@
 
 <script>
 import AdminMenu from "@/components/AdminMenu";
+  import { filehost, fileport, apiversion } from "@/conf";
 export default {
   name: "adminemptybook",
   components: {
