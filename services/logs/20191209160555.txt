@@ -1,0 +1,16 @@
+2019-12-09 16:05:55,959	INFO	main1	<module>	Line:11	app started
+2019-12-09 16:05:55,977	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-12-09 16:05:56,001	INFO	_internal	_log	Line:122	 * Debugger PIN: 194-661-588
+2019-12-09 16:05:56,024	INFO	_internal	_log	Line:122	 * Running on http://192.168.31.254:9100/ (Press CTRL+C to quit)
+2019-12-09 16:11:17,400	INFO	_internal	_log	Line:122	192.168.31.254 - - [09/Dec/2019 16:11:17] "GET /AdminLogin0.3/long/74205c0cecd1c24479b3fdd15c437698 HTTP/1.1" 200 -
+2019-12-09 16:11:17,480	INFO	_internal	_log	Line:122	192.168.31.254 - - [09/Dec/2019 16:11:17] "GET /AdminLogin0.3/checktoken/b80180f7-7772-426c-8807-a406df5c77f1 HTTP/1.1" 200 -
+2019-12-09 16:11:21,830	INFO	_internal	_log	Line:122	192.168.31.254 - - [09/Dec/2019 16:11:21] "GET /AdminLogin0.3/checktoken/b80180f7-7772-426c-8807-a406df5c77f1 HTTP/1.1" 200 -
+2019-12-09 16:11:21,860	INFO	_internal	_log	Line:122	192.168.31.254 - - [09/Dec/2019 16:11:21] "GET /AdminLogin0.3/checktoken/b80180f7-7772-426c-8807-a406df5c77f1 HTTP/1.1" 200 -
+2019-12-09 16:11:21,863	INFO	_internal	_log	Line:122	192.168.31.254 - - [09/Dec/2019 16:11:21] "GET /ProblemSet0.3/b80180f7-7772-426c-8807-a406df5c77f1 HTTP/1.1" 200 -
+2019-12-09 16:11:32,537	INFO	_internal	_log	Line:122	192.168.31.254 - - [09/Dec/2019 16:11:32] "GET /AdminLogin0.3/checktoken/b80180f7-7772-426c-8807-a406df5c77f1 HTTP/1.1" 200 -
+2019-12-09 16:11:32,563	INFO	_internal	_log	Line:122	192.168.31.254 - - [09/Dec/2019 16:11:32] "GET /AdminLogin0.3/checktoken/b80180f7-7772-426c-8807-a406df5c77f1 HTTP/1.1" 200 -
+2019-12-09 16:11:42,179	INFO	_internal	_log	Line:122	192.168.31.254 - - [09/Dec/2019 16:11:42] "GET /ProblemSet0.3/b80180f7-7772-426c-8807-a406df5c77f1/����21 HTTP/1.1" 200 -
+2019-12-09 16:11:43,465	INFO	_internal	_log	Line:122	192.168.31.254 - - [09/Dec/2019 16:11:43] "GET /AdminLogin0.3/checktoken/b80180f7-7772-426c-8807-a406df5c77f1 HTTP/1.1" 200 -
+2019-12-09 16:11:54,611	INFO	_internal	_log	Line:122	192.168.31.254 - - [09/Dec/2019 16:11:54] "POST /ProblemSet0.3/upload/b80180f7-7772-426c-8807-a406df5c77f1 HTTP/1.1" 200 -
+2019-12-09 16:12:09,183	INFO	_internal	_log	Line:122	192.168.31.254 - - [09/Dec/2019 16:12:09] "GET /ProblemSet0.3/upload/b80180f7-7772-426c-8807-a406df5c77f1/����21/���������ڶ�ѧ�����п��� HTTP/1.1" 500 -
+2019-12-09 16:12:12,488	INFO	_internal	_log	Line:122	192.168.31.254 - - [09/Dec/2019 16:12:12] "GET /ProblemSet0.3/upload/b80180f7-7772-426c-8807-a406df5c77f1/����21/���������ڶ�ѧ�����п��� HTTP/1.1" 500 -

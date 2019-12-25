@@ -1,0 +1,16 @@
+2019-12-04 23:24:46,624	INFO	main1	<module>	Line:11	app started
+2019-12-04 23:24:46,648	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-12-04 23:36:23,315	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-12-04 23:37:51,661	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-12-04 23:38:04,257	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-12-04 23:38:18,005	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-12-04 23:39:37,044	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-12-04 23:40:09,894	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-12-04 23:40:45,414	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-12-04 23:40:51,870	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-12-04 23:41:24,347	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-12-04 23:41:30,333	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-12-04 23:42:20,258	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-12-04 23:42:58,312	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-12-04 23:45:17,841	INFO	_internal	_log	Line:122	 * Restarting with stat
+2019-12-04 23:45:20,380	INFO	_internal	_log	Line:122	 * Restarting with stat

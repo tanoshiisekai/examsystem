@@ -2,7 +2,7 @@
   <div class="container">
     <div class="virtualbody">
       <md-subheader>
-        <span class="md-title">答题中</span>
+        <span class="md-title">[ {{this.username}} ] 答题中</span>
       </md-subheader>
       <md-subheader>
         <span>注意至少有一个正确答案，选择不全不得分</span>
@@ -62,7 +62,8 @@ import {
   apiversion,
   unmovetime,
   cheattime,
-  unmovecount
+  unmovecount,
+  moveoutcount
 } from "@/conf";
 export default {
   name: "answerproblems",
@@ -78,6 +79,7 @@ export default {
     };
     document.onmousemove = this.mouseMove;
     document.onblur = this.mouseMove;
+    document.onvisibilitychange = this.visibilitychange;
     window.onbeforeunload = function(e) {
       e = e || window.event;
       // 兼容IE8和Firefox 4之前的版本
@@ -88,6 +90,7 @@ export default {
       return "刷新提示";
     };
     this.initproblems();
+    this.username = this.$cookie.get("username");
   },
   data() {
     return {
@@ -105,31 +108,75 @@ export default {
       warningcount: 0,
       span: 0,
       mousePos: 0,
+      outcount: 0,
+      username: ""
     };
   },
   methods: {
+    visibilitychange() {
+      console.log("visibility change");
+    },
+    getViewPort() {
+      if (document.compatMode == "BackCompat") {
+        //混杂模式
+        return {
+          width: document.body.clientWidth,
+          height: document.body.clientHeight
+        };
+      } else {
+        return {
+          width: document.documentElement.clientWidth,
+          height: document.documentElement.clientHeight
+        };
+      }
+    },
+    getDocumentPort() {
+      if (document.compatMode == "BackCompat") {
+        return {
+          width: document.body.scrollWidth,
+          height: document.body.scrollHeight
+        };
+      } else {
+        return {
+          width: Math.max(
+            document.documentElement.scrollWidth,
+            document.documentElement.clientWidth
+          ),
+          height: Math.max(
+            document.documentElement.scrollHeight,
+            document.documentElement.clientHeight
+          )
+        };
+      }
+    },
     mouseMove(ev) {
       ev = ev || window.event;
-      this.mousePos = this.mousePosition(ev);
+/*       this.mousePos = this.mousePosition(ev);
       if (this.mousePos.x < 10) {
         alert("注意：鼠标请不要离开答题区域！");
+        this.outcount = this.outcount + 1;
       }
-      if (this.mousePos.x > document.body.clientWidth - 10) {
+      if (this.mousePos.x > this.getViewPort()["width"] - 10) {
         alert("注意：鼠标请不要离开答题区域！");
+        this.outcount = this.outcount + 1;
       }
       if (this.mousePos.y < 10) {
         alert("注意：鼠标请不要离开答题区域！");
+        this.outcount = this.outcount + 1;
       }
-      if (this.mousePos.y > document.body.clientHeight - 10) {
+      if (this.mousePos.y > this.getViewPort()["height"] - 10) {
         alert("注意：鼠标请不要离开答题区域！");
+        this.outcount = this.outcount + 1;
       }
+      if (this.outcount > moveoutcount) {
+        alert("系统检测到你有作弊嫌疑，请重新答题！");
+        this.$router.push({ name: "finished" });
+      } */
       var mousetimestamp = new Date().getTime();
-      console.log(mousetimestamp);
       if (this.lasttimestap == 0) {
         this.lasttimestap = mousetimestamp;
       } else {
         this.span = mousetimestamp - this.lasttimestap;
-        console.log("timespan:", this.span);
         if (this.span > unmovetime) {
           alert("注意：你已经长时间没有移动鼠标！");
           this.warningcount = this.warningcount + 1;

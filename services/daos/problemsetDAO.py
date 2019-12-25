@@ -125,7 +125,7 @@ class ProblemsetDAO:
             Score.user_id == userid,
             Score.problemset_id == psetid
         )).all()
-        print(scores)
+        print("scores:", scores)
         if len(scores) > 0:
             scores.sort(key=lambda x: x.score_id, reverse=True)
             aim = {}
@@ -135,7 +135,7 @@ class ProblemsetDAO:
                         if gettimespan(sc.score_timeend, sc.score_timestart) / sc.score_problemcount <= sc.problemset_timeperproblem + 3:
                             aim = sc.todict()
                             break
-            print(aim)
+            print("aim", aim)
             if "score_timeend" not in aim.keys():
                 return {}
             aim["score_timespan"] = gettimespan(
@@ -174,15 +174,18 @@ class ProblemsetDAO:
         """
         ulist = ProblemsetDAO.getuserlistbypsetid(psetid)
         scorelist = []
+        print("ulist", ulist)
         for uid in ulist:
             scorelist.append(
                 ProblemsetDAO.getscoresbyuseridandpsetid(uid, psetid))
+        print("sc", scorelist)
         scorelist = [x for x in scorelist if "score_right" in x.keys()]
         scorelist.sort(key=lambda x: (x["score_right"]/x["score_problemcount"], 1/(
             x["score_timespan"]/x["score_problemcount"])), reverse=True)
         totaluser = len(scorelist)
         for i in range(0, len(scorelist)):
             scorelist[i]["score_rank"] = str(i + 1)+"/"+str(totaluser)
+        print("scorelist", scorelist)
         return scorelist
 
     @staticmethod
@@ -235,9 +238,14 @@ class ProblemsetDAO:
             psetlist = ProblemsetDAO.getpsetlistbyuserid(usid)
             resultlist = []
             for pid in psetlist:
+                print(pid)
                 scores = ProblemsetDAO.getscorelistbypsetid(pid)
+                print(scores)
                 uaim = [x for x in scores if x["user_id"] == usid]
-                resultlist.append(uaim[0])
+                if len(uaim) > 0:
+                    resultlist.append(uaim[0])
+                else:
+                    resultlist = []
             return packinfo(infostatus=1, infomsg="查询成功!", inforesult=resultlist)
         else:
             return packinfo(infostatus=2, infomsg="没有权限!")

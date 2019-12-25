@@ -3,5 +3,6 @@ from tools.auth import getmd5
 
 
 InitDAO.insertadmin("long", getmd5("testlong"))
-InitDAO.insertsettings("togglenotebook", "1")   # 默认打开错题本
+InitDAO.insertsettings("togglenotebook", "0")   # 默认关闭错题本
+
 

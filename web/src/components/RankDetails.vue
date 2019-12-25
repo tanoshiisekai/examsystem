@@ -1,13 +1,12 @@
 <template>
   <div class="container">
-    <UserMenu></UserMenu>
     <md-subheader>
       <span class="md-title">详细积分信息</span>
       <md-button class="md-raised md-accent" style="margin-left:100px;" @click="handleBack()">返回</md-button>
     </md-subheader>
-     <md-subheader>
-    <span class="md-title" style="margin-top:20px;margin-bottom:20px;">题库名称：{{psettitle}}</span>
-     </md-subheader>
+    <md-subheader>
+      <span class="md-title" style="margin-top:20px;margin-bottom:20px;">题库名称：{{psettitle}}</span>
+    </md-subheader>
     <md-table>
       <md-table-row>
         <md-table-head style="text-align:center;">最新排名</md-table-head>
@@ -31,21 +30,22 @@
 </template>
 
 <script>
-import UserMenu from "@/components/UserMenu";
-  import { filehost, fileport, apiversion } from "@/conf";
+import { filehost, fileport, apiversion } from "@/conf";
 export default {
   name: "rankdetails",
-  components: {
-    UserMenu
-  },
+  components: {},
   created() {
     this.getdata();
+    this.timer = setInterval(() => {
+      this.getdata();
+    }, 30000);
   },
   data() {
     return {
       datalist: [],
       laststep: "",
-      psettitle: ""
+      psettitle: "",
+      timer: null,
     };
   },
   methods: {
@@ -53,19 +53,23 @@ export default {
       var usertoken = this.$cookie.get("usertoken");
       var psetid = this.$cookie.get("rank_problemsetid");
       this.axios
-        .get("/ProblemSet"+apiversion+"/scoreslist/" + usertoken + "/" + psetid)
+        .get(
+          "/ProblemSet" + apiversion + "/scoreslist/" + usertoken + "/" + psetid
+        )
         .then(response => {
-            var resp = response.data;
-            console.log(resp);
-            if(resp["infostatus"] == 1){
-                this.datalist = resp["inforesult"];
-                this.psettitle = this.datalist[0].problemset_title;
-            }
+          var resp = response.data;
+          console.log(resp);
+          if (resp["infostatus"] == 1) {
+            this.datalist = resp["inforesult"];
+            this.psettitle = this.datalist[0].problemset_title;
+          }
         });
     },
     handleBack() {
       this.laststep = this.$cookie.get("laststep");
-      this.$router.push({ name:this.laststep });
+      clearInterval(this.timer);
+      this.timer = null;
+      this.$router.push({ name: this.laststep });
     }
   }
 };

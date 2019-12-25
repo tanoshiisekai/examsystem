@@ -1,0 +1,5 @@
+2019-12-09 16:05:04,832	INFO	main1	<module>	Line:11	app started
+2019-12-09 16:05:04,851	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-12-09 16:05:04,872	INFO	_internal	_log	Line:122	 * Debugger PIN: 194-661-588
+2019-12-09 16:05:04,902	INFO	_internal	_log	Line:122	 * Running on http://192.168.31.254:9100/ (Press CTRL+C to quit)
+2019-12-09 16:05:53,411	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\main1.py', reloading

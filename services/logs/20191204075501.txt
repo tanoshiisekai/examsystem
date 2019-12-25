@@ -1,0 +1,2 @@
+2019-12-04 07:55:01,527	INFO	main1	<module>	Line:11	app started
+2019-12-04 07:55:01,541	INFO	_internal	_log	Line:122	 * Restarting with stat

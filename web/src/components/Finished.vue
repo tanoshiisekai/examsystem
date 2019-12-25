@@ -21,6 +21,8 @@ export default {
   },
   created() {
     document.onmousemove = null;
+    document.onblur = null;
+    document.onvisibilitychange = null;
     this.settimestr();
   },
   data() {

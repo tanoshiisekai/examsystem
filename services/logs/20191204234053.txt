@@ -1,0 +1,8 @@
+2019-12-04 23:40:53,467	INFO	main1	<module>	Line:11	app started
+2019-12-04 23:40:53,475	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-12-04 23:40:53,499	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-12-04 23:40:53,511	INFO	_internal	_log	Line:122	 * Running on http://192.168.31.254:9100/ (Press CTRL+C to quit)
+2019-12-04 23:40:58,123	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:40:58] "OPTIONS /Login0.3/checkagent/ HTTP/1.1" 200 -
+2019-12-04 23:40:58,369	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:40:58] "POST /Login0.3/checkagent/ HTTP/1.1" 200 -
+2019-12-04 23:40:58,460	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:40:58] "GET /ProblemSet0.3/scores/5f3cdcb3-c1cc-4969-b318-c8852a7f46ea HTTP/1.1" 500 -
+2019-12-04 23:41:24,252	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading

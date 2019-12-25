@@ -2,10 +2,10 @@
 import os
 dbconnection = 'sqlite:///db/examsystem.db'
 
-buildhost = "127.0.0.1"
+buildhost = "192.168.31.254"
 buildport = "9100"
 
-fileserverip = "127.0.0.1"
+fileserverip = "192.168.31.254"
 fileserverport = "9101"
 
 apiversion = "0.3"   # 修改代码后，修改代码版本号，以刷新前端浏览器

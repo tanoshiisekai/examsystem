@@ -1,0 +1,44 @@
+2019-12-04 23:24:48,017	INFO	main1	<module>	Line:11	app started
+2019-12-04 23:24:48,024	WARNING	_internal	_log	Line:122	 * Debugger is active!
+2019-12-04 23:24:48,056	INFO	_internal	_log	Line:122	 * Debugger PIN: 185-856-785
+2019-12-04 23:24:48,072	INFO	_internal	_log	Line:122	 * Running on http://192.168.31.254:9100/ (Press CTRL+C to quit)
+2019-12-04 23:26:45,672	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:26:45] "GET /AdminLogin0.3/long/74205c0cecd1c24479b3fdd15c437698 HTTP/1.1" 200 -
+2019-12-04 23:26:45,755	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:26:45] "GET /AdminLogin0.3/checktoken/0cbff850-9635-4e2d-8468-f5b7c7271bcb HTTP/1.1" 200 -
+2019-12-04 23:26:48,418	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:26:48] "GET /AdminLogin0.3/checktoken/0cbff850-9635-4e2d-8468-f5b7c7271bcb HTTP/1.1" 200 -
+2019-12-04 23:26:48,473	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:26:48] "GET /AdminLogin0.3/checktoken/0cbff850-9635-4e2d-8468-f5b7c7271bcb HTTP/1.1" 200 -
+2019-12-04 23:26:48,478	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:26:48] "GET /ProblemSet0.3/0cbff850-9635-4e2d-8468-f5b7c7271bcb HTTP/1.1" 200 -
+2019-12-04 23:26:49,940	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:26:49] "GET /AdminLogin0.3/checktoken/0cbff850-9635-4e2d-8468-f5b7c7271bcb HTTP/1.1" 200 -
+2019-12-04 23:26:49,972	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:26:49] "GET /AdminLogin0.3/checktoken/0cbff850-9635-4e2d-8468-f5b7c7271bcb HTTP/1.1" 200 -
+2019-12-04 23:26:56,722	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:26:56] "GET /ProblemSet0.3/pset/0cbff850-9635-4e2d-8468-f5b7c7271bcb/19��2����11 HTTP/1.1" 200 -
+2019-12-04 23:26:57,030	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:26:57] "GET /ProblemSet0.3/scoreslist/0cbff850-9635-4e2d-8468-f5b7c7271bcb/4 HTTP/1.1" 200 -
+2019-12-04 23:31:26,237	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:31:26] "GET /AdminLogin0.3/checktoken/0cbff850-9635-4e2d-8468-f5b7c7271bcb HTTP/1.1" 200 -
+2019-12-04 23:31:34,108	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:31:34] "GET /ProblemSet0.3/pset/0cbff850-9635-4e2d-8468-f5b7c7271bcb/19��1Python11 HTTP/1.1" 200 -
+2019-12-04 23:31:34,364	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:31:34] "GET /ProblemSet0.3/scoreslist/0cbff850-9635-4e2d-8468-f5b7c7271bcb/2 HTTP/1.1" 200 -
+2019-12-04 23:32:48,732	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:32:48] "GET /AdminLogin0.3/checktoken/0cbff850-9635-4e2d-8468-f5b7c7271bcb HTTP/1.1" 200 -
+2019-12-04 23:32:52,234	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:32:52] "GET /AdminLogin0.3/checktoken/0cbff850-9635-4e2d-8468-f5b7c7271bcb HTTP/1.1" 200 -
+2019-12-04 23:33:00,585	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:33:00] "GET /ProblemSet0.3/pset/0cbff850-9635-4e2d-8468-f5b7c7271bcb/19��1Python11 HTTP/1.1" 200 -
+2019-12-04 23:33:00,847	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:33:00] "GET /ProblemSet0.3/scoreslist/0cbff850-9635-4e2d-8468-f5b7c7271bcb/2 HTTP/1.1" 200 -
+2019-12-04 23:33:07,344	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:33:07] "GET /AdminLogin0.3/checktoken/0cbff850-9635-4e2d-8468-f5b7c7271bcb HTTP/1.1" 200 -
+2019-12-04 23:33:14,346	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:33:14] "GET /ProblemSet0.3/pset/0cbff850-9635-4e2d-8468-f5b7c7271bcb/19��2����11 HTTP/1.1" 200 -
+2019-12-04 23:33:14,650	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:33:14] "GET /ProblemSet0.3/scoreslist/0cbff850-9635-4e2d-8468-f5b7c7271bcb/4 HTTP/1.1" 200 -
+2019-12-04 23:33:18,503	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:33:18] "GET /AdminLogin0.3/checktoken/0cbff850-9635-4e2d-8468-f5b7c7271bcb HTTP/1.1" 200 -
+2019-12-04 23:33:20,244	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:33:20] "GET /AdminLogin0.3/checktoken/0cbff850-9635-4e2d-8468-f5b7c7271bcb HTTP/1.1" 200 -
+2019-12-04 23:33:20,270	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:33:20] "GET /AdminLogin0.3/logout/0cbff850-9635-4e2d-8468-f5b7c7271bcb/long HTTP/1.1" 200 -
+2019-12-04 23:33:28,942	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:33:28] "GET /Login0.3/test/098f6bcd4621d373cade4e832627b4f6 HTTP/1.1" 200 -
+2019-12-04 23:33:28,996	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:33:28] "OPTIONS /Login0.3/checkagent/ HTTP/1.1" 200 -
+2019-12-04 23:33:29,011	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:33:29] "POST /Login0.3/checkagent/ HTTP/1.1" 200 -
+2019-12-04 23:33:43,102	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:33:43] "GET /ProblemSet0.3/5f3cdcb3-c1cc-4969-b318-c8852a7f46ea/19��2����11 HTTP/1.1" 200 -
+2019-12-04 23:33:44,256	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:33:44] "GET /ProblemSet0.3/init/5f3cdcb3-c1cc-4969-b318-c8852a7f46ea/19��2����11 HTTP/1.1" 200 -
+2019-12-04 23:33:44,308	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:33:44] "GET /ProblemSet0.3/answer/5f3cdcb3-c1cc-4969-b318-c8852a7f46ea/387 HTTP/1.1" 200 -
+2019-12-04 23:33:46,732	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:33:46] "OPTIONS /Login0.3/checkagent/ HTTP/1.1" 200 -
+2019-12-04 23:33:46,740	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:33:46] "POST /Login0.3/checkagent/ HTTP/1.1" 200 -
+2019-12-04 23:33:48,096	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:33:48] "OPTIONS /Login0.3/checkagent/ HTTP/1.1" 200 -
+2019-12-04 23:33:48,121	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:33:48] "POST /Login0.3/checkagent/ HTTP/1.1" 200 -
+2019-12-04 23:33:48,147	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:33:48] "GET /ProblemSet0.3/scores/5f3cdcb3-c1cc-4969-b318-c8852a7f46ea HTTP/1.1" 500 -
+2019-12-04 23:34:09,833	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:34:09] "OPTIONS /Login0.3/checkagent/ HTTP/1.1" 200 -
+2019-12-04 23:34:10,101	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:34:10] "POST /Login0.3/checkagent/ HTTP/1.1" 200 -
+2019-12-04 23:34:10,146	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:34:10] "GET /ProblemSet0.3/scores/5f3cdcb3-c1cc-4969-b318-c8852a7f46ea HTTP/1.1" 500 -
+2019-12-04 23:34:52,810	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:34:52] "OPTIONS /Login0.3/checkagent/ HTTP/1.1" 200 -
+2019-12-04 23:34:52,854	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:34:52] "POST /Login0.3/checkagent/ HTTP/1.1" 200 -
+2019-12-04 23:34:52,896	INFO	_internal	_log	Line:122	192.168.31.254 - - [04/Dec/2019 23:34:52] "GET /ProblemSet0.3/scores/5f3cdcb3-c1cc-4969-b318-c8852a7f46ea HTTP/1.1" 500 -
+2019-12-04 23:36:23,155	INFO	_internal	_log	Line:122	 * Detected change in 'C:\\development\\examsystem\\services\\daos\\problemsetDAO.py', reloading

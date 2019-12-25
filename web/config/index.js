@@ -4,7 +4,7 @@
 
 const path = require('path')
 
-process.env.HOST = "127.0.0.1"
+process.env.HOST = "192.168.31.254"
 process.env.PORT = 80
 
 module.exports = {

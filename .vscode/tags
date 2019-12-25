@@ -36,7 +36,7 @@ appbase.py	../services/appbase.py	1;"	kind:file	line:1
 baseurl	../services/conf.py	/^baseurl = "http:\/\/" + buildhost + ":" + buildport$/;"	kind:variable	line:7
 baseurl	../services/main.py	/^from conf import baseurl$/;"	kind:namespace	line:5
 builddbmodelfromxls.py	../services/builddbmodelfromxls.py	1;"	kind:file	line:1
-buildhost	../services/conf.py	/^buildhost = "127.0.0.1"$/;"	kind:variable	line:4
+buildhost	../services/conf.py	/^buildhost = "192.168.31.254"$/;"	kind:variable	line:4
 buildhost	../services/main.py	/^from conf import buildhost$/;"	kind:namespace	line:3
 buildport	../services/conf.py	/^buildport = "9100"$/;"	kind:variable	line:5
 buildport	../services/main.py	/^from conf import buildport$/;"	kind:namespace	line:4
